@@ -1,0 +1,265 @@
+{
+  "source_manifest": [
+    "experiment/luna-five-city-legal-mutation-seed42/run_manifest.json",
+    "experiment/luna-five-city-legal-mutation-seed43/run_manifest.json",
+    "experiment/luna-five-city-legal-mutation-seed44/run_manifest.json"
+  ],
+  "design": {
+    "runs": 15,
+    "cities": [
+      "albany",
+      "troy",
+      "ann_arbor",
+      "los_angeles",
+      "manhattan"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "objectives_maximized": [
+      "top10",
+      "global_delay",
+      "co2",
+      "speed"
+    ],
+    "safety_envelope": {
+      "global_delay_reduction_pct": ">= 0",
+      "neighbor_reduction_pct": ">= -5",
+      "throughput_change": ">= 0",
+      "teleport_change": "<= 0",
+      "completed_trip_change": ">= 0"
+    },
+    "profile_weights": {
+      "pareto_delay": {
+        "top10": 0.55,
+        "global_delay": 0.3,
+        "co2": 0.1,
+        "speed": 0.05
+      },
+      "pareto_balanced": {
+        "top10": 0.25,
+        "global_delay": 0.25,
+        "co2": 0.25,
+        "speed": 0.25
+      },
+      "pareto_emissions": {
+        "top10": 0.1,
+        "global_delay": 0.15,
+        "co2": 0.65,
+        "speed": 0.1
+      },
+      "pareto_mobility": {
+        "top10": 0.1,
+        "global_delay": 0.25,
+        "co2": 0.1,
+        "speed": 0.55
+      }
+    }
+  },
+  "mean_pareto_front_size": 1.5333333333333334,
+  "pareto_front_size_range": [
+    1,
+    4
+  ],
+  "current_selection_on_pareto_front": 11,
+  "summaries": {
+    "current_top10": {
+      "policy": "current_top10",
+      "run_count": 15,
+      "no_op_count": 2,
+      "changed_from_current": 0,
+      "action_counts": {
+        "Corridor speed": 4,
+        "No-op": 2,
+        "Bundle": 4,
+        "TLS": 5
+      },
+      "top10": {
+        "mean": 9.17901918251745,
+        "sample_sd": 10.178031812019066
+      },
+      "global_delay": {
+        "mean": 2.775993095187338,
+        "sample_sd": 5.082425205086204
+      },
+      "neighbor": {
+        "mean": 6.359481072803286,
+        "sample_sd": 14.634058288004162
+      },
+      "co2": {
+        "mean": 1.2306499724534985,
+        "sample_sd": 2.530801269843617
+      },
+      "speed": {
+        "mean": 0.7286020591434365,
+        "sample_sd": 1.4013897206664243
+      }
+    },
+    "legacy_weighted": {
+      "policy": "legacy_weighted",
+      "run_count": 15,
+      "no_op_count": 2,
+      "changed_from_current": 9,
+      "action_counts": {
+        "TLS": 6,
+        "No-op": 2,
+        "Corridor speed": 2,
+        "Routing (1 edge)": 1,
+        "Bundle": 4
+      },
+      "top10": {
+        "mean": 7.68967899845902,
+        "sample_sd": 9.830560618279158
+      },
+      "global_delay": {
+        "mean": 2.9852621487523523,
+        "sample_sd": 5.011278611527926
+      },
+      "neighbor": {
+        "mean": 7.094188867900732,
+        "sample_sd": 14.624503832507381
+      },
+      "co2": {
+        "mean": 1.2809202290669042,
+        "sample_sd": 2.488399331131632
+      },
+      "speed": {
+        "mean": 0.8273068334795982,
+        "sample_sd": 1.337781819607399
+      }
+    },
+    "pareto_delay": {
+      "policy": "pareto_delay",
+      "run_count": 15,
+      "no_op_count": 2,
+      "changed_from_current": 6,
+      "action_counts": {
+        "Corridor speed": 3,
+        "No-op": 2,
+        "TLS": 6,
+        "Bundle": 4
+      },
+      "top10": {
+        "mean": 8.834555922840774,
+        "sample_sd": 10.42446712197393
+      },
+      "global_delay": {
+        "mean": 2.9454974091707733,
+        "sample_sd": 4.983561071002173
+      },
+      "neighbor": {
+        "mean": 6.136208586598727,
+        "sample_sd": 14.855779779244513
+      },
+      "co2": {
+        "mean": 1.2864420511848424,
+        "sample_sd": 2.5020987941691812
+      },
+      "speed": {
+        "mean": 0.7740844800408131,
+        "sample_sd": 1.3729408124821096
+      }
+    },
+    "pareto_balanced": {
+      "policy": "pareto_balanced",
+      "run_count": 15,
+      "no_op_count": 2,
+      "changed_from_current": 8,
+      "action_counts": {
+        "TLS": 7,
+        "No-op": 2,
+        "Corridor speed": 2,
+        "Routing (1 edge)": 1,
+        "Bundle": 3
+      },
+      "top10": {
+        "mean": 7.986413632297131,
+        "sample_sd": 9.897477933304998
+      },
+      "global_delay": {
+        "mean": 2.9535789167768725,
+        "sample_sd": 4.983538387516408
+      },
+      "neighbor": {
+        "mean": 6.113807176862308,
+        "sample_sd": 14.76514694554033
+      },
+      "co2": {
+        "mean": 1.3081308833200282,
+        "sample_sd": 2.495087657824939
+      },
+      "speed": {
+        "mean": 0.8099316302702545,
+        "sample_sd": 1.3574758570924952
+      }
+    },
+    "pareto_emissions": {
+      "policy": "pareto_emissions",
+      "run_count": 15,
+      "no_op_count": 2,
+      "changed_from_current": 8,
+      "action_counts": {
+        "TLS": 7,
+        "No-op": 2,
+        "Corridor speed": 2,
+        "Routing (1 edge)": 1,
+        "Bundle": 3
+      },
+      "top10": {
+        "mean": 7.986413632297131,
+        "sample_sd": 9.897477933304998
+      },
+      "global_delay": {
+        "mean": 2.9535789167768725,
+        "sample_sd": 4.983538387516408
+      },
+      "neighbor": {
+        "mean": 6.113807176862308,
+        "sample_sd": 14.76514694554033
+      },
+      "co2": {
+        "mean": 1.3081308833200282,
+        "sample_sd": 2.495087657824939
+      },
+      "speed": {
+        "mean": 0.8099316302702545,
+        "sample_sd": 1.3574758570924952
+      }
+    },
+    "pareto_mobility": {
+      "policy": "pareto_mobility",
+      "run_count": 15,
+      "no_op_count": 2,
+      "changed_from_current": 8,
+      "action_counts": {
+        "TLS": 7,
+        "No-op": 2,
+        "Corridor speed": 2,
+        "Routing (1 edge)": 1,
+        "Bundle": 3
+      },
+      "top10": {
+        "mean": 7.7153748171893,
+        "sample_sd": 9.903105654031902
+      },
+      "global_delay": {
+        "mean": 2.9755887377280152,
+        "sample_sd": 4.981595803338672
+      },
+      "neighbor": {
+        "mean": 7.114375482576882,
+        "sample_sd": 14.69262257843997
+      },
+      "co2": {
+        "mean": 1.285468185902418,
+        "sample_sd": 2.502445897575881
+      },
+      "speed": {
+        "mean": 0.8328284731569332,
+        "sample_sd": 1.3544795236919072
+      }
+    }
+  }
+}

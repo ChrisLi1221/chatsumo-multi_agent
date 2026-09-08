@@ -1,0 +1,10 @@
+{"id":"albany_small","prompt":"Build a 1 km network in Albany. Generate background traffic (800 flows/hour), then analyze mean speed and report it."}
+{"id":"annarbor_mid","prompt":"Build a 2 km network in Ann Arbor. Generate background traffic (1200 flows/hour), then analyze mean speed and report it."}
+{"id":"manhattan_large","prompt":"Build a 3 km network in New York. Generate background traffic (1600 flows/hour), then analyze mean speed and report it."}
+
+{"id":"albany_small_remove","prompt":"In Albany, build a 1 km radius road network centered on the city, generate background traffic with 800 flows/hour, run the baseline simulation and record mean speed/delay; remove all road segments whose street name equals \"Colonie Street\"\n"}
+{"id":"annarbor_mid_remove","prompt":"In Ann Arbor, build a 2 km radius road network centered on the city, generate background traffic with 1200 flows/hour, run the baseline simulation and record mean speed/delay; remove all road segments whose street name equals \"Virginia Avenue\"\n"}
+{"id":"manhattan_large_remove","prompt":"In New York City (Manhattan area), build a 3 km radius road network centered on Manhattan, generate background traffic with 1600 flows/hour, run the baseline simulation and record mean speed/delay; remove all road segments whose street name equals \"3rd Avenue\""}
+
+{"id":"albany_demand","prompt":"In Albany, build a 1 km radius road network centered on the city, generate a 800 flows/hour traffic flow from \"Colonie Street\" to \"Lark Street\", run the simulation and record mean speed/delay; \n"}
+{"id":"ann_arbor_demand","prompt":"In Ann Arbor, build a 2 km radius road network centered on the city, generate a 1200 flows/hour traffic flow from \"Virginia Avenue\" to \"West William Street\", run the simulation and record mean speed/delay; \n"}

@@ -1,0 +1,222 @@
+{
+  "input_dir": "/home/chris/Codes/sumo_multi_agent/experiment",
+  "files": [
+    "experiment/summary_multi_complex.json",
+    "experiment/summary_multi_medium.json",
+    "experiment/summary_multi_simple.json",
+    "experiment/summary_single_complex.json",
+    "experiment/summary_single_medium.json",
+    "experiment/summary_single_simple.json"
+  ],
+  "records": [
+    {
+      "file": "experiment/summary_multi_complex.json",
+      "agent": "multi",
+      "scenario": "complex",
+      "query": "Build a 1 km network in Albany with 800 veh/hour from \"Colonie Street\" to \"Lark Street\", removing Eagle Street, then run a simulation and report the average speed.",
+      "runs": 10,
+      "ok_runs": 9,
+      "error_runs": 1,
+      "success_rate": 0.9,
+      "tti_mean_s": 8.31659951210022,
+      "tti_median_s": 8.241410851478577,
+      "token_total_mean": 6028.7,
+      "token_total_median": 6439.5,
+      "token_prompt_mean": 4855.9,
+      "token_completion_mean": 1172.8,
+      "token_calls_mean": 5.6,
+      "top_fail_reasons": [
+        [
+          "multi_error:builder:Expecting value: line 1 column 1 (char 0)",
+          1
+        ]
+      ],
+      "token_scope_totals": {
+        "planner": 13996,
+        "role:builder": 8611,
+        "role:modifier": 8619,
+        "role:demand": 10513,
+        "role:runner_planner": 9030,
+        "role:analyst": 9518
+      },
+      "token_scope_calls": {
+        "planner": 10,
+        "role:builder": 10,
+        "role:modifier": 9,
+        "role:demand": 9,
+        "role:runner_planner": 9,
+        "role:analyst": 9
+      }
+    },
+    {
+      "file": "experiment/summary_multi_medium.json",
+      "agent": "multi",
+      "scenario": "medium",
+      "query": "Build a 1 km network in Albany with 800 veh/hour from \"Colonie Street\" to \"Lark Street\", run the simulation, and report the mean speed.",
+      "runs": 10,
+      "ok_runs": 10,
+      "error_runs": 0,
+      "success_rate": 1.0,
+      "tti_mean_s": 7.251017045974732,
+      "tti_median_s": 6.7748942375183105,
+      "token_total_mean": 5310.1,
+      "token_total_median": 5302.0,
+      "token_prompt_mean": 4292.1,
+      "token_completion_mean": 1018.0,
+      "token_calls_mean": 5.0,
+      "top_fail_reasons": [],
+      "token_scope_totals": {
+        "planner": 12922,
+        "role:builder": 8470,
+        "role:demand": 10754,
+        "role:runner_planner": 10274,
+        "role:analyst": 10681
+      },
+      "token_scope_calls": {
+        "planner": 10,
+        "role:builder": 10,
+        "role:demand": 10,
+        "role:runner_planner": 10,
+        "role:analyst": 10
+      }
+    },
+    {
+      "file": "experiment/summary_multi_simple.json",
+      "agent": "multi",
+      "scenario": "simple",
+      "query": "generate a 0.5 km simulation in Troy with medium traffic",
+      "runs": 10,
+      "ok_runs": 9,
+      "error_runs": 1,
+      "success_rate": 0.9,
+      "tti_mean_s": 6.151262664794922,
+      "tti_median_s": 6.135225296020508,
+      "token_total_mean": 4845.5,
+      "token_total_median": 5148.0,
+      "token_prompt_mean": 3883.8,
+      "token_completion_mean": 961.7,
+      "token_calls_mean": 4.7,
+      "top_fail_reasons": [
+        [
+          "multi_error:builder:Expecting value: line 1 column 1 (char 0)",
+          1
+        ]
+      ],
+      "token_scope_totals": {
+        "planner": 12376,
+        "role:builder": 8077,
+        "role:demand": 8933,
+        "role:runner_planner": 9385,
+        "role:analyst": 9684
+      },
+      "token_scope_calls": {
+        "planner": 10,
+        "role:builder": 10,
+        "role:demand": 9,
+        "role:runner_planner": 9,
+        "role:analyst": 9
+      }
+    },
+    {
+      "file": "experiment/summary_single_complex.json",
+      "agent": "single",
+      "scenario": "complex",
+      "query": "Build a 1 km network in Albany with 800 veh/hour from \"Colonie Street\" to \"Lark Street\", removing Eagle Street, then run a simulation and report the average speed.",
+      "runs": 10,
+      "ok_runs": 7,
+      "error_runs": 3,
+      "success_rate": 0.7,
+      "tti_mean_s": 41.42531502246857,
+      "tti_median_s": 43.051769733428955,
+      "token_total_mean": 11404.7,
+      "token_total_median": 13227.5,
+      "token_prompt_mean": 10510.1,
+      "token_completion_mean": 894.6,
+      "token_calls_mean": 4.0,
+      "top_fail_reasons": [
+        [
+          "single_error:Missing required param: mode",
+          2
+        ],
+        [
+          "single_error:Missing required param: city_name",
+          1
+        ]
+      ]
+    },
+    {
+      "file": "experiment/summary_single_medium.json",
+      "agent": "single",
+      "scenario": "medium",
+      "query": "Build a 1 km network in Albany with 800 veh/hour from \"Colonie Street\" to \"Lark Street\", run the simulation, and report the mean speed.",
+      "runs": 10,
+      "ok_runs": 10,
+      "error_runs": 0,
+      "success_rate": 1.0,
+      "tti_mean_s": 22.740278363227844,
+      "tti_median_s": 22.89517867565155,
+      "token_total_mean": 9690.3,
+      "token_total_median": 9818.0,
+      "token_prompt_mean": 9371.2,
+      "token_completion_mean": 319.1,
+      "token_calls_mean": 4.0,
+      "top_fail_reasons": []
+    },
+    {
+      "file": "experiment/summary_single_simple.json",
+      "agent": "single",
+      "scenario": "simple",
+      "query": "Build a 0.5 km network in Troy with medium traffic",
+      "runs": 10,
+      "ok_runs": 10,
+      "error_runs": 0,
+      "success_rate": 1.0,
+      "tti_mean_s": 19.758131504058838,
+      "tti_median_s": 19.015129446983337,
+      "token_total_mean": 8529.2,
+      "token_total_median": 8550.0,
+      "token_prompt_mean": 8223.9,
+      "token_completion_mean": 305.3,
+      "token_calls_mean": 4.0,
+      "top_fail_reasons": []
+    }
+  ],
+  "pairwise": [
+    {
+      "scenario": "complex",
+      "single_success_rate": 0.7,
+      "single_tti_mean_s": 41.42531502246857,
+      "single_token_total_mean": 11404.7,
+      "multi_success_rate": 0.9,
+      "multi_tti_mean_s": 8.31659951210022,
+      "multi_token_total_mean": 6028.7,
+      "delta_success_rate_multi_minus_single": 0.20000000000000007,
+      "delta_tti_mean_s_multi_minus_single": -33.10871551036835,
+      "delta_token_mean_multi_minus_single": -5376.000000000001
+    },
+    {
+      "scenario": "medium",
+      "single_success_rate": 1.0,
+      "single_tti_mean_s": 22.740278363227844,
+      "single_token_total_mean": 9690.3,
+      "multi_success_rate": 1.0,
+      "multi_tti_mean_s": 7.251017045974732,
+      "multi_token_total_mean": 5310.1,
+      "delta_success_rate_multi_minus_single": 0.0,
+      "delta_tti_mean_s_multi_minus_single": -15.489261317253114,
+      "delta_token_mean_multi_minus_single": -4380.199999999999
+    },
+    {
+      "scenario": "simple",
+      "single_success_rate": 1.0,
+      "single_tti_mean_s": 19.758131504058838,
+      "single_token_total_mean": 8529.2,
+      "multi_success_rate": 0.9,
+      "multi_tti_mean_s": 6.151262664794922,
+      "multi_token_total_mean": 4845.5,
+      "delta_success_rate_multi_minus_single": -0.09999999999999998,
+      "delta_tti_mean_s_multi_minus_single": -13.606868839263916,
+      "delta_token_mean_multi_minus_single": -3683.7000000000007
+    }
+  ]
+}

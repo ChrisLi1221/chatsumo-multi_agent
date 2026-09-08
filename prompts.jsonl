@@ -1,0 +1,32 @@
+{"id": "L1_test_01", "prompt": "Generate a 0.8 km simulation in Troy with medium traffic."}
+{"id": "L1_test_02", "prompt": "Build a 1 mile traffic simulation for Ann Arbor with high traffic volume."}
+{"id": "L1_test_03", "prompt": "Create a 2 km road network in Albany and add light traffic."}
+{"id": "L1_test_04", "prompt": "Set up a 1.5 km simulation map in Washington D.C. with heavy traffic."}
+{"id": "L1_test_05", "prompt": "Extract a 0.5 mile network in Los Angeles with moderate traffic flow."}
+{"id": "L1_test_06", "prompt": "Generate a 1.2 km simulation in Manhattan with low traffic."}
+{"id": "L1_test_07", "prompt": "Build a 2.5 km traffic model for Buffalo with dense traffic."}
+{"id": "L1_test_08", "prompt": "Create a 1.8 mile simulation in Syracuse with normal traffic conditions."}
+{"id": "L1_test_09", "prompt": "Set up a 3 km road network in Boston with sparse traffic."}
+{"id": "L1_test_10", "prompt": "Extract a 0.6 mile map in Chicago and simulate peak hour traffic."}
+
+{"id": "L2_test_01", "prompt": "Create a 1.5 mile simulation network in Troy. Generate a traffic flow of 600 vph from 'Hoosick Street' to 'Congress Street', and execute the simulation."}
+{"id": "L2_test_02", "prompt": "Extract a 2 km road network in Ann Arbor. I need 1000 veh/hour routed from 'State Street' to 'Main Street', followed by running the simulation."}
+{"id": "L2_test_03", "prompt": "Set up a 0.5 mile traffic simulation in Albany. Inject a demand of 500 vph starting at 'Washington Avenue' and ending at 'State Street', then run it."}
+{"id": "L2_test_04", "prompt": "Generate a 1 km radius network for Washington D.C., with 1200 veh/hour traveling from 'K Street' to 'Pennsylvania Avenue'. Run the simulation when ready."}
+{"id": "L2_test_05", "prompt": "Build a network covering 2 miles in downtown Los Angeles. Route 850 vehicles per hour from 'Figueroa Street' to 'Grand Avenue' and start the simulation run."}
+{"id": "L2_test_06", "prompt": "I want a 1.2 km simulation map in Ann Arbor. Create a flow of 750 veh/hour from 'Liberty Street' to 'Huron Street', then execute the simulation."}
+{"id": "L2_test_07", "prompt": "Extract a 0.8 km map in Manhattan, New York. Route 1500 vehicles per hour from 'Broadway' to '5th Avenue', and then run the simulation."}
+{"id": "L2_test_08", "prompt": "Build a 1.5 km road network in Buffalo. Add a traffic flow of 650 veh/hour from 'Main Street' to 'Delaware Avenue', followed by a simulation run."}
+{"id": "L2_test_09", "prompt": "Set up a 2.5 km network in Syracuse with 1100 veh/hour from 'Erie Boulevard' to 'Genesee Street', then run the simulation."}
+{"id": "L2_test_10", "prompt": "Generate a 1.8 mile simulation for Troy. Send a traffic volume of 900 veh/hour from '15th Street' to 'River Street', and then execute it."}
+
+{"id": "L3_test_01", "prompt": "Build a 1.5 mile network in Troy with 600 vph from 'Hoosick Street' to 'Congress Street', remove '15th Street', then run the simulation and report the average waiting time."}
+{"id": "L3_test_02", "prompt": "Extract a 2 km map in Ann Arbor, route 1000 veh/hour from 'State Street' to 'Main Street', but remove 'Liberty Street' first. Run it and report the CO2 emissions."}
+{"id": "L3_test_03", "prompt": "Set up a 0.8 mile simulation in Albany. Inject 500 vph from 'Washington Avenue' to 'State Street', remove 'Eagle Street', run the simulation, and extract the mean speed."}
+{"id": "L3_test_04", "prompt": "Generate a 1 km network for Washington D.C., delete 'K Street', and add 1200 veh/hour from 'Constitution Avenue' to 'Pennsylvania Avenue'. Run it and check the total travel time."}
+{"id": "L3_test_05", "prompt": "Build a 2 mile map in downtown Los Angeles. Remove 'Figueroa Street', then route 850 vehicles per hour from 'Grand Avenue' to 'Hope Street'. Execute and report the average speed."}
+{"id": "L3_test_06", "prompt": "Extract a 1.2 km network in Manhattan. Close 'Broadway', generate a flow of 1500 veh/hour from '5th Avenue' to 'Madison Avenue', run the simulation, and provide the average waiting time."}
+{"id": "L3_test_07", "prompt": "Build a 1.5 km road network in Buffalo. Remove 'Elmwood Avenue', add 650 veh/hour from 'Main Street' to 'Delaware Avenue', run it, and report the CO2 emissions."}
+{"id": "L3_test_08", "prompt": "Set up a 2.5 km network in Syracuse. Delete 'Erie Boulevard', simulate 1100 veh/hour from 'Genesee Street' to 'Salina Street', and extract the mean speed from the results."}
+{"id": "L3_test_09", "prompt": "Generate a 1 mile map in Chicago. Remove 'State Street', route 950 veh/hour from 'Michigan Avenue' to 'Clark Street', run the simulation, and report the total travel time."}
+{"id": "L3_test_10", "prompt": "Create a 1.5 km simulation in Boston. Close 'Boylston Street', send 800 veh/hour from 'Newbury Street' to 'Beacon Street', execute the run, and report the average waiting time."}

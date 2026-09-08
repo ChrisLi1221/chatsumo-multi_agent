@@ -1,0 +1,88 @@
+# ============================================================
+#  ChatSUMO Multi-Agent — .gitignore
+#  原则:提交源码、配置、论文文本与图表;忽略仿真产出与缓存。
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---------- 密钥与环境变量 ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# ---------- 实验批次输出(约 38G) ----------
+# experiment/ 下只保留顶层脚本、文档与配置,忽略全部运行输出目录。
+# experiment/ablation/ 是分析脚本目录(非输出),显式保留。
+experiment/*/
+!experiment/ablation/
+
+# ablation/ 只保留顶层汇总 JSON,忽略运行输出目录
+ablation/*/
+
+# ---------- 单次运行产出 ----------
+runs/
+tmp_demo/
+
+# ---------- SUMO 生成文件 ----------
+*.net.xml
+*.rou.xml
+*.rou.alt.xml
+*.sumocfg
+*.netccfg
+tripinfo.xml
+edgeData.xml
+summary.xml
+*.run.log
+# 根目录遗留的生成路由文件(1.1M)
+/routes.rou.xml
+
+# ---------- 缓存 ----------
+providers/cache/
+
+# ---------- 运行时数据库 ----------
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# ---------- LaTeX 中间产物 ----------
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+texput.log
+*.log
+
+# ---------- 第三方参考文献 PDF ----------
+# 下载的他人论文,未被任何 .tex/.bib 引用,占 8.2M
+paper/figures/chen-et-al-2023-curbside-parking-monitoring-with-roadside-lidar1.pdf
+
+# ---------- 编辑器与系统 ----------
+.vscode/
+.idea/
+.agents/
+.codex/
+.DS_Store
+Thumbs.db

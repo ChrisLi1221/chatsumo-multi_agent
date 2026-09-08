@@ -1,0 +1,32 @@
+[
+  {
+    "city": "Albany",
+    "key": "albany",
+    "net": "runs/scn_round_1_1784196587/albany.net.xml",
+    "routes": "runs/scn_round_1_1784196587/routes.rou.xml"
+  },
+  {
+    "city": "Troy",
+    "key": "troy",
+    "net": "experiment/closed-loop/L2/20_l2_test_10/repair_0/scn_round_1_1772147752/Troy.net.xml",
+    "routes": "experiment/closed-loop/L2/20_l2_test_10/repair_0/scn_round_1_1772147752/routes.rou.xml"
+  },
+  {
+    "city": "Ann Arbor",
+    "key": "ann_arbor",
+    "net": "experiment/closed-loop/L1/02_l1_test_02/repair_0/scn_round_1_1772146344/AnnArbor.net.xml",
+    "routes": "experiment/closed-loop/L1/02_l1_test_02/repair_0/scn_round_1_1772146344/routes.rou.xml"
+  },
+  {
+    "city": "Los Angeles",
+    "key": "los_angeles",
+    "net": "experiment/closed-loop/L1/05_l1_test_05/repair_1/scn_round_1_1772146617/LosAngeles.net.xml",
+    "routes": "experiment/closed-loop/L1/05_l1_test_05/repair_1/scn_round_1_1772146617/routes.rou.xml"
+  },
+  {
+    "city": "Manhattan",
+    "key": "manhattan",
+    "net": "experiment/closed-loop/L1/06_l1_test_06/repair_0/scn_round_1_1772146650/Manhattan.net.xml",
+    "routes": "experiment/closed-loop/L1/06_l1_test_06/repair_0/scn_round_1_1772146650/routes.rou.xml"
+  }
+]

@@ -1,0 +1,241 @@
+{
+  "input_dir": "/home/chris/Codes/sumo_multi_agent/experiment",
+  "files": [
+    "experiment/summary_multi_complex.json",
+    "experiment/summary_multi_medium.json",
+    "experiment/summary_multi_simple.json"
+  ],
+  "records": [
+    {
+      "file": "experiment/summary_multi_complex.json",
+      "scenario": "complex",
+      "query": "Build a 1 km network in Albany with 800 veh/hour from \"Colonie Street\" to \"Lark Street\", removing Eagle Street, then run a simulation and report the average speed.",
+      "runs": 10,
+      "ok_runs": 9,
+      "error_runs": 1,
+      "mean_total_tokens_per_run": 6028.7,
+      "roles": [
+        {
+          "scope": "planner",
+          "total_tokens": 13996,
+          "calls": 10,
+          "mean_tokens_per_run": 1399.6,
+          "share_of_tokens": 0.2321561862424735
+        },
+        {
+          "scope": "demand",
+          "total_tokens": 10513,
+          "calls": 9,
+          "mean_tokens_per_run": 1168.111111111111,
+          "share_of_tokens": 0.1743825368653275
+        },
+        {
+          "scope": "analyst",
+          "total_tokens": 9518,
+          "calls": 9,
+          "mean_tokens_per_run": 1057.5555555555557,
+          "share_of_tokens": 0.15787814951813825
+        },
+        {
+          "scope": "runner_planner",
+          "total_tokens": 9030,
+          "calls": 9,
+          "mean_tokens_per_run": 1003.3333333333334,
+          "share_of_tokens": 0.14978353542223033
+        },
+        {
+          "scope": "modifier",
+          "total_tokens": 8619,
+          "calls": 9,
+          "mean_tokens_per_run": 957.6666666666666,
+          "share_of_tokens": 0.1429661452717833
+        },
+        {
+          "scope": "builder",
+          "total_tokens": 8611,
+          "calls": 10,
+          "mean_tokens_per_run": 861.1,
+          "share_of_tokens": 0.1428334466800471
+        }
+      ]
+    },
+    {
+      "file": "experiment/summary_multi_medium.json",
+      "scenario": "medium",
+      "query": "Build a 1 km network in Albany with 800 veh/hour from \"Colonie Street\" to \"Lark Street\", run the simulation, and report the mean speed.",
+      "runs": 10,
+      "ok_runs": 10,
+      "error_runs": 0,
+      "mean_total_tokens_per_run": 5310.1,
+      "roles": [
+        {
+          "scope": "planner",
+          "total_tokens": 12922,
+          "calls": 10,
+          "mean_tokens_per_run": 1292.2,
+          "share_of_tokens": 0.24334758290804318
+        },
+        {
+          "scope": "demand",
+          "total_tokens": 10754,
+          "calls": 10,
+          "mean_tokens_per_run": 1075.4,
+          "share_of_tokens": 0.20251972655882186
+        },
+        {
+          "scope": "analyst",
+          "total_tokens": 10681,
+          "calls": 10,
+          "mean_tokens_per_run": 1068.1,
+          "share_of_tokens": 0.2011449878533361
+        },
+        {
+          "scope": "runner_planner",
+          "total_tokens": 10274,
+          "calls": 10,
+          "mean_tokens_per_run": 1027.4,
+          "share_of_tokens": 0.19348034876932638
+        },
+        {
+          "scope": "builder",
+          "total_tokens": 8470,
+          "calls": 10,
+          "mean_tokens_per_run": 847.0,
+          "share_of_tokens": 0.1595073539104725
+        }
+      ]
+    },
+    {
+      "file": "experiment/summary_multi_simple.json",
+      "scenario": "simple",
+      "query": "generate a 0.5 km simulation in Troy with medium traffic",
+      "runs": 10,
+      "ok_runs": 9,
+      "error_runs": 1,
+      "mean_total_tokens_per_run": 4845.5,
+      "roles": [
+        {
+          "scope": "planner",
+          "total_tokens": 12376,
+          "calls": 10,
+          "mean_tokens_per_run": 1237.6,
+          "share_of_tokens": 0.25541223815911673
+        },
+        {
+          "scope": "analyst",
+          "total_tokens": 9684,
+          "calls": 9,
+          "mean_tokens_per_run": 1076.0,
+          "share_of_tokens": 0.19985553606438963
+        },
+        {
+          "scope": "runner_planner",
+          "total_tokens": 9385,
+          "calls": 9,
+          "mean_tokens_per_run": 1042.7777777777778,
+          "share_of_tokens": 0.19368486224331855
+        },
+        {
+          "scope": "demand",
+          "total_tokens": 8933,
+          "calls": 9,
+          "mean_tokens_per_run": 992.5555555555555,
+          "share_of_tokens": 0.18435661954390672
+        },
+        {
+          "scope": "builder",
+          "total_tokens": 8077,
+          "calls": 10,
+          "mean_tokens_per_run": 807.7,
+          "share_of_tokens": 0.1666907439892684
+        }
+      ]
+    }
+  ],
+  "overall": {
+    "grand_total_tokens": 161843,
+    "roles": [
+      {
+        "scope": "planner",
+        "total_tokens": 39294,
+        "calls": 30,
+        "mean_tokens_per_run_across_tasks": 1309.8,
+        "share_of_tokens": 0.24279085286357766
+      },
+      {
+        "scope": "demand",
+        "total_tokens": 30200,
+        "calls": 28,
+        "mean_tokens_per_run_across_tasks": 1078.6888888888889,
+        "share_of_tokens": 0.18660059440321794
+      },
+      {
+        "scope": "analyst",
+        "total_tokens": 29883,
+        "calls": 28,
+        "mean_tokens_per_run_across_tasks": 1067.2185185185185,
+        "share_of_tokens": 0.18464190604474706
+      },
+      {
+        "scope": "runner_planner",
+        "total_tokens": 28689,
+        "calls": 28,
+        "mean_tokens_per_run_across_tasks": 1024.5037037037036,
+        "share_of_tokens": 0.17726438585542778
+      },
+      {
+        "scope": "builder",
+        "total_tokens": 25158,
+        "calls": 30,
+        "mean_tokens_per_run_across_tasks": 838.6,
+        "share_of_tokens": 0.1554469454965615
+      },
+      {
+        "scope": "modifier",
+        "total_tokens": 8619,
+        "calls": 9,
+        "mean_tokens_per_run_across_tasks": 957.6666666666666,
+        "share_of_tokens": 0.05325531533646806
+      }
+    ],
+    "scenario_role_matrix": {
+      "complex": {
+        "analyst": 9518,
+        "builder": 8611,
+        "demand": 10513,
+        "modifier": 8619,
+        "planner": 13996,
+        "runner_planner": 9030
+      },
+      "medium": {
+        "analyst": 10681,
+        "builder": 8470,
+        "demand": 10754,
+        "modifier": 0,
+        "planner": 12922,
+        "runner_planner": 10274
+      },
+      "simple": {
+        "analyst": 9684,
+        "builder": 8077,
+        "demand": 8933,
+        "modifier": 0,
+        "planner": 12376,
+        "runner_planner": 9385
+      }
+    },
+    "scenarios": [
+      "complex",
+      "medium",
+      "simple"
+    ],
+    "role_order": [
+      "analyst",
+      "builder",
+      "demand",
+      "modifier",
+      "planner",
+      "runner_planner"
+    ]
+  }
+}

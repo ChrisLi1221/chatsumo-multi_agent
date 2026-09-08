@@ -1,0 +1,290 @@
+{
+  "source_manifest": "experiment/top10-seeded-main/run_manifest.json",
+  "primary_cities": [
+    "albany",
+    "troy",
+    "ann_arbor",
+    "los_angeles"
+  ],
+  "primary_seeds": [
+    42,
+    43,
+    44
+  ],
+  "primary": {
+    "run_count": 12,
+    "top10_reduction_pct": {
+      "mean": 5.1850153493513895,
+      "sample_sd": 4.962432584961008
+    },
+    "global_delay_reduction_pct": {
+      "mean": 0.7202213274577179,
+      "sample_sd": 0.5607246519322472
+    },
+    "neighbor_reduction_pct": {
+      "mean": 7.654764322906436,
+      "sample_sd": 13.365364838496642
+    },
+    "co2_reduction_pct": {
+      "mean": 0.1026307853290757,
+      "sample_sd": 0.2539085262992907
+    },
+    "speed_improvement_pct": {
+      "mean": 0.269916053344027,
+      "sample_sd": 0.344686814954544
+    },
+    "applied_count": 9,
+    "pooled": {
+      "top10_reduction_pct": 5.772040863110728,
+      "neighbor_reduction_pct": 10.613115445555488,
+      "global_delay_reduction_pct": 0.7359369770849611,
+      "co2_reduction_pct": 0.09802607733082613
+    }
+  },
+  "by_city": {
+    "albany": {
+      "run_count": 3,
+      "top10_reduction_pct": {
+        "mean": 2.692952697693196,
+        "sample_sd": 3.197924032782444
+      },
+      "global_delay_reduction_pct": {
+        "mean": 0.7365758877533879,
+        "sample_sd": 0.6870198074982082
+      },
+      "neighbor_reduction_pct": {
+        "mean": 0.02821875540491477,
+        "sample_sd": 0.631113795334807
+      },
+      "co2_reduction_pct": {
+        "mean": 0.26597191434492756,
+        "sample_sd": 0.24714900376250132
+      },
+      "speed_improvement_pct": {
+        "mean": 0.19819513232814204,
+        "sample_sd": 0.21574722689741957
+      },
+      "applied_count": 2,
+      "pooled": {
+        "top10_reduction_pct": 2.4695912424372857,
+        "neighbor_reduction_pct": 0.014991508020589794,
+        "global_delay_reduction_pct": 0.7376048741431829,
+        "co2_reduction_pct": 0.2667924124801102
+      }
+    },
+    "troy": {
+      "run_count": 3,
+      "top10_reduction_pct": {
+        "mean": 6.471975774352479,
+        "sample_sd": 4.357252471303202
+      },
+      "global_delay_reduction_pct": {
+        "mean": 0.6560003373380178,
+        "sample_sd": 0.11645738108488199
+      },
+      "neighbor_reduction_pct": {
+        "mean": 5.9866077742754396,
+        "sample_sd": 11.468091471268304
+      },
+      "co2_reduction_pct": {
+        "mean": 0.12572874126209146,
+        "sample_sd": 0.12655555534461232
+      },
+      "speed_improvement_pct": {
+        "mean": 0.16123220862837387,
+        "sample_sd": 0.09384432796643236
+      },
+      "applied_count": 3,
+      "pooled": {
+        "top10_reduction_pct": 6.478804935056493,
+        "neighbor_reduction_pct": 6.101110319044645,
+        "global_delay_reduction_pct": 0.6560757270797968,
+        "co2_reduction_pct": 0.12618295141318958
+      }
+    },
+    "ann_arbor": {
+      "run_count": 3,
+      "top10_reduction_pct": {
+        "mean": 6.635993985181399,
+        "sample_sd": 6.805614544535378
+      },
+      "global_delay_reduction_pct": {
+        "mean": 0.6071188174715118,
+        "sample_sd": 0.5505495236036423
+      },
+      "neighbor_reduction_pct": {
+        "mean": 14.586155628609042,
+        "sample_sd": 23.915654734792028
+      },
+      "co2_reduction_pct": {
+        "mean": -0.012540370782158453,
+        "sample_sd": 0.4172275108135994
+      },
+      "speed_improvement_pct": {
+        "mean": 0.14887502288173002,
+        "sample_sd": 0.1441713402008758
+      },
+      "applied_count": 2,
+      "pooled": {
+        "top10_reduction_pct": 6.606823986961796,
+        "neighbor_reduction_pct": 18.057551208314514,
+        "global_delay_reduction_pct": 0.603639857677718,
+        "co2_reduction_pct": -0.014159717577189035
+      }
+    },
+    "los_angeles": {
+      "run_count": 3,
+      "top10_reduction_pct": {
+        "mean": 4.939138940178485,
+        "sample_sd": 6.698069977713072
+      },
+      "global_delay_reduction_pct": {
+        "mean": 0.8811902672679542,
+        "sample_sd": 0.9359278560743348
+      },
+      "neighbor_reduction_pct": {
+        "mean": 10.018075133336346,
+        "sample_sd": 10.33164345488078
+      },
+      "co2_reduction_pct": {
+        "mean": 0.03136285649144218,
+        "sample_sd": 0.18726640049977772
+      },
+      "speed_improvement_pct": {
+        "mean": 0.5713618495378622,
+        "sample_sd": 0.6273720200254395
+      },
+      "applied_count": 2,
+      "pooled": {
+        "top10_reduction_pct": 5.704133960295687,
+        "neighbor_reduction_pct": 12.49654254443281,
+        "global_delay_reduction_pct": 0.8845158901418237,
+        "co2_reduction_pct": 0.03150623384912121
+      }
+    }
+  },
+  "supplementary_runs": [
+    {
+      "case_id": "manhattan_equal_scale_delay_seed_43",
+      "city_key": "manhattan",
+      "city": "Manhattan",
+      "seed": 43,
+      "action": "TLS",
+      "optimization_applied": true,
+      "top10_reduction_pct": 15.697307604406818,
+      "global_delay_reduction_pct": 2.3310390285310234,
+      "neighbor_reduction_pct": 11.918734061019421,
+      "co2_reduction_pct": 1.0060469626348323,
+      "speed_improvement_pct": 0.4893822582504148,
+      "baseline_top10_loss_s": 106019.71000000008,
+      "optimized_top10_loss_s": 89377.47000000002,
+      "baseline_neighbor_loss_s": 34773.24000000002,
+      "optimized_neighbor_loss_s": 30628.70999999999,
+      "baseline_mean_delay_s": 238.8856041666671,
+      "optimized_mean_delay_s": 233.31708749999996,
+      "baseline_completed_trips": 2400,
+      "optimized_completed_trips": 2400,
+      "baseline_co2": 1946577.3017899992,
+      "optimized_co2": 1926993.819970002,
+      "optimized_throughput": 1.0,
+      "optimized_teleports": 0
+    },
+    {
+      "case_id": "manhattan_equal_scale_delay_seed_44",
+      "city_key": "manhattan",
+      "city": "Manhattan",
+      "seed": 44,
+      "action": "TLS",
+      "optimization_applied": true,
+      "top10_reduction_pct": 2.582522312297686,
+      "global_delay_reduction_pct": 0.4831949678573366,
+      "neighbor_reduction_pct": -0.8517440212557181,
+      "co2_reduction_pct": 0.2747323858642403,
+      "speed_improvement_pct": 0.184989049318518,
+      "baseline_top10_loss_s": 111180.84,
+      "optimized_top10_loss_s": 108309.57,
+      "baseline_neighbor_loss_s": 39338.11000000001,
+      "optimized_neighbor_loss_s": 39673.170000000006,
+      "baseline_mean_delay_s": 236.73414999999983,
+      "optimized_mean_delay_s": 235.5902625,
+      "baseline_completed_trips": 2400,
+      "optimized_completed_trips": 2400,
+      "baseline_co2": 1936015.8298300002,
+      "optimized_co2": 1930696.967349999,
+      "optimized_throughput": 1.0,
+      "optimized_teleports": 0
+    }
+  ],
+  "primary_action_counts": {
+    "Bundle": 1,
+    "TLS": 2,
+    "Rerouting": 3,
+    "No-op": 3,
+    "Corridor speed": 3
+  },
+  "all_valid_action_counts": {
+    "Bundle": 1,
+    "TLS": 4,
+    "Rerouting": 3,
+    "No-op": 3,
+    "Corridor speed": 3
+  },
+  "candidate_constraint_pass_rates": {
+    "families": [
+      "TLS",
+      "Corridor speed",
+      "Routing (1 edge)",
+      "Routing (3 edges)",
+      "Bundle"
+    ],
+    "totals": {
+      "Bundle": 33,
+      "Routing (3 edges)": 12,
+      "Routing (1 edge)": 12,
+      "Corridor speed": 12,
+      "TLS": 11
+    },
+    "rates": {
+      "TLS": {
+        "top10_improvement": 27.272727272727273,
+        "global_delay": 27.272727272727273,
+        "neighbor_spillover": 72.72727272727273,
+        "throughput": 100.0,
+        "teleports": 100.0,
+        "all": 18.181818181818183
+      },
+      "Corridor speed": {
+        "top10_improvement": 50.0,
+        "global_delay": 58.333333333333336,
+        "neighbor_spillover": 75.0,
+        "throughput": 100.0,
+        "teleports": 100.0,
+        "all": 33.333333333333336
+      },
+      "Routing (1 edge)": {
+        "top10_improvement": 50.0,
+        "global_delay": 8.333333333333334,
+        "neighbor_spillover": 50.0,
+        "throughput": 100.0,
+        "teleports": 50.0,
+        "all": 8.333333333333334
+      },
+      "Routing (3 edges)": {
+        "top10_improvement": 91.66666666666667,
+        "global_delay": 16.666666666666668,
+        "neighbor_spillover": 83.33333333333333,
+        "throughput": 100.0,
+        "teleports": 83.33333333333333,
+        "all": 16.666666666666668
+      },
+      "Bundle": {
+        "top10_improvement": 66.66666666666667,
+        "global_delay": 30.303030303030305,
+        "neighbor_spillover": 60.60606060606061,
+        "throughput": 100.0,
+        "teleports": 78.78787878787878,
+        "all": 27.272727272727273
+      }
+    }
+  }
+}
