@@ -2,7 +2,10 @@
 from typing import Optional, List, Dict, Any
 from agents.contracts import Proposal
 from agents.state_refactored import AgentState
-import json, os, re, httpx
+import json, os, re, time, httpx
+from agents.local_config import load_local_api_key
+
+load_local_api_key()
 
 Json = Dict[str, Any]
 
@@ -735,15 +738,27 @@ def _extract_json_obj(text: str) -> Json:
     text = (text or "").strip()
     # direct json
     try:
-        return json.loads(text)
-    except Exception:
-        pass
+        parsed = json.loads(text)
+    except json.JSONDecodeError:
+        parsed = None
+    else:
+        if not isinstance(parsed, dict):
+            raise ValueError("LLM JSON must be an object")
+        return parsed
 
     # extract first {...}
     m = re.search(r"\{.*\}", text, flags=re.DOTALL)
     if not m:
         raise ValueError(f"LLM output is not JSON: {text[:200]}")
     return json.loads(m.group(0))
+
+
+class LLMOutputError(RuntimeError):
+    """A response arrived, but cannot be used as a completed JSON decision."""
+
+    def __init__(self, category: str, message: str):
+        self.category = category
+        super().__init__(f"{category}: {message}")
 
 
 def _extract_usage(data: Dict[str, Any]) -> Dict[str, int]:
@@ -876,12 +891,28 @@ def call_llm(
     active_payload = dict(payload)
     last_err: Optional[Exception] = None
     for attempt in range(retries + 1):
+        record: Dict[str, Any] = {}
         try:
             with httpx.Client(timeout=timeout) as client:
                 while True:
+                    record = {
+                        "scope": usage_scope, "requested_model": mdl,
+                        "attempt": attempt + 1,
+                        "max_completion_tokens": active_payload["max_completion_tokens"],
+                        "response_format": active_payload.get("response_format"),
+                    }
+                    if state is not None:
+                        if not isinstance(state.context, dict):
+                            state.context = {}
+                        state.context.setdefault("llm_response_metadata", []).append(record)
+                    started = time.monotonic()
                     resp = client.post(url, json=active_payload, headers=headers)
+                    record.update(http_status=resp.status_code, elapsed_s=time.monotonic()-started)
+                    record["request_id"] = getattr(resp, "headers", {}).get("x-request-id")
                     if not resp.is_error:
                         break
+                    detail = resp.text.replace(api_key, "[REDACTED]")
+                    record.update(outcome="http_error", error=detail)
                     unsupported_param = unsupported_optional_request_parameter(
                         resp,
                         active_payload,
@@ -900,27 +931,69 @@ def call_llm(
                                 f"model={mdl} omitted={unsupported_param}"
                             )
                         continue
-                    detail = resp.text
+                    if resp.status_code == 400 and (
+                        "max_tokens or model output limit was reached" in detail.lower()
+                    ):
+                        raise LLMOutputError("http_output_limit", detail)
                     if _llm_debug_enabled():
                         print(f"[llm_http_error] scope={usage_scope} model={mdl} status={resp.status_code} body={detail}")
                     raise RuntimeError(f"OpenAI API error {resp.status_code}: {detail}")
                 data = resp.json()
+            record.update({
+                "response_model": data.get("model"), "response_id": data.get("id"),
+                "created": data.get("created"), "system_fingerprint": data.get("system_fingerprint"),
+                "usage": data.get("usage") or {},
+            })
             usage = _extract_usage(data)
             _accumulate_usage(state, usage, usage_scope)
 
             choices = data.get("choices") or []
-            content = ""
-            if choices:
-                content = ((choices[0].get("message") or {}).get("content") or "")
+            choice = choices[0] if choices else {}
+            message = choice.get("message") or {}
+            content = message.get("content") or ""
+            finish = choice.get("finish_reason")
+            refusal = message.get("refusal")
+            record.update(finish_reason=finish, choice_count=len(choices),
+                          raw_content=content.replace(api_key, "[REDACTED]") if isinstance(content, str) else None,
+                          content_chars=len(content) if isinstance(content, str) else None,
+                          refusal=str(refusal).replace(api_key, "[REDACTED]") if refusal else None)
+            # Check termination BEFORE parsing, including syntactically valid truncated JSON.
+            if finish == "length":
+                raise LLMOutputError("output_token_limit", "Response ended with finish_reason=length")
+            if refusal or finish == "content_filter":
+                raise LLMOutputError("refusal_or_filter", "Response was refused or filtered")
+            if finish in {"tool_calls", "function_call"}:
+                raise LLMOutputError("unexpected_tool_call", "Expected a JSON decision, received a tool call")
+            if not choices:
+                raise LLMOutputError("missing_choices", "Response contains no choices")
+            if not isinstance(content, str):
+                raise LLMOutputError("unsupported_content_type", "Expected text content")
+            if not content.strip():
+                raise LLMOutputError("empty_content", "No visible response; termination was not length")
             if _llm_debug_enabled():
-                print(f"[llm_raw] scope={usage_scope} model={mdl} content={content!r}")
-            return _extract_json_obj(content)
+                print(f"[llm_raw] scope={usage_scope} model={mdl} content={record['raw_content']!r}")
+            try:
+                result = _extract_json_obj(content)
+            except (ValueError, TypeError) as exc:
+                raise LLMOutputError("invalid_json_object", str(exc).replace(api_key, "[REDACTED]")) from exc
+            record["outcome"] = "ok"
+            return result
 
         except Exception as e:
             last_err = e
+            record["outcome"] = e.category if isinstance(e, LLMOutputError) else record.get("outcome", "transport_or_protocol_error")
+            record["error"] = str(e).replace(api_key, "[REDACTED]")
             if _llm_debug_enabled():
                 print(f"[llm_error] scope={usage_scope} model={mdl} attempt={attempt + 1} error={e}")
+            # Identical-budget retries cannot reliably remedy a truncated response;
+            # do not retry refusals or substitute a deterministic selector.
+            if isinstance(e, LLMOutputError) and e.category in {
+                "output_token_limit", "http_output_limit", "refusal_or_filter"
+            }:
+                raise
 
+    if isinstance(last_err, LLMOutputError):
+        raise last_err
     raise RuntimeError(f"call_llm failed after {retries+1} attempts: {last_err}")
 
 

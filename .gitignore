@@ -75,6 +75,13 @@ data/*.db-shm
 texput.log
 *.log
 
+# ---------- 本地归档与投稿打包 ----------
+# 保留可编辑源文件、当前论文/演示文稿及汇总证据；不重复提交 ZIP 和手工备份。
+/chatsumo_optimizer.zip
+/paper/multra_revision/*.zip
+/paper/multra_revision_history/
+/paper/multra_revision_private/
+
 # ---------- 第三方参考文献 PDF ----------
 # 下载的他人论文,未被任何 .tex/.bib 引用,占 8.2M
 paper/figures/chen-et-al-2023-curbside-parking-monitoring-with-roadside-lidar1.pdf

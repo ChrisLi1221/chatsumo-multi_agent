@@ -148,3 +148,72 @@ def test_call_llm_does_not_hide_unrelated_bad_requests(monkeypatch):
         )
 
     assert len(requests) == 1
+
+
+@pytest.mark.parametrize('content', ['', '{"mutation_id":"mutation_001"}'])
+def test_token_limit_is_not_json_error_and_is_not_silently_retried(monkeypatch, content):
+    monkeypatch.setenv('OPENAI_API_KEY', 'test-key')
+    requests = []
+    responses = [_FakeResponse(200, {
+        'id': 'diagnostic-response', 'model': 'test-model',
+        'choices': [{'finish_reason': 'length', 'message': {'content': content}}],
+        'usage': {'prompt_tokens': 100, 'completion_tokens': 500,
+                  'completion_tokens_details': {'reasoning_tokens': 500}},
+    })]
+    monkeypatch.setattr(llm_agents.httpx, 'Client', lambda timeout: _FakeClient(responses, requests))
+    state = AgentState.create(goal='test', workspace='.')
+    with pytest.raises(llm_agents.LLMOutputError) as exc:
+        llm_agents.call_llm('JSON', 'test', state=state, max_tokens=500, retries=2)
+    assert exc.value.category == 'output_token_limit'
+    assert len(requests) == 1
+    log = state.context['llm_response_metadata'][0]
+    assert log['finish_reason'] == 'length'
+    assert log['raw_content'] == content
+    assert log['max_completion_tokens'] == 500
+    assert log['usage']['completion_tokens_details']['reasoning_tokens'] == 500
+    assert state.context['token_usage']['completion_tokens'] == 500
+
+
+@pytest.mark.parametrize(('choice', 'category'), [
+    ({'finish_reason': 'stop', 'message': {'content': ''}}, 'empty_content'),
+    ({'finish_reason': 'stop', 'message': {'content': 'not json'}}, 'invalid_json_object'),
+    ({'finish_reason': 'stop', 'message': {'content': '[]'}}, 'invalid_json_object'),
+    ({'finish_reason': 'stop', 'message': {'content': None, 'refusal': 'Declined'}}, 'refusal_or_filter'),
+    ({'finish_reason': 'content_filter', 'message': {'content': ''}}, 'refusal_or_filter'),
+    ({'finish_reason': 'tool_calls', 'message': {'content': ''}}, 'unexpected_tool_call'),
+    (None, 'missing_choices'),
+])
+def test_distinguishes_failure_modes(monkeypatch, choice, category):
+    monkeypatch.setenv('OPENAI_API_KEY', 'test-key')
+    responses = [_FakeResponse(200, {'choices': [choice] if choice else []})]
+    monkeypatch.setattr(llm_agents.httpx, 'Client', lambda timeout: _FakeClient(responses, []))
+    state = AgentState.create(goal='test', workspace='.')
+    with pytest.raises(llm_agents.LLMOutputError) as exc:
+        llm_agents.call_llm('JSON', 'test', state=state, retries=0)
+    assert exc.value.category == category
+    assert state.context['llm_response_metadata'][0]['outcome'] == category
+
+
+def test_api_reported_output_limit_preserves_http_evidence(monkeypatch):
+    monkeypatch.setenv('OPENAI_API_KEY', 'test-key')
+    requests = []
+    responses = [_FakeResponse(400, {'error': {'message':
+        'Could not finish the message because max_tokens or model output limit was reached.'}})]
+    monkeypatch.setattr(llm_agents.httpx, 'Client', lambda timeout: _FakeClient(responses, requests))
+    state = AgentState.create(goal='test', workspace='.')
+    with pytest.raises(llm_agents.LLMOutputError) as exc:
+        llm_agents.call_llm('JSON', 'test', state=state, retries=2)
+    assert exc.value.category == 'http_output_limit'
+    assert len(requests) == 1
+    assert state.context['llm_response_metadata'][0]['http_status'] == 400
+
+
+def test_diagnostic_log_redacts_secret_in_response(monkeypatch):
+    monkeypatch.setenv('OPENAI_API_KEY', 'test-secret-value')
+    responses = [_FakeResponse(200, {'choices': [{'finish_reason': 'stop',
+                  'message': {'content': '{"echo":"test-secret-value"}'}}]})]
+    monkeypatch.setattr(llm_agents.httpx, 'Client', lambda timeout: _FakeClient(responses, []))
+    state = AgentState.create(goal='test', workspace='.')
+    llm_agents.call_llm('JSON', 'test', state=state, retries=0)
+    assert 'test-secret-value' not in json.dumps(state.context)
+    assert '[REDACTED]' in state.context['llm_response_metadata'][0]['raw_content']

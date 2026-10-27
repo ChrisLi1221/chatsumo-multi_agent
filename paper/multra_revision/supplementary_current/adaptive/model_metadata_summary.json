@@ -1,0 +1,10 @@
+{
+  "response_models": {
+    "gpt-5.6-luna": 108
+  },
+  "finish_reasons": {
+    "stop": 108
+  },
+  "prompt_tokens": 3145351,
+  "completion_tokens": 55807
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "repeat": 0,
+    "prefix_sha256": "392950f18a936c3dc177b48b9ec138bf143bfb8033fc2d2cabe1e1adc9bda534",
+    "shared_payload_sha256": "eeb8d290d08d7507a9bcbf0f0f79f1f18646c9fcfc38a12d8647cb1d2d9c0c6d"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "repeat": 0,
+    "prefix_sha256": "affed596e2a8d160f200151e8f6e03d3bb5b7ddb0d61504adbfc8a43f724967c",
+    "shared_payload_sha256": "974e3313e1b8bd70790ed2ccf1b982b1c5ad0b66ff7cef17745af2d105d2b346"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "repeat": 0,
+    "prefix_sha256": "cbeda85162ac788c2b8eaedf738dc381b7e53eaaddb95038e924a7de3bb43efa",
+    "shared_payload_sha256": "745a5e5c221c71bf59c4d113aba740e931c53c41b0efbe60c7266e56ca52a261"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "repeat": 0,
+    "prefix_sha256": "b82745f045d6f35c03b30513ecb44b7ae413b8343b1a4957b641cc4bdae9bbce",
+    "shared_payload_sha256": "12632b6c9c191fa10867b3361d634761526f9db980973578979a702f8244e0dd"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "repeat": 0,
+    "prefix_sha256": "c6da12aca3c55af45dd66dd19fa61d92eacd4769c28b981d4721982e00b9661a",
+    "shared_payload_sha256": "c9be9a93dacf73a67f0b282fd61cb4161e10a8eb028a9e71ee105fdd45bef51f"
+  }
+]

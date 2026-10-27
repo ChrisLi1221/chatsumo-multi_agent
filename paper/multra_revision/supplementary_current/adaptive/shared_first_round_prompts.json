@@ -1,0 +1,152 @@
+[
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "da36eef00f9c3c20aef0101d5a4830b05793611a25b2eaef867c3bcfedd5734c"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "prompt_sha256": "372a310211a64642b21750f224f3cec77f215c4e7eac633afc8838515db70411"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "875739fe0c7a302d4ec4e027ea42eda3dee5b050c3991fbe3fac85eb6ac13fbe"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "6e4401c2faa30315ffdd9489ec3f0b843c2fcbf101ff09b0e8f8e6e4b2e330d9"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "prompt_sha256": "717e19c89c9fd231b36fcb30e54dbeb3ea0873cc51c3b133912c72984ddb7ed4"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "948818709562c04ef08a529ab9e0b7f4113cd4a1ece3ef9fc49eec890fe3f6d8"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "6e037b6d30ccadbfb5b2b0e83c14f70fec4c9ee0b2d2f79026d169180578cf59"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "prompt_sha256": "d9d9c86e3925bd108df0336a2392cb4bb530ad6c82216863bd73777eb66eff29"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "prompt_sha256": "51559262747a52289107202355cec1f913b7efe6594642d32a26b49e0aac0867"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "5a701878d9b18233060059b18442c5d04fe25ae418031b6f76154c958f3c1fe5"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "33885e60e8364b862a7eb94bedb104978c7bc7263818468a10694f84dd5d0f7e"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "prompt_sha256": "75a29078fe70e79522855392d3b63ec5360507b0eb96ab67da1c906d46c36ffc"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "be267a254f01d02faf9226a11afc67dc08f041da9cc9069e9ea4f5bd6007cffa"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "prompt_sha256": "79816fbefd4bd45bbb49293b4385e20ceda118332c25dc41a971f99378de738c"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "prompt_sha256": "90dcebfb1266b88acdde8fd9f8fde8811896b103cd580bab55a07eb95f9984f8"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "fb7ecaad0a228e75f0d51ea50c745ffd1de12b7f556879a2b2e99d84a71ed0a4"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "576168e8d6ccb83b9fafcfb96844ab0b8668718da609717a086478bdf5d24d0d"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "prompt_sha256": "1374c0e5ba680ecc58b70a6575538f4f699da971ce7213ee866e893f5c5032cf"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_003_reroute_flows__edges_1",
+    "prompt_sha256": "cbce259ae2eb873959829e2441c8acbfc3a6c53dc2b5ff5c816c7394a657ad87"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "1e38ef3f223017430c49e164e623966813001a61c59d583ca52ae20233dc7aeb"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "prompt_sha256": "c7fa5c61117cd9f2dbd923436ea7e762ff446f2898a434ac17d3b1ad05b2588d"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "3159067799525cf5506f8684f7c3c0a36db1752943bc3e7837a045c662b34638"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "979b192b27f658184da58bcd7e1e7ef0fb92a0230f9de3112a2c5967bc33976d"
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_003_reroute_flows__edges_1",
+    "prompt_sha256": "bb5299363cb62571ea11dd7758564af3d74b02107fad6bed267e35288e742cbc"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "prompt_sha256": "183f1cba5d0b29ca5bdce692f7b1aa214048515c9f7172b8ad0f6c281aa7ca15"
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "e4a250c318660eebf23e4fa997064718cbe62cf87d489423ed01bf263c418891"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "7a269c4d6e4093aacd6767aa1262c1341c8a19dd3cc31090c9077ce2d6278024"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_003_reroute_flows__edges_1",
+    "prompt_sha256": "30fa0ae34c4ecb548d9d4b3456925c26eecfd4cf9e6dfa22b7b5fbcfbc892951"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "prompt_sha256": "ad0d68e9220dcae7becc2685561c6545400a5eb5a91142d7ba93d00eaa0a9933"
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "prompt_sha256": "f9952d2df6735d4bd758cab92b6d1aef908fb290b01aa61553ab16c508735ff7"
+  }
+]

@@ -1,0 +1,260 @@
+{
+  "1200_catalog_first": {
+    "n": 6,
+    "mean_difference_pp": 8.651231182243174,
+    "median_difference_pp": 5.117032426400126,
+    "wins": 4,
+    "ties": 2,
+    "losses": 0,
+    "wilcoxon_p": 0.06788915486182899,
+    "original_zsplit_auto_p": 0.125,
+    "exact_case_signflip_p": 0.125,
+    "exact_city_signflip_p": 0.5,
+    "city_cluster_bootstrap_ci95_pp": [
+      3.411354950933417,
+      13.89110741355293
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_demand1200_delay_seed_42",
+        "difference_pp": 3.635411689164891
+      },
+      {
+        "case": "albany_equal_scale_demand1200_delay_seed_43",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "albany_equal_scale_demand1200_delay_seed_44",
+        "difference_pp": 6.59865316363536
+      },
+      {
+        "case": "manhattan_equal_scale_demand1200_delay_seed_42",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "manhattan_equal_scale_demand1200_delay_seed_43",
+        "difference_pp": 20.652042725528695
+      },
+      {
+        "case": "manhattan_equal_scale_demand1200_delay_seed_44",
+        "difference_pp": 21.021279515130097
+      }
+    ],
+    "holm_wilcoxon_p": 0.13577830972365798
+  },
+  "1200_catalog_random": {
+    "n": 6,
+    "mean_difference_pp": 4.12800380740346,
+    "median_difference_pp": 1.2197283423528482,
+    "wins": 4,
+    "ties": 1,
+    "losses": 1,
+    "wilcoxon_p": 0.22491588401596185,
+    "original_zsplit_auto_p": 0.25,
+    "exact_case_signflip_p": 0.3125,
+    "exact_city_signflip_p": 0.5,
+    "city_cluster_bootstrap_ci95_pp": [
+      2.292723664348817,
+      5.963283950458105
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_demand1200_delay_seed_42",
+        "difference_pp": 0.27951782941109116
+      },
+      {
+        "case": "albany_equal_scale_demand1200_delay_seed_43",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "albany_equal_scale_demand1200_delay_seed_44",
+        "difference_pp": 6.59865316363536
+      },
+      {
+        "case": "manhattan_equal_scale_demand1200_delay_seed_42",
+        "difference_pp": -4.9221297294489865
+      },
+      {
+        "case": "manhattan_equal_scale_demand1200_delay_seed_43",
+        "difference_pp": 20.652042725528695
+      },
+      {
+        "case": "manhattan_equal_scale_demand1200_delay_seed_44",
+        "difference_pp": 2.1599388552946053
+      }
+    ],
+    "holm_wilcoxon_p": 0.22491588401596185
+  },
+  "2400_catalog_first": {
+    "n": 6,
+    "mean_difference_pp": 0.922707540219437,
+    "median_difference_pp": -0.11104412840042777,
+    "wins": 2,
+    "ties": 1,
+    "losses": 3,
+    "wilcoxon_p": 0.6858304344516057,
+    "original_zsplit_auto_p": 0.9375,
+    "exact_case_signflip_p": 0.6875,
+    "exact_city_signflip_p": 1.0,
+    "city_cluster_bootstrap_ci95_pp": [
+      -0.7914436243716523,
+      2.636858704810526
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_delay_seed_42",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_43",
+        "difference_pp": 1.8332301546955758
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_44",
+        "difference_pp": 6.077345959736003
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_42",
+        "difference_pp": -1.6959993309976866
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_43",
+        "difference_pp": -0.45624328531641467
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_44",
+        "difference_pp": -0.22208825680085553
+      }
+    ],
+    "holm_wilcoxon_p": 0.6858304344516057
+  },
+  "2400_catalog_random": {
+    "n": 6,
+    "mean_difference_pp": -1.1399820849112798,
+    "median_difference_pp": -0.3576391686920246,
+    "wins": 1,
+    "ties": 1,
+    "losses": 4,
+    "wilcoxon_p": 0.22491588401596185,
+    "original_zsplit_auto_p": 0.25,
+    "exact_case_signflip_p": 0.3125,
+    "exact_city_signflip_p": 0.5,
+    "city_cluster_bootstrap_ci95_pp": [
+      -1.614558718457592,
+      -0.6654054513649678
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_delay_seed_42",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_43",
+        "difference_pp": 1.8332301546955758
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_44",
+        "difference_pp": -3.829446508790479
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_42",
+        "difference_pp": -4.128397817988727
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_43",
+        "difference_pp": -0.618237628538175
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_44",
+        "difference_pp": -0.09704070884587424
+      }
+    ],
+    "holm_wilcoxon_p": 0.4498317680319237
+  },
+  "3600_catalog_first": {
+    "n": 6,
+    "mean_difference_pp": 1.765636697659976,
+    "median_difference_pp": 0.0,
+    "wins": 2,
+    "ties": 3,
+    "losses": 1,
+    "wilcoxon_p": 0.28504940740261275,
+    "original_zsplit_auto_p": 0.5,
+    "exact_case_signflip_p": 0.5,
+    "exact_city_signflip_p": 0.5,
+    "city_cluster_bootstrap_ci95_pp": [
+      0.5493652033902618,
+      2.9819081919296906
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_demand3600_delay_seed_42",
+        "difference_pp": 3.1880757087972778
+      },
+      {
+        "case": "albany_equal_scale_demand3600_delay_seed_43",
+        "difference_pp": -1.5399800986264922
+      },
+      {
+        "case": "albany_equal_scale_demand3600_delay_seed_44",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "manhattan_equal_scale_demand3600_delay_seed_42",
+        "difference_pp": 8.945724575789072
+      },
+      {
+        "case": "manhattan_equal_scale_demand3600_delay_seed_43",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "manhattan_equal_scale_demand3600_delay_seed_44",
+        "difference_pp": 0.0
+      }
+    ],
+    "holm_wilcoxon_p": 0.5700988148052255
+  },
+  "3600_catalog_random": {
+    "n": 6,
+    "mean_difference_pp": -0.06574528617611652,
+    "median_difference_pp": 0.0,
+    "wins": 1,
+    "ties": 4,
+    "losses": 1,
+    "wilcoxon_p": 0.6547208460185769,
+    "original_zsplit_auto_p": 1.0,
+    "exact_case_signflip_p": 1.0,
+    "exact_city_signflip_p": 1.0,
+    "city_cluster_bootstrap_ci95_pp": [
+      -0.13149057235223305,
+      0.0
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_demand3600_delay_seed_42",
+        "difference_pp": 3.1880757087972778
+      },
+      {
+        "case": "albany_equal_scale_demand3600_delay_seed_43",
+        "difference_pp": -3.582547425853977
+      },
+      {
+        "case": "albany_equal_scale_demand3600_delay_seed_44",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "manhattan_equal_scale_demand3600_delay_seed_42",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "manhattan_equal_scale_demand3600_delay_seed_43",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "manhattan_equal_scale_demand3600_delay_seed_44",
+        "difference_pp": 0.0
+      }
+    ],
+    "holm_wilcoxon_p": 0.6547208460185769
+  }
+}

@@ -592,7 +592,8 @@ def test_bundle_route_validation_preserves_original_demand():
     assert aggregated["minimum_retention"] == 0.98
 
 
-def test_bundle_evaluation_revalidates_against_previous_step_artifacts(tmp_path, monkeypatch):
+@pytest.mark.parametrize("isolated_available", [True, False])
+def test_bundle_evaluation_revalidates_against_previous_step_artifacts(tmp_path, monkeypatch, isolated_available):
     validations = []
     tool_calls = []
 
@@ -673,7 +674,7 @@ def test_bundle_evaluation_revalidates_against_previous_step_artifacts(tmp_path,
         baseline_kpi,
         {"delay": 0.5, "speed": 0.2, "throughput": 0.2, "co2": 0.1},
         5,
-        {"network": 0.1, "signal": 0.1},
+        {"network": 0.1, "signal": 0.1} if isolated_available else {"network": 0.1},
     )
 
     assert result["status"] == "ok"
@@ -681,3 +682,7 @@ def test_bundle_evaluation_revalidates_against_previous_step_artifacts(tmp_path,
     assert validations[1][1]["cfg_path"] == "after_remove.sumocfg"
     assert validations[1][2]["net"] == "after_remove.net.xml"
     assert tool_calls[-1] == ("runner", "run", {"cfg_path": "after_tls.sumocfg", "gui": False})
+    assert result["interaction"]["isolated_effects_available"] is isolated_available
+    if not isolated_available:
+        assert result["interaction"]["interaction_gain"] is None
+        assert result["interaction"]["additive_single_gain"] is None

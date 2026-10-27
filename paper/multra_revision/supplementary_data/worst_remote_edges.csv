@@ -1,0 +1,901 @@
+case,cohort,arm,edge,name,baseline_loss_s,selected_loss_s,increase_s,nearest_target_midpoint_m
+albany_equal_scale_delay_seed_42,historical_matched,llm,-43763489#6,North Pearl Street,1531.11,1902.9900000000005,371.88000000000056,85.9059853205172
+albany_equal_scale_delay_seed_42,historical_matched,llm,33904608#1,State Street,1434.2799999999995,1746.9599999999998,312.6800000000003,119.53152722190073
+albany_equal_scale_delay_seed_42,historical_matched,llm,669255402,South Pearl Street,1583.1500000000008,1740.7000000000005,157.54999999999973,154.59376976450253
+albany_equal_scale_delay_seed_42,historical_matched,llm,319487943#14,Lark Street,270.13,412.43999999999994,142.30999999999995,247.8672347245595
+albany_equal_scale_delay_seed_42,historical_matched,llm,35970302#2,North Pearl Street,3557.34,3692.129999999999,134.78999999999905,3.199853512272214
+albany_equal_scale_delay_seed_42,historical_matched,llm,669255474#0,Columbia Street,909.66,1039.54,129.88,179.92837693093293
+albany_equal_scale_delay_seed_42,historical_matched,llm,38208897#26,Elk Street,1560.3,1683.7900000000002,123.49000000000024,472.30722449084936
+albany_equal_scale_delay_seed_42,historical_matched,llm,516224402#11,Broadway,2212.35,2326.8000000000006,114.45000000000073,59.73489971532553
+albany_equal_scale_delay_seed_42,historical_matched,llm,5585560#4,Pine Street,1179.7299999999998,1289.2300000000005,109.50000000000068,176.67886751108637
+albany_equal_scale_delay_seed_42,historical_matched,llm,-44092707#14,Clinton Avenue,1899.8800000000003,2007.0100000000004,107.13000000000011,762.3737666164805
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,33904608#1,State Street,1434.2799999999995,1852.4700000000003,418.19000000000074,119.53152722190073
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,516224402#11,Broadway,2212.35,2437.0299999999993,224.67999999999938,59.73489971532553
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,5592836#1,Henry Johnson Boulevard,375.06999999999994,515.9699999999998,140.89999999999986,146.40492904953658
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,-669255492#7,Livingston Avenue,922.2899999999995,1062.4,140.11000000000058,289.1792407832902
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,516224391#13,Washington Avenue,2534.920000000001,2674.71,139.78999999999905,381.1400249580196
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,5589339#6,Dr Martin Luther King Jr Boulevard,921.2500000000003,1053.0299999999997,131.7799999999994,1250.8527753996475
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,601569766#0,Howard Street,507.3399999999999,634.8799999999998,127.53999999999985,115.45519098334194
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,669255474#0,Columbia Street,909.66,1037.0000000000002,127.34000000000026,179.92837693093293
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,516224372#1,Madison Avenue,2136.849999999999,2263.4199999999996,126.57000000000062,654.6436205210354
+albany_equal_scale_delay_seed_42,historical_matched,catalog_first,-594355796#0,Eagle Street,836.9700000000003,950.4400000000002,113.46999999999991,67.12801015390136
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,33904608#1,State Street,1434.2799999999995,1852.4700000000003,418.19000000000074,119.53152722190073
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,516224402#11,Broadway,2212.35,2437.0299999999993,224.67999999999938,59.73489971532553
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,5592836#1,Henry Johnson Boulevard,375.06999999999994,515.9699999999998,140.89999999999986,146.40492904953658
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,-669255492#7,Livingston Avenue,922.2899999999995,1062.4,140.11000000000058,289.1792407832902
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,516224391#13,Washington Avenue,2534.920000000001,2674.71,139.78999999999905,381.1400249580196
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,5589339#6,Dr Martin Luther King Jr Boulevard,921.2500000000003,1053.0299999999997,131.7799999999994,1250.8527753996475
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,601569766#0,Howard Street,507.3399999999999,634.8799999999998,127.53999999999985,115.45519098334194
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,669255474#0,Columbia Street,909.66,1037.0000000000002,127.34000000000026,179.92837693093293
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,516224372#1,Madison Avenue,2136.849999999999,2263.4199999999996,126.57000000000062,654.6436205210354
+albany_equal_scale_delay_seed_42,historical_matched,catalog_random,-594355796#0,Eagle Street,836.9700000000003,950.4400000000002,113.46999999999991,67.12801015390136
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-441448155#0,East Washington Street,1985.26,3257.6199999999994,1272.3599999999994,197.9361134305714
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-220171726#2,East Washington Street,3233.0199999999995,4139.959999999999,906.9399999999996,222.0788702803579
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,220171729#3,South Fifth Avenue,1332.8300000000002,1946.3700000000001,613.54,190.6821281609789
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-213222771#1,East Washington Street,1556.1000000000004,2050.7500000000005,494.6500000000001,23.037592105078986
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-222821823#4,East Liberty Street,778.5499999999998,1128.2399999999998,349.68999999999994,156.59230736214363
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-222822477#1,East Liberty Street,1303.8300000000002,1652.77,348.9399999999998,144.26891669725632
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-441448204#2,South Ashley Street,950.0100000000002,1289.2200000000003,339.21000000000004,132.9906226017457
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,1379634473#1,West Liberty Street,88.49000000000001,417.21000000000004,328.72,48.501341476292744
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,-412683889#1,East Huron Street,1494.1699999999994,1738.76,244.5900000000006,47.55517695851389
+ann_arbor_equal_scale_delay_seed_42,historical_matched,llm,441448199#0,South Ashley Street,1311.1400000000003,1545.2799999999997,234.13999999999942,84.24023222308907
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-441448155#0,East Washington Street,1985.26,3164.83,1179.57,197.9361134305714
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-220171726#2,East Washington Street,3233.0199999999995,3985.5900000000006,752.5700000000011,222.0788702803579
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-216972932#1,East Liberty Street,4323.409999999998,5027.91,704.5000000000018,256.03941222766605
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-936995558#1,West Liberty Street,2866.43,3528.63,662.2000000000003,42.398924809481215
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-222821823#4,East Liberty Street,778.5499999999998,1354.7100000000005,576.1600000000007,156.59230736214363
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-8733683#1,East Liberty Street,3250.1900000000005,3819.6800000000007,569.4900000000002,101.35132325233809
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-213222771#1,East Washington Street,1556.1000000000004,2118.06,561.9599999999996,23.037592105078986
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,441448154#0,East Washington Street,2645.65,3111.31,465.65999999999985,265.3812609247309
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,398995919#0,North Main Street,1117.1499999999999,1540.0099999999998,422.8599999999999,29.709044498267065
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_first,-222822477#1,East Liberty Street,1303.8300000000002,1714.55,410.7199999999998,144.26891669725632
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,-441448164#1,North Ashley Street,3906.3399999999992,4866.220000000002,959.8800000000028,135.1475179202341
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,441448154#0,East Washington Street,2645.65,3388.059999999999,742.409999999999,265.3812609247309
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,-222822477#1,East Liberty Street,1303.8300000000002,1910.1099999999994,606.2799999999993,144.26891669725632
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,-8733683#1,East Liberty Street,3250.1900000000005,3816.0700000000006,565.8800000000001,101.35132325233809
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,-8727968#1,North State Street,5089.889999999999,5532.299999999998,442.40999999999894,42.58273124166622
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,220171729#3,South Fifth Avenue,1332.8300000000002,1755.3900000000006,422.5600000000004,190.6821281609789
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,398995919#0,North Main Street,1117.1499999999999,1539.6699999999998,422.52,29.709044498267065
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,-216972932#1,East Liberty Street,4323.409999999998,4663.65,340.2400000000016,256.03941222766605
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,411632944#6,East Huron Street,1471.5899999999997,1776.2199999999998,304.6300000000001,44.82130324968199
+ann_arbor_equal_scale_delay_seed_42,historical_matched,catalog_random,409824600#2,Miller Avenue,2085.26,2379.4100000000008,294.15000000000055,40.41793674980318
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,-398740656#3,West 2nd Street,2078.0000000000005,3179.5299999999997,1101.5299999999993,39.426373470052084
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,398740648#0,East 2nd Street,2305.71,2722.9200000000005,417.2100000000005,101.95005860714303
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,161822265#0,East 2nd Street,1537.1500000000003,1943.4199999999994,406.2699999999991,354.1216617052519
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,405180169#0,North Broadway,4478.090000000001,4848.850000000002,370.7600000000011,274.1305220602041
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,-405180170#1,South Broadway,2741.32,2938.75,197.42999999999984,73.78376735434416
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,1409929526#1,East 3rd Street,1782.2,1945.1899999999996,162.98999999999955,407.0160052135542
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,405178831#3,North Spring Street,1648.5700000000002,1796.6299999999994,148.05999999999926,173.92561808140871
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,-518201967,West 2nd Street,3600.5700000000006,3747.1399999999994,146.5699999999988,45.81585151451455
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,398735946#0,San Pedro Street,350.1500000000001,488.7,138.5499999999999,80.15069712734847
+los_angeles_equal_scale_delay_seed_42,historical_matched,llm,-405180171#1,North Broadway,3303.6400000000003,3423.2799999999993,119.63999999999896,289.28858541256045
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,-398740656#3,West 2nd Street,2078.0000000000005,2530.71,452.7099999999996,39.426373470052084
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,161822265#0,East 2nd Street,1537.1500000000003,1931.09,393.9399999999996,354.1216617052519
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,405180173#0,West Temple Street,1871.9100000000003,2248.769999999999,376.85999999999876,342.8378671106797
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,-398740651#1,East 2nd Street,1623.1400000000003,1913.4599999999998,290.3199999999995,125.59128512759175
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,-405169157#1,West Temple Street,3264.7600000000007,3543.8299999999995,279.0699999999988,504.72959010246296
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,-398735937#2,South Central Avenue,2123.16,2377.8400000000006,254.68000000000075,294.1347387252991
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,405180169#0,North Broadway,4478.090000000001,4729.5199999999995,251.42999999999847,274.1305220602041
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,404995542#1,West 3rd Street,7992.270000000001,8226.150000000001,233.8800000000001,198.77250520381332
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,-206346809#1,South Hill Street,696.8600000000001,929.89,233.02999999999986,124.26258336683694
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_first,-405180171#1,North Broadway,3303.6400000000003,3535.27,231.62999999999965,289.28858541256045
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,161822265#0,East 2nd Street,1537.1500000000003,1991.4499999999998,454.2999999999995,354.1216617052519
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,234665446#2,West 5th Street,3027.719999999999,3373.16,345.44000000000096,84.8247229585805
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,-398815190#1,North Broadway,3140.5399999999995,3471.54,331.00000000000045,60.55454999419955
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,404995542#1,West 3rd Street,7992.270000000001,8315.109999999999,322.8399999999974,198.77250520381332
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,398738128,South Los Angeles Street,160.29000000000002,404.13999999999976,243.84999999999974,101.27297547964056
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,405178831#3,North Spring Street,1648.5700000000002,1889.7100000000007,241.14000000000055,173.92561808140871
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,381482571#0,East 1st Street,471.24,709.6899999999999,238.44999999999993,322.5246037901603
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,398738131#0,South Los Angeles Street,7164.339999999999,7389.269999999998,224.92999999999847,70.12845392563558
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,405180173#0,West Temple Street,1871.9100000000003,2083.08,211.16999999999962,342.8378671106797
+los_angeles_equal_scale_delay_seed_42,historical_matched,catalog_random,-206346809#1,South Hill Street,696.8600000000001,907.6599999999997,210.7999999999996,124.26258336683694
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,-760433119,79th Street Transverse,2329.61,4747.630000000001,2418.020000000001,155.8827109224561
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,5669691#0,79th Street Transverse,6341.25,8269.64,1928.3899999999994,40.119654803630496
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,587061857#0,East 79th Street,10203.700000000003,11012.570000000003,808.8700000000008,148.5909160151529
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,5671628#11,West 76th Street,2271.7899999999995,2908.130000000001,636.3400000000015,291.2212425287693
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,420897876#0,Columbus Avenue,750.8099999999998,1382.2599999999998,631.4499999999999,284.69118282896596
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,1080862160,East 79th Street,479.09999999999997,1092.8799999999999,613.78,107.14551228482593
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,-542215781#6,Central Park West,2482.4399999999996,3047.420000000001,564.9800000000014,173.33662215629792
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,587061856#10,5th Avenue,979.3399999999999,1530.83,551.49,283.83427594773946
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,421853581,79th Street Transverse,1596.83,2147.850000000001,551.0200000000009,49.81960073103737
+manhattan_equal_scale_delay_seed_42,historical_matched,llm,-5671093#1,West 81st Street,3395.2799999999993,3891.0099999999998,495.7300000000005,248.46411410905978
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,-760433119,79th Street Transverse,2329.61,4747.630000000001,2418.020000000001,155.8827109224561
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,5669691#0,79th Street Transverse,6341.25,8269.64,1928.3899999999994,40.119654803630496
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,587061857#0,East 79th Street,10203.700000000003,11012.570000000003,808.8700000000008,148.5909160151529
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,5671628#11,West 76th Street,2271.7899999999995,2908.130000000001,636.3400000000015,291.2212425287693
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,420897876#0,Columbus Avenue,750.8099999999998,1382.2599999999998,631.4499999999999,284.69118282896596
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,1080862160,East 79th Street,479.09999999999997,1092.8799999999999,613.78,107.14551228482593
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,-542215781#6,Central Park West,2482.4399999999996,3047.420000000001,564.9800000000014,173.33662215629792
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,587061856#10,5th Avenue,979.3399999999999,1530.83,551.49,283.83427594773946
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,421853581,79th Street Transverse,1596.83,2147.850000000001,551.0200000000009,49.81960073103737
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_first,-5671093#1,West 81st Street,3395.2799999999993,3891.0099999999998,495.7300000000005,248.46411410905978
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,-760433119,79th Street Transverse,2329.61,4747.630000000001,2418.020000000001,155.8827109224561
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,5669691#0,79th Street Transverse,6341.25,8269.64,1928.3899999999994,40.119654803630496
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,587061857#0,East 79th Street,10203.700000000003,11012.570000000003,808.8700000000008,148.5909160151529
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,5671628#11,West 76th Street,2271.7899999999995,2908.130000000001,636.3400000000015,291.2212425287693
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,420897876#0,Columbus Avenue,750.8099999999998,1382.2599999999998,631.4499999999999,284.69118282896596
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,1080862160,East 79th Street,479.09999999999997,1092.8799999999999,613.78,107.14551228482593
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,-542215781#6,Central Park West,2482.4399999999996,3047.420000000001,564.9800000000014,173.33662215629792
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,587061856#10,5th Avenue,979.3399999999999,1530.83,551.49,283.83427594773946
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,421853581,79th Street Transverse,1596.83,2147.850000000001,551.0200000000009,49.81960073103737
+manhattan_equal_scale_delay_seed_42,historical_matched,catalog_random,-5671093#1,West 81st Street,3395.2799999999993,3891.0099999999998,495.7300000000005,248.46411410905978
+troy_equal_scale_delay_seed_42,historical_matched,llm,103495371#9,2nd Street,2861.0,3239.960000000001,378.96000000000095,74.57105291599345
+troy_equal_scale_delay_seed_42,historical_matched,llm,-68235505#0,23rd Street,3331.9300000000003,3696.1400000000003,364.21000000000004,52.082770007294656
+troy_equal_scale_delay_seed_42,historical_matched,llm,-38286734#0,Broadway,1717.4699999999998,2031.990000000001,314.5200000000011,679.4128696529078
+troy_equal_scale_delay_seed_42,historical_matched,llm,5633781#5,Hill Street,2370.95,2647.77,276.82000000000016,732.5124461325634
+troy_equal_scale_delay_seed_42,historical_matched,llm,1295371579#7,4th Street,1169.63,1422.2300000000002,252.60000000000014,261.6523504576253
+troy_equal_scale_delay_seed_42,historical_matched,llm,-669453512#0,8th Street,865.3399999999998,1087.1300000000003,221.79000000000053,243.83472768455283
+troy_equal_scale_delay_seed_42,historical_matched,llm,669453513#1,8th Street,999.0799999999998,1182.8900000000003,183.8100000000005,196.02769453574575
+troy_equal_scale_delay_seed_42,historical_matched,llm,669453499,23rd Street,1319.37,1502.54,183.17000000000007,109.12225139489216
+troy_equal_scale_delay_seed_42,historical_matched,llm,1375130314,23rd Street,4943.329999999999,5109.629999999998,166.29999999999927,173.17588768985328
+troy_equal_scale_delay_seed_42,historical_matched,llm,87996411#1,Jacob Street,1213.18,1374.61,161.42999999999984,253.7425239238038
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,-68235505#0,23rd Street,3331.9300000000003,3685.31,353.37999999999965,52.082770007294656
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,1295371579#7,4th Street,1169.63,1469.81,300.17999999999984,261.6523504576253
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,51863809#2,Ferry Street,1213.2100000000005,1494.68,281.4699999999996,195.44577796667764
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,1375130314,23rd Street,4943.329999999999,5223.780000000003,280.45000000000437,173.17588768985328
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,669453499,23rd Street,1319.37,1564.5600000000006,245.19000000000074,109.12225139489216
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,-38286734#0,Broadway,1717.4699999999998,1942.0499999999995,224.5799999999997,679.4128696529078
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,87996411#1,Jacob Street,1213.18,1417.49,204.30999999999995,253.7425239238038
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,103495371#9,2nd Street,2861.0,3062.93,201.92999999999984,74.57105291599345
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,-669453512#0,8th Street,865.3399999999998,1066.0799999999997,200.7399999999999,243.83472768455283
+troy_equal_scale_delay_seed_42,historical_matched,catalog_first,5617685#5,Jefferson Street,269.33,447.63000000000005,178.30000000000007,838.2375204177575
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,1295371579#7,4th Street,1169.63,1549.1699999999998,379.53999999999974,261.6523504576253
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,669608266#2,Ferry Street,1553.7500000000002,1929.8000000000002,376.04999999999995,277.0190781336187
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,51863809#2,Ferry Street,1213.2100000000005,1519.6200000000001,306.4099999999996,195.44577796667764
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,-38286734#0,Broadway,1717.4699999999998,1964.2500000000005,246.78000000000065,679.4128696529078
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,87996411#1,Jacob Street,1213.18,1429.5699999999997,216.38999999999965,253.7425239238038
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,74754966#4,Jacob Street,580.85,776.6199999999999,195.76999999999987,242.00507701286026
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,-68235505#0,23rd Street,3331.9300000000003,3522.0099999999984,190.0799999999981,52.082770007294656
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,-669453512#0,8th Street,865.3399999999998,1039.4099999999999,174.07000000000005,243.83472768455283
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,669246267#3,4th Street,1945.7499999999993,2113.6299999999997,167.88000000000034,178.2623791634117
+troy_equal_scale_delay_seed_42,historical_matched,catalog_random,79635182#4,6th Avenue,2072.5400000000004,2219.61,147.0699999999997,84.74466520410448
+albany_equal_scale_delay_seed_43,historical_matched,llm,35893580#4,Madison Avenue,1981.0500000000004,2168.7000000000003,187.64999999999986,147.49935514924965
+albany_equal_scale_delay_seed_43,historical_matched,llm,-669246362#1,Broadway,604.9099999999999,783.1899999999998,178.27999999999997,35.23196063235694
+albany_equal_scale_delay_seed_43,historical_matched,llm,5587241#1,Washington Avenue,3634.12,3802.3799999999997,168.25999999999976,320.23924630223337
+albany_equal_scale_delay_seed_43,historical_matched,llm,-5569091,Eagle Street,380.68999999999994,542.7900000000001,162.10000000000014,67.103962278484
+albany_equal_scale_delay_seed_43,historical_matched,llm,-43763489#3,North Pearl Street,276.90999999999997,436.31,159.40000000000003,93.51362307172109
+albany_equal_scale_delay_seed_43,historical_matched,llm,-35970766#1,South Pearl Street,1399.5300000000002,1558.2400000000002,158.71000000000004,93.71524615083216
+albany_equal_scale_delay_seed_43,historical_matched,llm,-43763490#8,South Pearl Street,751.3800000000001,887.9100000000002,136.5300000000001,75.41125958517236
+albany_equal_scale_delay_seed_43,historical_matched,llm,-669255492#4,Livingston Avenue,890.3699999999999,1010.82,120.45000000000016,444.9230447223423
+albany_equal_scale_delay_seed_43,historical_matched,llm,516224391#9,Washington Avenue,3378.460000000001,3493.7899999999995,115.32999999999856,610.9994629049511
+albany_equal_scale_delay_seed_43,historical_matched,llm,669264742,Madison Avenue,238.57999999999998,351.10999999999996,112.52999999999997,211.74034561488534
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,35893580#4,Madison Avenue,1981.0500000000004,2168.7000000000003,187.64999999999986,147.49935514924965
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,-669246362#1,Broadway,604.9099999999999,783.1899999999998,178.27999999999997,35.23196063235694
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,5587241#1,Washington Avenue,3634.12,3802.3799999999997,168.25999999999976,320.23924630223337
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,-5569091,Eagle Street,380.68999999999994,542.7900000000001,162.10000000000014,67.103962278484
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,-43763489#3,North Pearl Street,276.90999999999997,436.31,159.40000000000003,93.51362307172109
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,-35970766#1,South Pearl Street,1399.5300000000002,1558.2400000000002,158.71000000000004,93.71524615083216
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,-43763490#8,South Pearl Street,751.3800000000001,887.9100000000002,136.5300000000001,75.41125958517236
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,-669255492#4,Livingston Avenue,890.3699999999999,1010.82,120.45000000000016,444.9230447223423
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,516224391#9,Washington Avenue,3378.460000000001,3493.7899999999995,115.32999999999856,610.9994629049511
+albany_equal_scale_delay_seed_43,historical_matched,catalog_first,669264742,Madison Avenue,238.57999999999998,351.10999999999996,112.52999999999997,211.74034561488534
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,43763489#4,North Pearl Street,740.02,1068.1099999999997,328.0899999999997,74.17162142625656
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,-35970766#1,South Pearl Street,1399.5300000000002,1719.8199999999997,320.2899999999995,93.71524615083216
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,43763489#3,North Pearl Street,422.78999999999985,667.0799999999999,244.29000000000008,85.15989461008047
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,669608276#1,State Street,1797.6100000000004,2040.3399999999995,242.7299999999991,83.82820640386457
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,599150331#1,North Pearl Street,1812.8799999999997,1978.4599999999996,165.57999999999993,172.60935157169166
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,516224391#9,Washington Avenue,3378.460000000001,3527.560000000001,149.0999999999999,610.9994629049511
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,89965053#1,South Swan Street,1683.6000000000001,1824.02,140.41999999999985,431.9399074106129
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,669264742,Madison Avenue,238.57999999999998,353.89,115.31,211.74034561488534
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,-43763490#2,South Pearl Street,1314.9600000000005,1428.5399999999993,113.57999999999879,62.2303543297002
+albany_equal_scale_delay_seed_43,historical_matched,catalog_random,38208898#2,South Swan Street,4271.62,4384.950000000001,113.33000000000084,416.2095146464364
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-441448152#0,East Washington Street,846.9800000000002,4528.089999999998,3681.109999999998,59.5989447380476
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-220171726#2,East Washington Street,2842.15,4460.2699999999995,1618.1199999999994,222.0788702803579
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-213222771#1,East Washington Street,1497.7800000000002,3086.259999999999,1588.4799999999987,23.037592105078986
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-441448155#0,East Washington Street,1361.89,2833.39,1471.4999999999998,197.9361134305714
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-213222774#1,East Washington Street,3167.530000000001,3705.6600000000008,538.1299999999997,101.67920583875552
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-412683889#1,East Huron Street,1743.3599999999997,2240.64,497.2800000000002,47.55517695851389
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,213222775#2,South Fourth Avenue,1179.4900000000002,1665.5299999999995,486.0399999999993,98.24142214463275
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-936995559#1,South Ashley Street,2816.1600000000003,3272.369999999999,456.2099999999987,51.0980474186636
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,-8734730#1,Fletcher Street,671.3000000000001,1056.9,385.6,182.39218575640757
+ann_arbor_equal_scale_delay_seed_43,historical_matched,llm,1492722906#0,West Washington Street,3128.2700000000013,3474.5199999999995,346.2499999999982,101.49438075578368
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,441448199#0,South Ashley Street,1043.4599999999996,1991.6499999999996,948.19,84.24023222308907
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,8722105#0,Fuller Street,1754.9500000000007,2116.0699999999997,361.119999999999,367.588886121439
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,-213222774#1,East Washington Street,3167.530000000001,3515.6,348.0699999999988,101.67920583875552
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,1492722906#0,West Washington Street,3128.2700000000013,3405.43,277.1599999999985,101.49438075578368
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,-222821823#2,East Liberty Street,3208.390000000001,3471.2200000000007,262.8299999999999,224.75216956683656
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,8733683#2,East Liberty Street,3118.56,3372.36,253.80000000000018,114.2651732812756
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,222821827#2,South Division Street,936.03,1188.5800000000006,252.55000000000064,236.5727927087139
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,-8727572#0,West Madison Street,724.3500000000001,918.4399999999998,194.0899999999997,597.3775220494995
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,-441448164#1,North Ashley Street,3569.33,3757.17,187.84000000000015,135.1475179202341
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_first,-409822218#1,North Main Street,1422.32,1606.9399999999991,184.6199999999992,257.0392764248295
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1049523915#1,West Kingsley Street,1558.6199999999997,1558.6199999999997,0.0,225.7009221292638
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1049523916#1,North Ashley Street,287.75000000000017,287.75000000000017,0.0,270.0584369066155
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1059660021#1,Charlotte Lane,3.58,3.58,0.0,807.8194888092264
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1074654783#0,West Medical Center Drive,6.319999999999999,6.319999999999999,0.0,321.7363971337796
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1074654783#1,West Medical Center Drive,1.8199999999999998,1.8199999999999998,0.0,210.47908533272383
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1122213739#1,West Ann Street,9.07,9.07,0.0,160.6182692364102
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1122213740#2,North First Street,413.28000000000003,413.28000000000003,0.0,101.38789634369611
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1122213740#3,North First Street,11.05,11.05,0.0,109.37929900122772
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1122213741#1,East Kingsley Street,2235.1700000000005,2235.1700000000005,0.0,465.46490804893114
+ann_arbor_equal_scale_delay_seed_43,historical_matched,catalog_random,-1122213741#2,East Kingsley Street,22.610000000000003,22.610000000000003,0.0,443.89988615114555
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,398740647#2,East 2nd Street,8564.749999999998,10911.229999999998,2346.4799999999996,199.57367217396228
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,-398815190#1,North Broadway,3948.7700000000013,4453.299999999999,504.5299999999979,60.55454999419955
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,405178820,North Main Street,4182.2699999999995,4554.449999999999,372.1799999999994,507.1888958021456
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,-405180170#1,South Broadway,3261.2299999999996,3633.3600000000006,372.130000000001,73.78376735434416
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,148385464,North Spring Street,3554.6499999999987,3922.640000000001,367.99000000000206,509.4836162723981
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,-382238064#1,South Broadway,1144.4399999999996,1439.71,295.27000000000044,169.8180265019001
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,382238488#1,West 4th Street,1901.97,2171.5299999999997,269.5599999999997,178.9575490087591
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,-405180171#1,North Broadway,2719.6400000000003,2972.4300000000003,252.78999999999996,360.2614546756287
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,404983743#0,West 1st Street,2999.1399999999994,3219.7399999999993,220.5999999999999,168.97164739979354
+los_angeles_equal_scale_delay_seed_43,historical_matched,llm,381471424#0,North Los Angeles Street,3421.5999999999995,3623.0500000000006,201.45000000000118,309.8589494027891
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,398740647#2,East 2nd Street,8564.749999999998,10911.229999999998,2346.4799999999996,199.57367217396228
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,-398815190#1,North Broadway,3948.7700000000013,4453.299999999999,504.5299999999979,60.55454999419955
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,405178820,North Main Street,4182.2699999999995,4554.449999999999,372.1799999999994,507.1888958021456
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,-405180170#1,South Broadway,3261.2299999999996,3633.3600000000006,372.130000000001,73.78376735434416
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,148385464,North Spring Street,3554.6499999999987,3922.640000000001,367.99000000000206,509.4836162723981
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,-382238064#1,South Broadway,1144.4399999999996,1439.71,295.27000000000044,169.8180265019001
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,382238488#1,West 4th Street,1901.97,2171.5299999999997,269.5599999999997,178.9575490087591
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,-405180171#1,North Broadway,2719.6400000000003,2972.4300000000003,252.78999999999996,360.2614546756287
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,404983743#0,West 1st Street,2999.1399999999994,3219.7399999999993,220.5999999999999,168.97164739979354
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_first,381471424#0,North Los Angeles Street,3421.5999999999995,3623.0500000000006,201.45000000000118,309.8589494027891
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,398740647#2,East 2nd Street,8564.749999999998,10911.229999999998,2346.4799999999996,199.57367217396228
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,-398815190#1,North Broadway,3948.7700000000013,4453.299999999999,504.5299999999979,60.55454999419955
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,405178820,North Main Street,4182.2699999999995,4554.449999999999,372.1799999999994,507.1888958021456
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,-405180170#1,South Broadway,3261.2299999999996,3633.3600000000006,372.130000000001,73.78376735434416
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,148385464,North Spring Street,3554.6499999999987,3922.640000000001,367.99000000000206,509.4836162723981
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,-382238064#1,South Broadway,1144.4399999999996,1439.71,295.27000000000044,169.8180265019001
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,382238488#1,West 4th Street,1901.97,2171.5299999999997,269.5599999999997,178.9575490087591
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,-405180171#1,North Broadway,2719.6400000000003,2972.4300000000003,252.78999999999996,360.2614546756287
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,404983743#0,West 1st Street,2999.1399999999994,3219.7399999999993,220.5999999999999,168.97164739979354
+los_angeles_equal_scale_delay_seed_43,historical_matched,catalog_random,381471424#0,North Los Angeles Street,3421.5999999999995,3623.0500000000006,201.45000000000118,309.8589494027891
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,1537904626#1,West 78th Street,10141.49,13972.070000000002,3830.5800000000017,436.08427502605497
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,-587061857#0,East 79th Street,254.1799999999999,2143.3200000000006,1889.1400000000008,84.56482043708053
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,587061856#4,5th Avenue,446.93,2043.4800000000002,1596.5500000000002,125.33554870604017
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,195743180#13,Madison Avenue,1332.51,2159.43,826.9199999999998,385.6296266317093
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,5672524#1,East 76th Street,926.49,1688.2100000000007,761.7200000000007,255.9783925180233
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,1080862160,East 79th Street,345.25999999999993,793.07,447.8100000000001,44.19792683046541
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,-1271523173#1,Central Park West,1444.29,1864.4499999999998,420.15999999999985,536.9419061686289
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,-5671093#1,West 81st Street,3093.79,3500.3799999999997,406.5899999999997,248.46411410905978
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,587061856#19,5th Avenue,977.48,1383.5100000000002,406.0300000000002,525.5634335591129
+manhattan_equal_scale_delay_seed_43,historical_matched,llm,275298552#1,West 75th Street,1781.9499999999996,2180.61,398.66000000000054,223.31911074737948
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,1537904626#1,West 78th Street,10141.49,15826.819999999998,5685.329999999998,436.08427502605497
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,5669691#0,79th Street Transverse,8808.83,11213.759999999998,2404.9299999999985,40.119654803630496
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,421853581,79th Street Transverse,2028.74,2918.9,890.1600000000001,49.81960073103737
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,760433114,79th Street Transverse,1067.55,1759.58,692.03,135.42297641620397
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,5671628#11,West 76th Street,2148.85,2589.8999999999996,441.0499999999997,291.2212425287693
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,195743151#1,Broadway,4788.579999999998,5212.090000000001,423.51000000000295,45.71980485036604
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,686125782#55,Park Avenue,934.0000000000002,1306.8499999999997,372.84999999999945,600.7679732595981
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,760433122,79th Street Transverse,257.9199999999999,597.2800000000002,339.3600000000003,108.66518213773819
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,-1271523173#1,Central Park West,1444.29,1780.5200000000004,336.2300000000005,536.9419061686289
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_first,1271523174#3,Central Park West,13209.239999999998,13477.2,267.96000000000276,245.04634714115272
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,1537904626#1,West 78th Street,10141.49,15826.819999999998,5685.329999999998,436.08427502605497
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,5669691#0,79th Street Transverse,8808.83,11213.759999999998,2404.9299999999985,40.119654803630496
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,421853581,79th Street Transverse,2028.74,2918.9,890.1600000000001,49.81960073103737
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,760433114,79th Street Transverse,1067.55,1759.58,692.03,135.42297641620397
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,5671628#11,West 76th Street,2148.85,2589.8999999999996,441.0499999999997,291.2212425287693
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,195743151#1,Broadway,4788.579999999998,5212.090000000001,423.51000000000295,45.71980485036604
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,686125782#55,Park Avenue,934.0000000000002,1306.8499999999997,372.84999999999945,600.7679732595981
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,760433122,79th Street Transverse,257.9199999999999,597.2800000000002,339.3600000000003,108.66518213773819
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,-1271523173#1,Central Park West,1444.29,1780.5200000000004,336.2300000000005,536.9419061686289
+manhattan_equal_scale_delay_seed_43,historical_matched,catalog_random,1271523174#3,Central Park West,13209.239999999998,13477.2,267.96000000000276,245.04634714115272
+troy_equal_scale_delay_seed_43,historical_matched,llm,-1017862838,Adams Street,5.510000000000001,5.510000000000001,0.0,710.4189539498855
+troy_equal_scale_delay_seed_43,historical_matched,llm,-103495368#0,5th Avenue,4.98,4.98,0.0,919.6337758827939
+troy_equal_scale_delay_seed_43,historical_matched,llm,-103495368#1,5th Avenue,9.34,9.34,0.0,846.3809427071103
+troy_equal_scale_delay_seed_43,historical_matched,llm,-103495368#2,5th Avenue,24.32,24.32,0.0,745.130092899518
+troy_equal_scale_delay_seed_43,historical_matched,llm,-103495368#3,5th Avenue,12.979999999999999,12.979999999999999,0.0,654.0460412204261
+troy_equal_scale_delay_seed_43,historical_matched,llm,-107999639#0,6th Avenue,4.75,4.75,0.0,387.91905251324965
+troy_equal_scale_delay_seed_43,historical_matched,llm,-107999639#1,6th Avenue,40.79999999999999,40.79999999999999,0.0,371.53494697672835
+troy_equal_scale_delay_seed_43,historical_matched,llm,-107999639#2,6th Avenue,18.41,18.41,0.0,314.35789516091444
+troy_equal_scale_delay_seed_43,historical_matched,llm,-107999639#5,6th Avenue,855.0,855.0,0.0,244.7273322623572
+troy_equal_scale_delay_seed_43,historical_matched,llm,-107999639#7,6th Avenue,6.510000000000001,6.510000000000001,0.0,196.34932091810327
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-1017862838,Adams Street,5.510000000000001,5.510000000000001,0.0,710.4189539498855
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-103495368#0,5th Avenue,4.98,4.98,0.0,919.6337758827939
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-103495368#1,5th Avenue,9.34,9.34,0.0,846.3809427071103
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-103495368#2,5th Avenue,24.32,24.32,0.0,745.130092899518
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-103495368#3,5th Avenue,12.979999999999999,12.979999999999999,0.0,654.0460412204261
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-107999639#0,6th Avenue,4.75,4.75,0.0,387.91905251324965
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-107999639#1,6th Avenue,40.79999999999999,40.79999999999999,0.0,371.53494697672835
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-107999639#2,6th Avenue,18.41,18.41,0.0,314.35789516091444
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-107999639#5,6th Avenue,855.0,855.0,0.0,244.7273322623572
+troy_equal_scale_delay_seed_43,historical_matched,catalog_first,-107999639#7,6th Avenue,6.510000000000001,6.510000000000001,0.0,196.34932091810327
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-1017862838,Adams Street,5.510000000000001,5.510000000000001,0.0,710.4189539498855
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-103495368#0,5th Avenue,4.98,4.98,0.0,919.6337758827939
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-103495368#1,5th Avenue,9.34,9.34,0.0,846.3809427071103
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-103495368#2,5th Avenue,24.32,24.32,0.0,745.130092899518
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-103495368#3,5th Avenue,12.979999999999999,12.979999999999999,0.0,654.0460412204261
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-107999639#0,6th Avenue,4.75,4.75,0.0,387.91905251324965
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-107999639#1,6th Avenue,40.79999999999999,40.79999999999999,0.0,371.53494697672835
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-107999639#2,6th Avenue,18.41,18.41,0.0,314.35789516091444
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-107999639#5,6th Avenue,855.0,855.0,0.0,244.7273322623572
+troy_equal_scale_delay_seed_43,historical_matched,catalog_random,-107999639#7,6th Avenue,6.510000000000001,6.510000000000001,0.0,196.34932091810327
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1037264494#0,Franklin Street,0.17,0.17,0.0,396.5617150268039
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1037264494#1,Franklin Street,2.8200000000000003,2.8200000000000003,0.0,416.60184124053035
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1037264494#2,Franklin Street,1.8,1.8,0.0,438.3409461252738
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1067077750,Grand Street,854.0400000000001,854.0400000000001,0.0,200.88570444409436
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1082971923,Henry Johnson Boulevard,71.16999999999997,71.16999999999997,0.0,182.56126753169139
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1128670703,Montgomery Street,0.14,0.14,0.0,115.50360654542376
+albany_equal_scale_delay_seed_44,historical_matched,llm,-1128670704#1,Livingston Avenue,14.719999999999999,14.719999999999999,0.0,90.21843630877257
+albany_equal_scale_delay_seed_44,historical_matched,llm,-113864589#10,Lexington Avenue,74.03999999999999,74.03999999999999,0.0,473.94220699305095
+albany_equal_scale_delay_seed_44,historical_matched,llm,-113864589#11,Lexington Avenue,0.13,0.13,0.0,506.4360670410433
+albany_equal_scale_delay_seed_44,historical_matched,llm,-113864589#12,Lexington Avenue,6.07,6.07,0.0,538.630528142643
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,33904608#1,State Street,1051.7199999999998,1314.7499999999998,263.03,119.53152722190073
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,5579067,Madison Avenue,705.1600000000001,957.1,251.93999999999994,418.3196064003931
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,5580810#0,Myrtle Avenue,954.5499999999998,1123.9000000000008,169.35000000000093,473.3677886168421
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,516224391#9,Washington Avenue,3493.3100000000013,3660.990000000001,167.67999999999984,610.9994629049511
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,38208897#26,Elk Street,1080.5200000000002,1222.3899999999996,141.86999999999944,369.3345231714062
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,36747108#4,Clinton Avenue,977.8499999999998,1106.1,128.2500000000001,89.98691954328099
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,5589339#6,Dr Martin Luther King Jr Boulevard,1100.9399999999998,1214.2800000000002,113.34000000000037,762.1562228637904
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,1299358303#0,Eagle Street,1389.67,1495.9199999999996,106.24999999999955,472.9120242941596
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,-44092707#1,Clinton Avenue,837.71,936.0999999999998,98.38999999999976,161.6976132322304
+albany_equal_scale_delay_seed_44,historical_matched,catalog_first,-43763489#9,North Pearl Street,416.59,513.64,97.05000000000001,115.71798871610206
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1037264494#0,Franklin Street,0.17,0.17,0.0,396.5617150268039
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1037264494#1,Franklin Street,2.8200000000000003,2.8200000000000003,0.0,416.60184124053035
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1037264494#2,Franklin Street,1.8,1.8,0.0,438.3409461252738
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1067077750,Grand Street,854.0400000000001,854.0400000000001,0.0,200.88570444409436
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1082971923,Henry Johnson Boulevard,71.16999999999997,71.16999999999997,0.0,182.56126753169139
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1128670703,Montgomery Street,0.14,0.14,0.0,115.50360654542376
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-1128670704#1,Livingston Avenue,14.719999999999999,14.719999999999999,0.0,90.21843630877257
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-113864589#10,Lexington Avenue,74.03999999999999,74.03999999999999,0.0,473.94220699305095
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-113864589#11,Lexington Avenue,0.13,0.13,0.0,506.4360670410433
+albany_equal_scale_delay_seed_44,historical_matched,catalog_random,-113864589#12,Lexington Avenue,6.07,6.07,0.0,538.630528142643
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,1302055767#0,South Ashley Street,4537.120000000001,5350.950000000001,813.8299999999999,149.15740251492753
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,-1049523915#1,West Kingsley Street,1468.92,1996.73,527.81,225.7009221292638
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,-441448164#1,North Ashley Street,3421.8900000000003,3937.73,515.8399999999997,135.1475179202341
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,-1379634473#1,West Liberty Street,1686.4999999999993,2111.7899999999995,425.2900000000002,30.294995048687205
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,1379634473#1,West Liberty Street,324.6099999999999,736.37,411.7600000000001,35.00541422408825
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,1492722906#0,West Washington Street,3536.7700000000004,3919.4999999999995,382.7299999999991,101.49438075578368
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,-409824600#5,Miller Avenue,1848.82,2192.6000000000004,343.7800000000004,57.91608488916464
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,8734732#3,South Fifth Avenue,1416.9599999999996,1754.14,337.1800000000005,174.88100389979485
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,-1319549812#0,West Kingsley Street,686.9800000000001,992.2199999999997,305.23999999999955,219.94981296877694
+ann_arbor_equal_scale_delay_seed_44,historical_matched,llm,-8724871#1,Catherine Street,341.69,554.5500000000001,212.86000000000007,278.5989307230017
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-441448155#0,East Washington Street,1736.3699999999997,2475.4500000000003,739.0800000000006,197.9361134305714
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-213222771#1,East Washington Street,1429.76,2084.1899999999996,654.4299999999996,23.037592105078986
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,441448154#0,East Washington Street,2573.56,3087.190000000001,513.630000000001,265.3812609247309
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-936995559#1,South Ashley Street,3724.7100000000014,4233.169999999999,508.45999999999776,51.0980474186636
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-8733683#2,East Liberty Street,333.56,779.7299999999999,446.1699999999999,111.34936293037308
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-8733683#1,East Liberty Street,3567.6399999999994,4008.4399999999996,440.8000000000002,101.35132325233809
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,1449490715#0,South State Street,596.8,1018.5500000000001,421.7500000000001,91.26110302313839
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-216972932#1,East Liberty Street,4375.349999999999,4720.209999999999,344.8599999999997,256.03941222766605
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-220171730#2,East Washington Street,564.2899999999998,871.6799999999998,307.39,217.91096404265696
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_first,-412683889#1,East Huron Street,1484.6100000000006,1780.5200000000002,295.9099999999996,47.55517695851389
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1049523915#1,West Kingsley Street,1468.92,1468.92,0.0,225.7009221292638
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1049523916#1,North Ashley Street,192.74999999999997,192.74999999999997,0.0,270.0584369066155
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1074654783#0,West Medical Center Drive,8.35,8.35,0.0,321.7363971337796
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1074654783#1,West Medical Center Drive,4.41,4.41,0.0,210.47908533272383
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1122213739#1,West Ann Street,20.33,20.33,0.0,160.6182692364102
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1122213740#2,North First Street,457.26,457.26,0.0,101.38789634369611
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1122213740#3,North First Street,11.209999999999999,11.209999999999999,0.0,109.37929900122772
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1122213741#1,East Kingsley Street,1969.4099999999996,1969.4099999999996,0.0,465.46490804893114
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1122213741#2,East Kingsley Street,19.3,19.3,0.0,443.89988615114555
+ann_arbor_equal_scale_delay_seed_44,historical_matched,catalog_random,-1122213741#3,East Kingsley Street,16.760000000000005,16.760000000000005,0.0,423.30531587732276
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,398740647#2,East 2nd Street,9726.61,11369.83,1643.2199999999993,199.57367217396228
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,-398815190#1,North Broadway,3275.81,3863.170000000001,587.360000000001,60.55454999419955
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,381471424#0,North Los Angeles Street,3510.299999999999,3916.2799999999997,405.9800000000009,309.8589494027891
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,398738131#0,South Los Angeles Street,4998.27,5397.47,399.1999999999998,258.2530660514997
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,206344773,West General Thaddeus Kosciuszko Way,913.5200000000002,1251.8100000000002,338.28999999999996,122.52225603946385
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,148385464,North Spring Street,3042.700000000001,3375.600000000001,332.89999999999964,198.12289550932803
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,-405169157#1,West Temple Street,3321.4400000000005,3566.98,245.5399999999995,438.813538191337
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,405180164#0,East Temple Street,2187.2,2423.7599999999993,236.5599999999995,181.6942873345229
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,-206346809#1,South Hill Street,855.1000000000003,1084.26,229.15999999999974,124.26258336683694
+los_angeles_equal_scale_delay_seed_44,historical_matched,llm,405162734#2,West 3rd Street,304.3199999999999,507.0200000000001,202.70000000000022,42.73055376425614
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,398740647#2,East 2nd Street,9726.61,14656.789999999999,4930.1799999999985,199.57367217396228
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,398738131#0,South Los Angeles Street,4998.27,6030.61,1032.3399999999992,258.2530660514997
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,381471424#0,North Los Angeles Street,3510.299999999999,3952.23,441.9300000000012,309.8589494027891
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,382238488#1,West 4th Street,2004.7700000000002,2362.4700000000007,357.7000000000005,178.9575490087591
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,382210034#0,West 1st Street,1121.4800000000002,1412.72,291.2399999999998,49.27079383366968
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,186070722#2,East 5th Street,1317.0,1575.4899999999996,258.48999999999955,165.76804705672316
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,1409929526#1,East 3rd Street,1808.2099999999996,2040.7700000000002,232.56000000000063,909.469281559306
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,47805886#10,South Los Angeles Street,1754.5100000000004,1986.5500000000002,232.03999999999974,275.5678755316016
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,161821792#0,West Aliso Street,2205.1600000000003,2426.24,221.07999999999947,169.05011461102305
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_first,382251676#0,West Temple Street,1166.37,1383.74,217.37000000000012,48.434696757592796
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,398740647#2,East 2nd Street,9726.61,12275.600000000002,2548.9900000000016,199.57367217396228
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,-398815190#1,North Broadway,3275.81,4063.6999999999994,787.8899999999994,60.55454999419955
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,-405180170#1,South Broadway,2939.8900000000003,3590.77,650.8799999999997,73.78376735434416
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,1393433144#0,West Aliso Street,3350.4100000000003,3882.1499999999987,531.7399999999984,207.11818425720134
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,382251676#0,West Temple Street,1166.37,1474.88,308.5100000000002,48.434696757592796
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,405180169#0,North Broadway,4901.28,5138.519999999999,237.23999999999887,95.58997816193872
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,-206346809#1,South Hill Street,855.1000000000003,1087.0000000000002,231.89999999999998,124.26258336683694
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,382238488#1,West 4th Street,2004.7700000000002,2235.7599999999998,230.98999999999955,178.9575490087591
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,161821792#0,West Aliso Street,2205.1600000000003,2425.649999999999,220.48999999999887,169.05011461102305
+los_angeles_equal_scale_delay_seed_44,historical_matched,catalog_random,148385464,North Spring Street,3042.700000000001,3238.64,195.9399999999987,198.12289550932803
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,421853581,79th Street Transverse,1759.81,4897.81,3138.0000000000005,49.81960073103737
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,5669691#0,79th Street Transverse,6839.7,9553.550000000003,2713.850000000003,40.119654803630496
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,-5671093#1,West 81st Street,3870.43,5635.91,1765.48,248.46411410905978
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,-760433119,79th Street Transverse,2138.0699999999993,3374.789999999999,1236.7199999999998,155.8827109224561
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,587061857#0,East 79th Street,9041.83,9933.239999999996,891.4099999999962,85.12625629681622
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,-542215781#6,Central Park West,2992.2099999999996,3813.1799999999994,820.9699999999998,418.249132754629
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,195743180#13,Madison Avenue,1523.62,2312.8599999999988,789.2399999999989,385.6296266317093
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,420897876#0,Columbus Avenue,1387.7499999999995,2106.4799999999996,718.73,381.41104578918583
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,195743151#1,Broadway,6080.939999999999,6711.929999999999,630.9900000000007,38.4163687624025
+manhattan_equal_scale_delay_seed_44,historical_matched,llm,1533843721#1,West 74th Street,1323.2399999999998,1896.4400000000007,573.200000000001,164.5283155721227
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,421853581,79th Street Transverse,1759.81,8286.08,6526.27,49.81960073103737
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,-1271523176#1,Central Park West,1582.2099999999991,5438.88,3856.670000000001,183.92331513432455
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,5669691#0,79th Street Transverse,6839.7,10614.669999999998,3774.9699999999984,40.119654803630496
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,587061857#0,East 79th Street,9041.83,10578.730000000001,1536.9000000000015,85.12625629681622
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,-195743156#0,Central Park West,872.9499999999999,2291.4300000000003,1418.4800000000005,114.41187493000868
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,1053628248#1,Columbus Avenue,2347.9199999999996,3282.6999999999994,934.7799999999997,284.39936924156484
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,-5671093#1,West 81st Street,3870.43,4691.55,821.1200000000003,248.46411410905978
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,742007046,79th Street Transverse,479.46,1297.0500000000006,817.5900000000006,96.9051066559447
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,-1271523174#3,Central Park West,1641.12,2447.3099999999995,806.1899999999996,245.24288025116783
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_first,220544055,79th Street Transverse,241.95999999999998,1031.86,789.8999999999999,71.09291822834554
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,421853581,79th Street Transverse,1759.81,4897.81,3138.0000000000005,49.81960073103737
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,5669691#0,79th Street Transverse,6839.7,9553.550000000003,2713.850000000003,40.119654803630496
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,-5671093#1,West 81st Street,3870.43,5635.91,1765.48,248.46411410905978
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,-760433119,79th Street Transverse,2138.0699999999993,3374.789999999999,1236.7199999999998,155.8827109224561
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,587061857#0,East 79th Street,9041.83,9933.239999999996,891.4099999999962,85.12625629681622
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,-542215781#6,Central Park West,2992.2099999999996,3813.1799999999994,820.9699999999998,418.249132754629
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,195743180#13,Madison Avenue,1523.62,2312.8599999999988,789.2399999999989,385.6296266317093
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,420897876#0,Columbus Avenue,1387.7499999999995,2106.4799999999996,718.73,381.41104578918583
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,195743151#1,Broadway,6080.939999999999,6711.929999999999,630.9900000000007,38.4163687624025
+manhattan_equal_scale_delay_seed_44,historical_matched,catalog_random,1533843721#1,West 74th Street,1323.2399999999998,1896.4400000000007,573.200000000001,164.5283155721227
+troy_equal_scale_delay_seed_44,historical_matched,llm,669608266#2,Ferry Street,1870.5100000000004,7349.25,5478.74,277.0190781336187
+troy_equal_scale_delay_seed_44,historical_matched,llm,39804593#0,Green Island Bridge,2437.5900000000006,3254.1999999999994,816.6099999999988,84.25447976880008
+troy_equal_scale_delay_seed_44,historical_matched,llm,107999639#2,6th Avenue,1559.2299999999998,2094.7299999999996,535.4999999999998,184.7188276814247
+troy_equal_scale_delay_seed_44,historical_matched,llm,-5638505#1,Bridge Avenue,2865.9100000000003,3213.8,347.8899999999999,78.15177173295544
+troy_equal_scale_delay_seed_44,historical_matched,llm,-139324188#2,2nd Avenue,1978.1799999999998,2308.2999999999993,330.11999999999944,72.0967488864789
+troy_equal_scale_delay_seed_44,historical_matched,llm,121772758#2,4th Street,749.1800000000001,1075.8300000000004,326.6500000000003,291.68995393225373
+troy_equal_scale_delay_seed_44,historical_matched,llm,669246281#3,2nd Avenue,1662.5499999999993,1985.790000000001,323.2400000000018,42.97765145979992
+troy_equal_scale_delay_seed_44,historical_matched,llm,-5588364#1,Hudson Avenue,2565.789999999999,2830.830000000001,265.0400000000018,286.9077159907448
+troy_equal_scale_delay_seed_44,historical_matched,llm,74754966#4,Jacob Street,1375.75,1638.82,263.06999999999994,242.00507701286026
+troy_equal_scale_delay_seed_44,historical_matched,llm,-669453499,23rd Street,4299.940000000002,4487.3,187.35999999999785,108.7751260605567
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,669608266#2,Ferry Street,1870.5100000000004,7349.25,5478.74,277.0190781336187
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,39804593#0,Green Island Bridge,2437.5900000000006,3254.1999999999994,816.6099999999988,84.25447976880008
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,107999639#2,6th Avenue,1559.2299999999998,2094.7299999999996,535.4999999999998,184.7188276814247
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,-5638505#1,Bridge Avenue,2865.9100000000003,3213.8,347.8899999999999,78.15177173295544
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,-139324188#2,2nd Avenue,1978.1799999999998,2308.2999999999993,330.11999999999944,72.0967488864789
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,121772758#2,4th Street,749.1800000000001,1075.8300000000004,326.6500000000003,291.68995393225373
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,669246281#3,2nd Avenue,1662.5499999999993,1985.790000000001,323.2400000000018,42.97765145979992
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,-5588364#1,Hudson Avenue,2565.789999999999,2830.830000000001,265.0400000000018,286.9077159907448
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,74754966#4,Jacob Street,1375.75,1638.82,263.06999999999994,242.00507701286026
+troy_equal_scale_delay_seed_44,historical_matched,catalog_first,-669453499,23rd Street,4299.940000000002,4487.3,187.35999999999785,108.7751260605567
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,669608266#2,Ferry Street,1870.5100000000004,7349.25,5478.74,277.0190781336187
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,39804593#0,Green Island Bridge,2437.5900000000006,3254.1999999999994,816.6099999999988,84.25447976880008
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,107999639#2,6th Avenue,1559.2299999999998,2094.7299999999996,535.4999999999998,184.7188276814247
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,-5638505#1,Bridge Avenue,2865.9100000000003,3213.8,347.8899999999999,78.15177173295544
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,-139324188#2,2nd Avenue,1978.1799999999998,2308.2999999999993,330.11999999999944,72.0967488864789
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,121772758#2,4th Street,749.1800000000001,1075.8300000000004,326.6500000000003,291.68995393225373
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,669246281#3,2nd Avenue,1662.5499999999993,1985.790000000001,323.2400000000018,42.97765145979992
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,-5588364#1,Hudson Avenue,2565.789999999999,2830.830000000001,265.0400000000018,286.9077159907448
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,74754966#4,Jacob Street,1375.75,1638.82,263.06999999999994,242.00507701286026
+troy_equal_scale_delay_seed_44,historical_matched,catalog_random,-669453499,23rd Street,4299.940000000002,4487.3,187.35999999999785,108.7751260605567
+albany_equal_scale_delay_seed_42,fresh,catalog_first,33904608#1,State Street,1434.2799999999995,1852.4700000000003,418.19000000000074,119.53152722190073
+albany_equal_scale_delay_seed_42,fresh,catalog_first,516224402#11,Broadway,2212.35,2437.0299999999993,224.67999999999938,59.73489971532553
+albany_equal_scale_delay_seed_42,fresh,catalog_first,5592836#1,Henry Johnson Boulevard,375.06999999999994,515.9699999999998,140.89999999999986,146.40492904953658
+albany_equal_scale_delay_seed_42,fresh,catalog_first,-669255492#7,Livingston Avenue,922.2899999999995,1062.4,140.11000000000058,289.1792407832902
+albany_equal_scale_delay_seed_42,fresh,catalog_first,516224391#13,Washington Avenue,2534.920000000001,2674.71,139.78999999999905,381.1400249580196
+albany_equal_scale_delay_seed_42,fresh,catalog_first,5589339#6,Dr Martin Luther King Jr Boulevard,921.2500000000003,1053.0299999999997,131.7799999999994,1250.8527753996475
+albany_equal_scale_delay_seed_42,fresh,catalog_first,601569766#0,Howard Street,507.3399999999999,634.8799999999998,127.53999999999985,115.45519098334194
+albany_equal_scale_delay_seed_42,fresh,catalog_first,669255474#0,Columbia Street,909.66,1037.0000000000002,127.34000000000026,179.92837693093293
+albany_equal_scale_delay_seed_42,fresh,catalog_first,516224372#1,Madison Avenue,2136.849999999999,2263.4199999999996,126.57000000000062,654.6436205210354
+albany_equal_scale_delay_seed_42,fresh,catalog_first,-594355796#0,Eagle Street,836.9700000000003,950.4400000000002,113.46999999999991,67.12801015390136
+albany_equal_scale_delay_seed_42,fresh,catalog_random,33904608#1,State Street,1434.2799999999995,1852.4700000000003,418.19000000000074,119.53152722190073
+albany_equal_scale_delay_seed_42,fresh,catalog_random,516224402#11,Broadway,2212.35,2437.0299999999993,224.67999999999938,59.73489971532553
+albany_equal_scale_delay_seed_42,fresh,catalog_random,5592836#1,Henry Johnson Boulevard,375.06999999999994,515.9699999999998,140.89999999999986,146.40492904953658
+albany_equal_scale_delay_seed_42,fresh,catalog_random,-669255492#7,Livingston Avenue,922.2899999999995,1062.4,140.11000000000058,289.1792407832902
+albany_equal_scale_delay_seed_42,fresh,catalog_random,516224391#13,Washington Avenue,2534.920000000001,2674.71,139.78999999999905,381.1400249580196
+albany_equal_scale_delay_seed_42,fresh,catalog_random,5589339#6,Dr Martin Luther King Jr Boulevard,921.2500000000003,1053.0299999999997,131.7799999999994,1250.8527753996475
+albany_equal_scale_delay_seed_42,fresh,catalog_random,601569766#0,Howard Street,507.3399999999999,634.8799999999998,127.53999999999985,115.45519098334194
+albany_equal_scale_delay_seed_42,fresh,catalog_random,669255474#0,Columbia Street,909.66,1037.0000000000002,127.34000000000026,179.92837693093293
+albany_equal_scale_delay_seed_42,fresh,catalog_random,516224372#1,Madison Avenue,2136.849999999999,2263.4199999999996,126.57000000000062,654.6436205210354
+albany_equal_scale_delay_seed_42,fresh,catalog_random,-594355796#0,Eagle Street,836.9700000000003,950.4400000000002,113.46999999999991,67.12801015390136
+albany_equal_scale_delay_seed_42,fresh,llm,-43763489#6,North Pearl Street,1531.11,1902.9900000000005,371.88000000000056,85.9059853205172
+albany_equal_scale_delay_seed_42,fresh,llm,33904608#1,State Street,1434.2799999999995,1746.9599999999998,312.6800000000003,119.53152722190073
+albany_equal_scale_delay_seed_42,fresh,llm,669255402,South Pearl Street,1583.1500000000008,1740.7000000000005,157.54999999999973,154.59376976450253
+albany_equal_scale_delay_seed_42,fresh,llm,319487943#14,Lark Street,270.13,412.43999999999994,142.30999999999995,247.8672347245595
+albany_equal_scale_delay_seed_42,fresh,llm,35970302#2,North Pearl Street,3557.34,3692.129999999999,134.78999999999905,3.199853512272214
+albany_equal_scale_delay_seed_42,fresh,llm,669255474#0,Columbia Street,909.66,1039.54,129.88,179.92837693093293
+albany_equal_scale_delay_seed_42,fresh,llm,38208897#26,Elk Street,1560.3,1683.7900000000002,123.49000000000024,472.30722449084936
+albany_equal_scale_delay_seed_42,fresh,llm,516224402#11,Broadway,2212.35,2326.8000000000006,114.45000000000073,59.73489971532553
+albany_equal_scale_delay_seed_42,fresh,llm,5585560#4,Pine Street,1179.7299999999998,1289.2300000000005,109.50000000000068,176.67886751108637
+albany_equal_scale_delay_seed_42,fresh,llm,-44092707#14,Clinton Avenue,1899.8800000000003,2007.0100000000004,107.13000000000011,762.3737666164805
+albany_equal_scale_delay_seed_43,fresh,catalog_first,35893580#4,Madison Avenue,1981.0500000000004,2168.7000000000003,187.64999999999986,147.49935514924965
+albany_equal_scale_delay_seed_43,fresh,catalog_first,-669246362#1,Broadway,604.9099999999999,783.1899999999998,178.27999999999997,35.23196063235694
+albany_equal_scale_delay_seed_43,fresh,catalog_first,5587241#1,Washington Avenue,3634.12,3802.3799999999997,168.25999999999976,320.23924630223337
+albany_equal_scale_delay_seed_43,fresh,catalog_first,-5569091,Eagle Street,380.68999999999994,542.7900000000001,162.10000000000014,67.103962278484
+albany_equal_scale_delay_seed_43,fresh,catalog_first,-43763489#3,North Pearl Street,276.90999999999997,436.31,159.40000000000003,93.51362307172109
+albany_equal_scale_delay_seed_43,fresh,catalog_first,-35970766#1,South Pearl Street,1399.5300000000002,1558.2400000000002,158.71000000000004,93.71524615083216
+albany_equal_scale_delay_seed_43,fresh,catalog_first,-43763490#8,South Pearl Street,751.3800000000001,887.9100000000002,136.5300000000001,75.41125958517236
+albany_equal_scale_delay_seed_43,fresh,catalog_first,-669255492#4,Livingston Avenue,890.3699999999999,1010.82,120.45000000000016,444.9230447223423
+albany_equal_scale_delay_seed_43,fresh,catalog_first,516224391#9,Washington Avenue,3378.460000000001,3493.7899999999995,115.32999999999856,610.9994629049511
+albany_equal_scale_delay_seed_43,fresh,catalog_first,669264742,Madison Avenue,238.57999999999998,351.10999999999996,112.52999999999997,211.74034561488534
+albany_equal_scale_delay_seed_43,fresh,catalog_random,35970303#4,North Pearl Street,813.2100000000002,1303.3800000000003,490.1700000000002,365.49750655237074
+albany_equal_scale_delay_seed_43,fresh,catalog_random,44436753#3,South Pearl Street,2306.579999999999,2683.5499999999997,376.9700000000007,109.62895132876365
+albany_equal_scale_delay_seed_43,fresh,catalog_random,669255492#6,Livingston Avenue,746.55,1058.28,311.73,486.01833136724343
+albany_equal_scale_delay_seed_43,fresh,catalog_random,-36747108#2,Clinton Avenue,848.5099999999999,1098.3999999999996,249.88999999999976,25.706657697958395
+albany_equal_scale_delay_seed_43,fresh,catalog_random,5579067,Madison Avenue,240.67000000000002,430.97,190.3,294.8593931869342
+albany_equal_scale_delay_seed_43,fresh,catalog_random,516224372#1,Madison Avenue,1502.7699999999998,1665.890000000001,163.12000000000126,473.44852544917666
+albany_equal_scale_delay_seed_43,fresh,catalog_random,-35893580#1,Madison Avenue,1089.6800000000003,1252.0000000000005,162.32000000000016,166.3172407712979
+albany_equal_scale_delay_seed_43,fresh,catalog_random,8695429#0,Madison Avenue,1259.3900000000003,1418.3499999999997,158.95999999999935,186.00475326214445
+albany_equal_scale_delay_seed_43,fresh,catalog_random,44436753#2,South Pearl Street,146.9,301.72,154.82000000000002,126.03932406638455
+albany_equal_scale_delay_seed_43,fresh,catalog_random,-251679332#3,Henry Johnson Boulevard,652.57,801.5099999999999,148.93999999999983,92.84115587927604
+albany_equal_scale_delay_seed_43,fresh,llm,35893580#4,Madison Avenue,1981.0500000000004,2168.7000000000003,187.64999999999986,147.49935514924965
+albany_equal_scale_delay_seed_43,fresh,llm,-669246362#1,Broadway,604.9099999999999,783.1899999999998,178.27999999999997,35.23196063235694
+albany_equal_scale_delay_seed_43,fresh,llm,5587241#1,Washington Avenue,3634.12,3802.3799999999997,168.25999999999976,320.23924630223337
+albany_equal_scale_delay_seed_43,fresh,llm,-5569091,Eagle Street,380.68999999999994,542.7900000000001,162.10000000000014,67.103962278484
+albany_equal_scale_delay_seed_43,fresh,llm,-43763489#3,North Pearl Street,276.90999999999997,436.31,159.40000000000003,93.51362307172109
+albany_equal_scale_delay_seed_43,fresh,llm,-35970766#1,South Pearl Street,1399.5300000000002,1558.2400000000002,158.71000000000004,93.71524615083216
+albany_equal_scale_delay_seed_43,fresh,llm,-43763490#8,South Pearl Street,751.3800000000001,887.9100000000002,136.5300000000001,75.41125958517236
+albany_equal_scale_delay_seed_43,fresh,llm,-669255492#4,Livingston Avenue,890.3699999999999,1010.82,120.45000000000016,444.9230447223423
+albany_equal_scale_delay_seed_43,fresh,llm,516224391#9,Washington Avenue,3378.460000000001,3493.7899999999995,115.32999999999856,610.9994629049511
+albany_equal_scale_delay_seed_43,fresh,llm,669264742,Madison Avenue,238.57999999999998,351.10999999999996,112.52999999999997,211.74034561488534
+albany_equal_scale_delay_seed_44,fresh,catalog_first,33904608#1,State Street,1051.7199999999998,1314.7499999999998,263.03,119.53152722190073
+albany_equal_scale_delay_seed_44,fresh,catalog_first,5579067,Madison Avenue,705.1600000000001,957.1,251.93999999999994,418.3196064003931
+albany_equal_scale_delay_seed_44,fresh,catalog_first,5580810#0,Myrtle Avenue,954.5499999999998,1123.9000000000008,169.35000000000093,473.3677886168421
+albany_equal_scale_delay_seed_44,fresh,catalog_first,516224391#9,Washington Avenue,3493.3100000000013,3660.990000000001,167.67999999999984,610.9994629049511
+albany_equal_scale_delay_seed_44,fresh,catalog_first,38208897#26,Elk Street,1080.5200000000002,1222.3899999999996,141.86999999999944,369.3345231714062
+albany_equal_scale_delay_seed_44,fresh,catalog_first,36747108#4,Clinton Avenue,977.8499999999998,1106.1,128.2500000000001,89.98691954328099
+albany_equal_scale_delay_seed_44,fresh,catalog_first,5589339#6,Dr Martin Luther King Jr Boulevard,1100.9399999999998,1214.2800000000002,113.34000000000037,762.1562228637904
+albany_equal_scale_delay_seed_44,fresh,catalog_first,1299358303#0,Eagle Street,1389.67,1495.9199999999996,106.24999999999955,472.9120242941596
+albany_equal_scale_delay_seed_44,fresh,catalog_first,-44092707#1,Clinton Avenue,837.71,936.0999999999998,98.38999999999976,161.6976132322304
+albany_equal_scale_delay_seed_44,fresh,catalog_first,-43763489#9,North Pearl Street,416.59,513.64,97.05000000000001,115.71798871610206
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1037264494#0,Franklin Street,0.17,0.17,0.0,396.5617150268039
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1037264494#1,Franklin Street,2.8200000000000003,2.8200000000000003,0.0,416.60184124053035
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1037264494#2,Franklin Street,1.8,1.8,0.0,438.3409461252738
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1067077750,Grand Street,854.0400000000001,854.0400000000001,0.0,200.88570444409436
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1082971923,Henry Johnson Boulevard,71.16999999999997,71.16999999999997,0.0,182.56126753169139
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1128670703,Montgomery Street,0.14,0.14,0.0,115.50360654542376
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-1128670704#1,Livingston Avenue,14.719999999999999,14.719999999999999,0.0,90.21843630877257
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-113864589#10,Lexington Avenue,74.03999999999999,74.03999999999999,0.0,473.94220699305095
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-113864589#11,Lexington Avenue,0.13,0.13,0.0,506.4360670410433
+albany_equal_scale_delay_seed_44,fresh,catalog_random,-113864589#12,Lexington Avenue,6.07,6.07,0.0,538.630528142643
+albany_equal_scale_delay_seed_44,fresh,llm,33904608#1,State Street,1051.7199999999998,1314.7499999999998,263.03,119.53152722190073
+albany_equal_scale_delay_seed_44,fresh,llm,5579067,Madison Avenue,705.1600000000001,957.1,251.93999999999994,418.3196064003931
+albany_equal_scale_delay_seed_44,fresh,llm,5580810#0,Myrtle Avenue,954.5499999999998,1123.9000000000008,169.35000000000093,473.3677886168421
+albany_equal_scale_delay_seed_44,fresh,llm,516224391#9,Washington Avenue,3493.3100000000013,3660.990000000001,167.67999999999984,610.9994629049511
+albany_equal_scale_delay_seed_44,fresh,llm,38208897#26,Elk Street,1080.5200000000002,1222.3899999999996,141.86999999999944,369.3345231714062
+albany_equal_scale_delay_seed_44,fresh,llm,36747108#4,Clinton Avenue,977.8499999999998,1106.1,128.2500000000001,89.98691954328099
+albany_equal_scale_delay_seed_44,fresh,llm,5589339#6,Dr Martin Luther King Jr Boulevard,1100.9399999999998,1214.2800000000002,113.34000000000037,762.1562228637904
+albany_equal_scale_delay_seed_44,fresh,llm,1299358303#0,Eagle Street,1389.67,1495.9199999999996,106.24999999999955,472.9120242941596
+albany_equal_scale_delay_seed_44,fresh,llm,-44092707#1,Clinton Avenue,837.71,936.0999999999998,98.38999999999976,161.6976132322304
+albany_equal_scale_delay_seed_44,fresh,llm,-43763489#9,North Pearl Street,416.59,513.64,97.05000000000001,115.71798871610206
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-441448155#0,East Washington Street,1985.26,3164.83,1179.57,197.9361134305714
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-220171726#2,East Washington Street,3233.0199999999995,3985.5900000000006,752.5700000000011,222.0788702803579
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-216972932#1,East Liberty Street,4323.409999999998,5027.91,704.5000000000018,256.03941222766605
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-936995558#1,West Liberty Street,2866.43,3528.63,662.2000000000003,42.398924809481215
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-222821823#4,East Liberty Street,778.5499999999998,1354.7100000000005,576.1600000000007,156.59230736214363
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-8733683#1,East Liberty Street,3250.1900000000005,3819.6800000000007,569.4900000000002,101.35132325233809
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-213222771#1,East Washington Street,1556.1000000000004,2118.06,561.9599999999996,23.037592105078986
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,441448154#0,East Washington Street,2645.65,3111.31,465.65999999999985,265.3812609247309
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,398995919#0,North Main Street,1117.1499999999999,1540.0099999999998,422.8599999999999,29.709044498267065
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_first,-222822477#1,East Liberty Street,1303.8300000000002,1714.55,410.7199999999998,144.26891669725632
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-441448155#0,East Washington Street,1985.26,3141.73,1156.47,197.9361134305714
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-216972932#1,East Liberty Street,4323.409999999998,5232.16,908.7500000000018,256.03941222766605
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-220171726#2,East Washington Street,3233.0199999999995,3816.0999999999995,583.0799999999999,222.0788702803579
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-222822477#1,East Liberty Street,1303.8300000000002,1835.22,531.3899999999999,144.26891669725632
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-222821823#4,East Liberty Street,778.5499999999998,1277.7400000000002,499.1900000000004,156.59230736214363
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,441448154#0,East Washington Street,2645.65,3142.8900000000003,497.24000000000024,265.3812609247309
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-213222771#1,East Washington Street,1556.1000000000004,2050.2200000000003,494.1199999999999,23.037592105078986
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-8733683#1,East Liberty Street,3250.1900000000005,3559.8899999999994,309.6999999999989,101.35132325233809
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,-9257819#1,East Medical Center Drive,1589.5400000000004,1873.24,283.6999999999996,532.2619292228219
+ann_arbor_equal_scale_delay_seed_42,fresh,catalog_random,398995919#0,North Main Street,1117.1499999999999,1399.2600000000002,282.11000000000035,29.709044498267065
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-441448155#0,East Washington Street,1985.26,3257.6199999999994,1272.3599999999994,197.9361134305714
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-220171726#2,East Washington Street,3233.0199999999995,4139.959999999999,906.9399999999996,222.0788702803579
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,220171729#3,South Fifth Avenue,1332.8300000000002,1946.3700000000001,613.54,190.6821281609789
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-213222771#1,East Washington Street,1556.1000000000004,2050.7500000000005,494.6500000000001,23.037592105078986
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-222821823#4,East Liberty Street,778.5499999999998,1128.2399999999998,349.68999999999994,156.59230736214363
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-222822477#1,East Liberty Street,1303.8300000000002,1652.77,348.9399999999998,144.26891669725632
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-441448204#2,South Ashley Street,950.0100000000002,1289.2200000000003,339.21000000000004,132.9906226017457
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,1379634473#1,West Liberty Street,88.49000000000001,417.21000000000004,328.72,48.501341476292744
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,-412683889#1,East Huron Street,1494.1699999999994,1738.76,244.5900000000006,47.55517695851389
+ann_arbor_equal_scale_delay_seed_42,fresh,llm,441448199#0,South Ashley Street,1311.1400000000003,1545.2799999999997,234.13999999999942,84.24023222308907
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,441448199#0,South Ashley Street,1043.4599999999996,1991.6499999999996,948.19,84.24023222308907
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,8722105#0,Fuller Street,1754.9500000000007,2116.0699999999997,361.119999999999,367.588886121439
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,-213222774#1,East Washington Street,3167.530000000001,3515.6,348.0699999999988,101.67920583875552
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,1492722906#0,West Washington Street,3128.2700000000013,3405.43,277.1599999999985,101.49438075578368
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,-222821823#2,East Liberty Street,3208.390000000001,3471.2200000000007,262.8299999999999,224.75216956683656
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,8733683#2,East Liberty Street,3118.56,3372.36,253.80000000000018,114.2651732812756
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,222821827#2,South Division Street,936.03,1188.5800000000006,252.55000000000064,236.5727927087139
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,-8727572#0,West Madison Street,724.3500000000001,918.4399999999998,194.0899999999997,597.3775220494995
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,-441448164#1,North Ashley Street,3569.33,3757.17,187.84000000000015,135.1475179202341
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_first,-409822218#1,North Main Street,1422.32,1606.9399999999991,184.6199999999992,257.0392764248295
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-1379634473#1,West Liberty Street,2340.6200000000003,3296.999999999999,956.3799999999987,30.294995048687205
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-432300212#2,South First Street,981.0199999999999,1824.0200000000002,843.0000000000003,56.73170444978482
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,213222774#2,East Washington Street,1296.48,1923.66,627.1800000000001,145.4908052936681
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-936995558#1,West Liberty Street,2881.4900000000002,3433.0199999999995,551.5299999999993,42.398924809481215
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-213222775#1,South Fourth Avenue,547.33,1033.0600000000002,485.73000000000013,78.84981372837844
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-441448223#2,South Main Street,235.67000000000007,649.5,413.8299999999999,223.6011141519648
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-412697597#1,South Main Street,248.32,654.1800000000001,405.86000000000007,35.19969104978065
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,8733683#2,East Liberty Street,3118.56,3505.2400000000002,386.6800000000003,114.2651732812756
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,-222821823#2,East Liberty Street,3208.390000000001,3576.15,367.7599999999993,224.75216956683656
+ann_arbor_equal_scale_delay_seed_43,fresh,catalog_random,1162276359#1,East Kingsley Street,1969.38,2335.5099999999998,366.12999999999965,474.8490209793003
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-441448152#0,East Washington Street,846.9800000000002,4528.089999999998,3681.109999999998,59.5989447380476
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-220171726#2,East Washington Street,2842.15,4460.2699999999995,1618.1199999999994,222.0788702803579
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-213222771#1,East Washington Street,1497.7800000000002,3086.259999999999,1588.4799999999987,23.037592105078986
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-441448155#0,East Washington Street,1361.89,2833.39,1471.4999999999998,197.9361134305714
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-213222774#1,East Washington Street,3167.530000000001,3705.6600000000008,538.1299999999997,101.67920583875552
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-412683889#1,East Huron Street,1743.3599999999997,2240.64,497.2800000000002,47.55517695851389
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,213222775#2,South Fourth Avenue,1179.4900000000002,1665.5299999999995,486.0399999999993,98.24142214463275
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-936995559#1,South Ashley Street,2816.1600000000003,3272.369999999999,456.2099999999987,51.0980474186636
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,-8734730#1,Fletcher Street,671.3000000000001,1056.9,385.6,182.39218575640757
+ann_arbor_equal_scale_delay_seed_43,fresh,llm,1492722906#0,West Washington Street,3128.2700000000013,3474.5199999999995,346.2499999999982,101.49438075578368
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-441448155#0,East Washington Street,1736.3699999999997,2475.4500000000003,739.0800000000006,197.9361134305714
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-213222771#1,East Washington Street,1429.76,2084.1899999999996,654.4299999999996,23.037592105078986
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,441448154#0,East Washington Street,2573.56,3087.190000000001,513.630000000001,265.3812609247309
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-936995559#1,South Ashley Street,3724.7100000000014,4233.169999999999,508.45999999999776,51.0980474186636
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-8733683#2,East Liberty Street,333.56,779.7299999999999,446.1699999999999,111.34936293037308
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-8733683#1,East Liberty Street,3567.6399999999994,4008.4399999999996,440.8000000000002,101.35132325233809
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,1449490715#0,South State Street,596.8,1018.5500000000001,421.7500000000001,91.26110302313839
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-216972932#1,East Liberty Street,4375.349999999999,4720.209999999999,344.8599999999997,256.03941222766605
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-220171730#2,East Washington Street,564.2899999999998,871.6799999999998,307.39,217.91096404265696
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_first,-412683889#1,East Huron Street,1484.6100000000006,1780.5200000000002,295.9099999999996,47.55517695851389
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,1302055767#0,South Ashley Street,4537.120000000001,5350.950000000001,813.8299999999999,149.15740251492753
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,-1049523915#1,West Kingsley Street,1468.92,1996.73,527.81,225.7009221292638
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,-441448164#1,North Ashley Street,3421.8900000000003,3937.73,515.8399999999997,135.1475179202341
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,-1379634473#1,West Liberty Street,1686.4999999999993,2111.7899999999995,425.2900000000002,30.294995048687205
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,1379634473#1,West Liberty Street,324.6099999999999,736.37,411.7600000000001,35.00541422408825
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,1492722906#0,West Washington Street,3536.7700000000004,3919.4999999999995,382.7299999999991,101.49438075578368
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,-409824600#5,Miller Avenue,1848.82,2192.6000000000004,343.7800000000004,57.91608488916464
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,8734732#3,South Fifth Avenue,1416.9599999999996,1754.14,337.1800000000005,174.88100389979485
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,-1319549812#0,West Kingsley Street,686.9800000000001,992.2199999999997,305.23999999999955,219.94981296877694
+ann_arbor_equal_scale_delay_seed_44,fresh,catalog_random,-8724871#1,Catherine Street,341.69,554.5500000000001,212.86000000000007,278.5989307230017
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1049523915#1,West Kingsley Street,1468.92,1468.92,0.0,225.7009221292638
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1049523916#1,North Ashley Street,192.74999999999997,192.74999999999997,0.0,270.0584369066155
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1074654783#0,West Medical Center Drive,8.35,8.35,0.0,321.7363971337796
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1074654783#1,West Medical Center Drive,4.41,4.41,0.0,210.47908533272383
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1122213739#1,West Ann Street,20.33,20.33,0.0,160.6182692364102
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1122213740#2,North First Street,457.26,457.26,0.0,101.38789634369611
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1122213740#3,North First Street,11.209999999999999,11.209999999999999,0.0,109.37929900122772
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1122213741#1,East Kingsley Street,1969.4099999999996,1969.4099999999996,0.0,465.46490804893114
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1122213741#2,East Kingsley Street,19.3,19.3,0.0,443.89988615114555
+ann_arbor_equal_scale_delay_seed_44,fresh,llm,-1122213741#3,East Kingsley Street,16.760000000000005,16.760000000000005,0.0,423.30531587732276
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,-398740656#3,West 2nd Street,2078.0000000000005,2530.71,452.7099999999996,39.426373470052084
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,161822265#0,East 2nd Street,1537.1500000000003,1931.09,393.9399999999996,354.1216617052519
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,405180173#0,West Temple Street,1871.9100000000003,2248.769999999999,376.85999999999876,342.8378671106797
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,-398740651#1,East 2nd Street,1623.1400000000003,1913.4599999999998,290.3199999999995,125.59128512759175
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,-405169157#1,West Temple Street,3264.7600000000007,3543.8299999999995,279.0699999999988,504.72959010246296
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,-398735937#2,South Central Avenue,2123.16,2377.8400000000006,254.68000000000075,294.1347387252991
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,405180169#0,North Broadway,4478.090000000001,4729.5199999999995,251.42999999999847,274.1305220602041
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,404995542#1,West 3rd Street,7992.270000000001,8226.150000000001,233.8800000000001,198.77250520381332
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,-206346809#1,South Hill Street,696.8600000000001,929.89,233.02999999999986,124.26258336683694
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_first,-405180171#1,North Broadway,3303.6400000000003,3535.27,231.62999999999965,289.28858541256045
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,-398815190#1,North Broadway,3140.5399999999995,4653.270000000001,1512.7300000000018,60.55454999419955
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,-405169157#1,West Temple Street,3264.7600000000007,3574.7500000000005,309.9899999999998,504.72959010246296
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,-206346809#1,South Hill Street,696.8600000000001,981.7099999999999,284.8499999999998,124.26258336683694
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,-398740656#3,West 2nd Street,2078.0000000000005,2316.01,238.00999999999976,39.426373470052084
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,1125394688,South Hill Street,2186.2799999999997,2423.8600000000006,237.58000000000084,285.7040528238971
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,161822265#0,East 2nd Street,1537.1500000000003,1739.4700000000003,202.31999999999994,354.1216617052519
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,405180173#0,West Temple Street,1871.9100000000003,2074.08,202.16999999999962,342.8378671106797
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,404995540#8,South Main Street,4027.43,4215.56,188.13000000000056,105.03354809297845
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,405178831#3,North Spring Street,1648.5700000000002,1835.0600000000002,186.49,173.92561808140871
+los_angeles_equal_scale_delay_seed_42,fresh,catalog_random,-398740647#2,East 2nd Street,4141.169999999999,4322.240000000001,181.07000000000153,3.2012888029669058
+los_angeles_equal_scale_delay_seed_42,fresh,llm,-398815190#1,North Broadway,3140.5399999999995,4769.030000000002,1628.490000000002,60.55454999419955
+los_angeles_equal_scale_delay_seed_42,fresh,llm,161822265#0,East 2nd Street,1537.1500000000003,1868.5499999999997,331.3999999999994,354.1216617052519
+los_angeles_equal_scale_delay_seed_42,fresh,llm,47805886#5,South Los Angeles Street,1783.43,2085.7300000000005,302.3000000000004,347.13237974790593
+los_angeles_equal_scale_delay_seed_42,fresh,llm,1125394688,South Hill Street,2186.2799999999997,2452.8300000000004,266.55000000000064,285.7040528238971
+los_angeles_equal_scale_delay_seed_42,fresh,llm,-206346809#1,South Hill Street,696.8600000000001,945.45,248.58999999999992,124.26258336683694
+los_angeles_equal_scale_delay_seed_42,fresh,llm,398738126#0,East 3rd Street,2084.270000000001,2269.540000000001,185.26999999999998,211.3365137313268
+los_angeles_equal_scale_delay_seed_42,fresh,llm,405180173#0,West Temple Street,1871.9100000000003,2055.28,183.3699999999999,342.8378671106797
+los_angeles_equal_scale_delay_seed_42,fresh,llm,405178831#3,North Spring Street,1648.5700000000002,1821.0999999999995,172.5299999999993,173.92561808140871
+los_angeles_equal_scale_delay_seed_42,fresh,llm,399312994#1,North Hope Street,1442.1599999999999,1608.5999999999995,166.4399999999996,519.3649568944755
+los_angeles_equal_scale_delay_seed_42,fresh,llm,234662681#2,West 3rd Street,3374.22,3529.24,155.01999999999998,206.68964255348854
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,398740647#2,East 2nd Street,8564.749999999998,10911.229999999998,2346.4799999999996,199.57367217396228
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,-398815190#1,North Broadway,3948.7700000000013,4453.299999999999,504.5299999999979,60.55454999419955
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,405178820,North Main Street,4182.2699999999995,4554.449999999999,372.1799999999994,507.1888958021456
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,-405180170#1,South Broadway,3261.2299999999996,3633.3600000000006,372.130000000001,73.78376735434416
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,148385464,North Spring Street,3554.6499999999987,3922.640000000001,367.99000000000206,509.4836162723981
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,-382238064#1,South Broadway,1144.4399999999996,1439.71,295.27000000000044,169.8180265019001
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,382238488#1,West 4th Street,1901.97,2171.5299999999997,269.5599999999997,178.9575490087591
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,-405180171#1,North Broadway,2719.6400000000003,2972.4300000000003,252.78999999999996,360.2614546756287
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,404983743#0,West 1st Street,2999.1399999999994,3219.7399999999993,220.5999999999999,168.97164739979354
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_first,381471424#0,North Los Angeles Street,3421.5999999999995,3623.0500000000006,201.45000000000118,309.8589494027891
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1014457434#0,South Los Angeles Street,10.67,10.67,0.0,251.39014907112013
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1014457434#1,South Los Angeles Street,11.84,11.84,0.0,251.47196290043945
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1014457434#2,South Los Angeles Street,196.08999999999997,196.08999999999997,0.0,256.33698157893684
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1014457434#3,South Los Angeles Street,1.57,1.57,0.0,267.81300416521987
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1014457434#4,South Los Angeles Street,1.8199999999999998,1.8199999999999998,0.0,275.42093502491804
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1014457434#5,South Los Angeles Street,11.31,11.31,0.0,302.4557880087602
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1036249339#0,North Hope Street,15.119999999999997,15.119999999999997,0.0,428.2976897556188
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1036249339#2,North Hope Street,7.130000000000001,7.130000000000001,0.0,475.7902378674873
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1046059231#0,South Hill Street,0.25,0.25,0.0,283.7763433145898
+los_angeles_equal_scale_delay_seed_43,fresh,catalog_random,-1046059231#1,South Hill Street,0.35,0.35,0.0,272.5263105188194
+los_angeles_equal_scale_delay_seed_43,fresh,llm,398740647#2,East 2nd Street,8564.749999999998,10720.990000000002,2156.2400000000034,199.57367217396228
+los_angeles_equal_scale_delay_seed_43,fresh,llm,-398815190#1,North Broadway,3948.7700000000013,5215.16,1266.3899999999985,60.55454999419955
+los_angeles_equal_scale_delay_seed_43,fresh,llm,398738131#0,South Los Angeles Street,7056.610000000001,7613.759999999999,557.1499999999987,258.2530660514997
+los_angeles_equal_scale_delay_seed_43,fresh,llm,148385464,North Spring Street,3554.6499999999987,3901.9500000000007,347.300000000002,509.4836162723981
+los_angeles_equal_scale_delay_seed_43,fresh,llm,47805886#10,South Los Angeles Street,2086.5099999999998,2398.2599999999993,311.74999999999955,275.5678755316016
+los_angeles_equal_scale_delay_seed_43,fresh,llm,1393433144#0,West Aliso Street,3085.7300000000005,3314.8499999999995,229.11999999999898,514.703296885691
+los_angeles_equal_scale_delay_seed_43,fresh,llm,-405169157#1,West Temple Street,4049.0600000000004,4272.530000000001,223.47000000000025,504.72959010246296
+los_angeles_equal_scale_delay_seed_43,fresh,llm,1409929526#1,East 3rd Street,1819.6899999999998,2030.2000000000005,210.51000000000067,407.0160052135542
+los_angeles_equal_scale_delay_seed_43,fresh,llm,-398735937#2,South Central Avenue,1512.7699999999995,1711.9100000000003,199.14000000000078,294.1347387252991
+los_angeles_equal_scale_delay_seed_43,fresh,llm,381471424#0,North Los Angeles Street,3421.5999999999995,3593.6400000000003,172.04000000000087,309.8589494027891
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,398740647#2,East 2nd Street,9726.61,14656.789999999999,4930.1799999999985,199.57367217396228
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,398738131#0,South Los Angeles Street,4998.27,6030.61,1032.3399999999992,258.2530660514997
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,381471424#0,North Los Angeles Street,3510.299999999999,3952.23,441.9300000000012,309.8589494027891
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,382238488#1,West 4th Street,2004.7700000000002,2362.4700000000007,357.7000000000005,178.9575490087591
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,382210034#0,West 1st Street,1121.4800000000002,1412.72,291.2399999999998,49.27079383366968
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,186070722#2,East 5th Street,1317.0,1575.4899999999996,258.48999999999955,165.76804705672316
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,1409929526#1,East 3rd Street,1808.2099999999996,2040.7700000000002,232.56000000000063,909.469281559306
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,47805886#10,South Los Angeles Street,1754.5100000000004,1986.5500000000002,232.03999999999974,275.5678755316016
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,161821792#0,West Aliso Street,2205.1600000000003,2426.24,221.07999999999947,169.05011461102305
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_first,382251676#0,West Temple Street,1166.37,1383.74,217.37000000000012,48.434696757592796
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,398740647#2,East 2nd Street,9726.61,14134.589999999998,4407.979999999998,199.57367217396228
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,398738131#0,South Los Angeles Street,4998.27,5598.510000000001,600.2400000000007,258.2530660514997
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,381471424#0,North Los Angeles Street,3510.299999999999,3824.3300000000004,314.03000000000156,309.8589494027891
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,-398735951#1,San Pedro Street,1073.14,1373.2499999999998,300.1099999999997,434.9893775267522
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,1051463650#1,South Spring Street,3982.85,4251.980000000001,269.1300000000015,200.52220733901547
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,234657817#0,East 1st Street,383.78,650.0699999999999,266.28999999999996,225.8780648934286
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,382251676#0,West Temple Street,1166.37,1420.0200000000002,253.65000000000032,48.434696757592796
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,206344773,West General Thaddeus Kosciuszko Way,913.5200000000002,1160.4299999999998,246.90999999999963,122.52225603946385
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,234665446#2,West 5th Street,2814.53,3044.6599999999994,230.1299999999992,84.8247229585805
+los_angeles_equal_scale_delay_seed_44,fresh,catalog_random,1409929526#1,East 3rd Street,1808.2099999999996,2015.3400000000006,207.13000000000102,909.469281559306
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1014457434#0,South Los Angeles Street,3.55,3.55,0.0,251.39014907112013
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1014457434#1,South Los Angeles Street,4.140000000000001,4.140000000000001,0.0,251.47196290043945
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1014457434#2,South Los Angeles Street,72.00999999999999,72.00999999999999,0.0,256.33698157893684
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1014457434#3,South Los Angeles Street,0.32999999999999996,0.32999999999999996,0.0,267.81300416521987
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1014457434#4,South Los Angeles Street,0.2,0.2,0.0,275.42093502491804
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1014457434#5,South Los Angeles Street,0.37,0.37,0.0,302.4557880087602
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1036249339#0,North Hope Street,20.62,20.62,0.0,428.2976897556188
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1036249339#2,North Hope Street,9.61,9.61,0.0,475.7902378674873
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1046059231#0,South Hill Street,0.39,0.39,0.0,283.7763433145898
+los_angeles_equal_scale_delay_seed_44,fresh,llm,-1046059231#1,South Hill Street,0.8400000000000001,0.8400000000000001,0.0,272.5263105188194
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,-760433119,79th Street Transverse,2329.61,4747.630000000001,2418.020000000001,155.8827109224561
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,5669691#0,79th Street Transverse,6341.25,8269.64,1928.3899999999994,40.119654803630496
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,587061857#0,East 79th Street,10203.700000000003,11012.570000000003,808.8700000000008,148.5909160151529
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,5671628#11,West 76th Street,2271.7899999999995,2908.130000000001,636.3400000000015,291.2212425287693
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,420897876#0,Columbus Avenue,750.8099999999998,1382.2599999999998,631.4499999999999,284.69118282896596
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,1080862160,East 79th Street,479.09999999999997,1092.8799999999999,613.78,107.14551228482593
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,-542215781#6,Central Park West,2482.4399999999996,3047.420000000001,564.9800000000014,173.33662215629792
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,587061856#10,5th Avenue,979.3399999999999,1530.83,551.49,283.83427594773946
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,421853581,79th Street Transverse,1596.83,2147.850000000001,551.0200000000009,49.81960073103737
+manhattan_equal_scale_delay_seed_42,fresh,catalog_first,-5671093#1,West 81st Street,3395.2799999999993,3891.0099999999998,495.7300000000005,248.46411410905978
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,-760433119,79th Street Transverse,2329.61,8297.819999999998,5968.209999999997,155.8827109224561
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,5669691#0,79th Street Transverse,6341.25,7941.289999999998,1600.0399999999981,40.119654803630496
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,587061857#0,East 79th Street,10203.700000000003,11508.310000000001,1304.6099999999988,148.5909160151529
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,5671628#11,West 76th Street,2271.7899999999995,3068.350000000001,796.5600000000013,291.2212425287693
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,-5671093#1,West 81st Street,3395.2799999999993,4190.8099999999995,795.5300000000002,248.46411410905978
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,421853581,79th Street Transverse,1596.83,2390.65,793.8200000000002,49.81960073103737
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,420897876#0,Columbus Avenue,750.8099999999998,1526.8600000000006,776.0500000000008,284.69118282896596
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,1533843721#1,West 74th Street,914.8699999999998,1488.83,573.9600000000002,164.5283155721227
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,1080862160,East 79th Street,479.09999999999997,1030.7600000000002,551.6600000000003,107.14551228482593
+manhattan_equal_scale_delay_seed_42,fresh,catalog_random,587061856#10,5th Avenue,979.3399999999999,1415.7499999999995,436.4099999999996,283.83427594773946
+manhattan_equal_scale_delay_seed_42,fresh,llm,-760433119,79th Street Transverse,2329.61,4747.630000000001,2418.020000000001,155.8827109224561
+manhattan_equal_scale_delay_seed_42,fresh,llm,5669691#0,79th Street Transverse,6341.25,8269.64,1928.3899999999994,40.119654803630496
+manhattan_equal_scale_delay_seed_42,fresh,llm,587061857#0,East 79th Street,10203.700000000003,11012.570000000003,808.8700000000008,148.5909160151529
+manhattan_equal_scale_delay_seed_42,fresh,llm,5671628#11,West 76th Street,2271.7899999999995,2908.130000000001,636.3400000000015,291.2212425287693
+manhattan_equal_scale_delay_seed_42,fresh,llm,420897876#0,Columbus Avenue,750.8099999999998,1382.2599999999998,631.4499999999999,284.69118282896596
+manhattan_equal_scale_delay_seed_42,fresh,llm,1080862160,East 79th Street,479.09999999999997,1092.8799999999999,613.78,107.14551228482593
+manhattan_equal_scale_delay_seed_42,fresh,llm,-542215781#6,Central Park West,2482.4399999999996,3047.420000000001,564.9800000000014,173.33662215629792
+manhattan_equal_scale_delay_seed_42,fresh,llm,587061856#10,5th Avenue,979.3399999999999,1530.83,551.49,283.83427594773946
+manhattan_equal_scale_delay_seed_42,fresh,llm,421853581,79th Street Transverse,1596.83,2147.850000000001,551.0200000000009,49.81960073103737
+manhattan_equal_scale_delay_seed_42,fresh,llm,-5671093#1,West 81st Street,3395.2799999999993,3891.0099999999998,495.7300000000005,248.46411410905978
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,1537904626#1,West 78th Street,10141.49,15826.819999999998,5685.329999999998,436.08427502605497
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,5669691#0,79th Street Transverse,8808.83,11213.759999999998,2404.9299999999985,40.119654803630496
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,421853581,79th Street Transverse,2028.74,2918.9,890.1600000000001,49.81960073103737
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,760433114,79th Street Transverse,1067.55,1759.58,692.03,135.42297641620397
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,5671628#11,West 76th Street,2148.85,2589.8999999999996,441.0499999999997,291.2212425287693
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,195743151#1,Broadway,4788.579999999998,5212.090000000001,423.51000000000295,45.71980485036604
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,686125782#55,Park Avenue,934.0000000000002,1306.8499999999997,372.84999999999945,600.7679732595981
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,760433122,79th Street Transverse,257.9199999999999,597.2800000000002,339.3600000000003,108.66518213773819
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,-1271523173#1,Central Park West,1444.29,1780.5200000000004,336.2300000000005,536.9419061686289
+manhattan_equal_scale_delay_seed_43,fresh,catalog_first,1271523174#3,Central Park West,13209.239999999998,13477.2,267.96000000000276,245.04634714115272
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,587061857#0,East 79th Street,8637.15,10214.659999999998,1577.5099999999984,85.12625629681622
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,1537904626#1,West 78th Street,10141.49,11386.469999999998,1244.9799999999977,436.08427502605497
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,195743180#13,Madison Avenue,1332.51,2267.1400000000003,934.6300000000003,385.6296266317093
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,5672389#0,West 79th Street,1889.3399999999995,2650.4800000000005,761.140000000001,442.4790368198254
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,421853581,79th Street Transverse,2028.74,2580.74,551.9999999999998,49.81960073103737
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,895398384#1,Amsterdam Avenue,1534.31,2063.14,528.8299999999999,383.1264196711053
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,1123883121#1,Broadway,1329.1399999999999,1815.81,486.6700000000001,498.6042098197732
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,420898202#0,Columbus Avenue,3978.790000000001,4459.65,480.85999999999876,264.96388286896774
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,-1080864179#1,West 79th Street,1707.6,2170.12,462.52,322.5046182615068
+manhattan_equal_scale_delay_seed_43,fresh,catalog_random,584971432#2,West 79th Street,1106.69,1493.0099999999998,386.3199999999997,524.3605780853483
+manhattan_equal_scale_delay_seed_43,fresh,llm,1537904626#1,West 78th Street,10141.49,15826.819999999998,5685.329999999998,436.08427502605497
+manhattan_equal_scale_delay_seed_43,fresh,llm,5669691#0,79th Street Transverse,8808.83,11213.759999999998,2404.9299999999985,40.119654803630496
+manhattan_equal_scale_delay_seed_43,fresh,llm,421853581,79th Street Transverse,2028.74,2918.9,890.1600000000001,49.81960073103737
+manhattan_equal_scale_delay_seed_43,fresh,llm,760433114,79th Street Transverse,1067.55,1759.58,692.03,135.42297641620397
+manhattan_equal_scale_delay_seed_43,fresh,llm,5671628#11,West 76th Street,2148.85,2589.8999999999996,441.0499999999997,291.2212425287693
+manhattan_equal_scale_delay_seed_43,fresh,llm,195743151#1,Broadway,4788.579999999998,5212.090000000001,423.51000000000295,45.71980485036604
+manhattan_equal_scale_delay_seed_43,fresh,llm,686125782#55,Park Avenue,934.0000000000002,1306.8499999999997,372.84999999999945,600.7679732595981
+manhattan_equal_scale_delay_seed_43,fresh,llm,760433122,79th Street Transverse,257.9199999999999,597.2800000000002,339.3600000000003,108.66518213773819
+manhattan_equal_scale_delay_seed_43,fresh,llm,-1271523173#1,Central Park West,1444.29,1780.5200000000004,336.2300000000005,536.9419061686289
+manhattan_equal_scale_delay_seed_43,fresh,llm,1271523174#3,Central Park West,13209.239999999998,13477.2,267.96000000000276,245.04634714115272
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,421853581,79th Street Transverse,1759.81,8286.08,6526.27,49.81960073103737
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,-1271523176#1,Central Park West,1582.2099999999991,5438.88,3856.670000000001,183.92331513432455
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,5669691#0,79th Street Transverse,6839.7,10614.669999999998,3774.9699999999984,40.119654803630496
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,587061857#0,East 79th Street,9041.83,10578.730000000001,1536.9000000000015,85.12625629681622
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,-195743156#0,Central Park West,872.9499999999999,2291.4300000000003,1418.4800000000005,114.41187493000868
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,1053628248#1,Columbus Avenue,2347.9199999999996,3282.6999999999994,934.7799999999997,284.39936924156484
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,-5671093#1,West 81st Street,3870.43,4691.55,821.1200000000003,248.46411410905978
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,742007046,79th Street Transverse,479.46,1297.0500000000006,817.5900000000006,96.9051066559447
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,-1271523174#3,Central Park West,1641.12,2447.3099999999995,806.1899999999996,245.24288025116783
+manhattan_equal_scale_delay_seed_44,fresh,catalog_first,220544055,79th Street Transverse,241.95999999999998,1031.86,789.8999999999999,71.09291822834554
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,421853581,79th Street Transverse,1759.81,4897.81,3138.0000000000005,49.81960073103737
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,5669691#0,79th Street Transverse,6839.7,9553.550000000003,2713.850000000003,40.119654803630496
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,-5671093#1,West 81st Street,3870.43,5635.91,1765.48,248.46411410905978
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,-760433119,79th Street Transverse,2138.0699999999993,3374.789999999999,1236.7199999999998,155.8827109224561
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,587061857#0,East 79th Street,9041.83,9933.239999999996,891.4099999999962,85.12625629681622
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,-542215781#6,Central Park West,2992.2099999999996,3813.1799999999994,820.9699999999998,418.249132754629
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,195743180#13,Madison Avenue,1523.62,2312.8599999999988,789.2399999999989,385.6296266317093
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,420897876#0,Columbus Avenue,1387.7499999999995,2106.4799999999996,718.73,381.41104578918583
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,195743151#1,Broadway,6080.939999999999,6711.929999999999,630.9900000000007,38.4163687624025
+manhattan_equal_scale_delay_seed_44,fresh,catalog_random,1533843721#1,West 74th Street,1323.2399999999998,1896.4400000000007,573.200000000001,164.5283155721227
+manhattan_equal_scale_delay_seed_44,fresh,llm,421853581,79th Street Transverse,1759.81,4897.81,3138.0000000000005,49.81960073103737
+manhattan_equal_scale_delay_seed_44,fresh,llm,5669691#0,79th Street Transverse,6839.7,9553.550000000003,2713.850000000003,40.119654803630496
+manhattan_equal_scale_delay_seed_44,fresh,llm,-5671093#1,West 81st Street,3870.43,5635.91,1765.48,248.46411410905978
+manhattan_equal_scale_delay_seed_44,fresh,llm,-760433119,79th Street Transverse,2138.0699999999993,3374.789999999999,1236.7199999999998,155.8827109224561
+manhattan_equal_scale_delay_seed_44,fresh,llm,587061857#0,East 79th Street,9041.83,9933.239999999996,891.4099999999962,85.12625629681622
+manhattan_equal_scale_delay_seed_44,fresh,llm,-542215781#6,Central Park West,2992.2099999999996,3813.1799999999994,820.9699999999998,418.249132754629
+manhattan_equal_scale_delay_seed_44,fresh,llm,195743180#13,Madison Avenue,1523.62,2312.8599999999988,789.2399999999989,385.6296266317093
+manhattan_equal_scale_delay_seed_44,fresh,llm,420897876#0,Columbus Avenue,1387.7499999999995,2106.4799999999996,718.73,381.41104578918583
+manhattan_equal_scale_delay_seed_44,fresh,llm,195743151#1,Broadway,6080.939999999999,6711.929999999999,630.9900000000007,38.4163687624025
+manhattan_equal_scale_delay_seed_44,fresh,llm,1533843721#1,West 74th Street,1323.2399999999998,1896.4400000000007,573.200000000001,164.5283155721227
+troy_equal_scale_delay_seed_42,fresh,catalog_first,-68235505#0,23rd Street,3331.9300000000003,3685.31,353.37999999999965,52.082770007294656
+troy_equal_scale_delay_seed_42,fresh,catalog_first,1295371579#7,4th Street,1169.63,1469.81,300.17999999999984,261.6523504576253
+troy_equal_scale_delay_seed_42,fresh,catalog_first,51863809#2,Ferry Street,1213.2100000000005,1494.68,281.4699999999996,195.44577796667764
+troy_equal_scale_delay_seed_42,fresh,catalog_first,1375130314,23rd Street,4943.329999999999,5223.780000000003,280.45000000000437,173.17588768985328
+troy_equal_scale_delay_seed_42,fresh,catalog_first,669453499,23rd Street,1319.37,1564.5600000000006,245.19000000000074,109.12225139489216
+troy_equal_scale_delay_seed_42,fresh,catalog_first,-38286734#0,Broadway,1717.4699999999998,1942.0499999999995,224.5799999999997,679.4128696529078
+troy_equal_scale_delay_seed_42,fresh,catalog_first,87996411#1,Jacob Street,1213.18,1417.49,204.30999999999995,253.7425239238038
+troy_equal_scale_delay_seed_42,fresh,catalog_first,103495371#9,2nd Street,2861.0,3062.93,201.92999999999984,74.57105291599345
+troy_equal_scale_delay_seed_42,fresh,catalog_first,-669453512#0,8th Street,865.3399999999998,1066.0799999999997,200.7399999999999,243.83472768455283
+troy_equal_scale_delay_seed_42,fresh,catalog_first,5617685#5,Jefferson Street,269.33,447.63000000000005,178.30000000000007,838.2375204177575
+troy_equal_scale_delay_seed_42,fresh,catalog_random,1295371579#7,4th Street,1169.63,1549.1699999999998,379.53999999999974,261.6523504576253
+troy_equal_scale_delay_seed_42,fresh,catalog_random,669608266#2,Ferry Street,1553.7500000000002,1929.8000000000002,376.04999999999995,277.0190781336187
+troy_equal_scale_delay_seed_42,fresh,catalog_random,51863809#2,Ferry Street,1213.2100000000005,1519.6200000000001,306.4099999999996,195.44577796667764
+troy_equal_scale_delay_seed_42,fresh,catalog_random,-38286734#0,Broadway,1717.4699999999998,1964.2500000000005,246.78000000000065,679.4128696529078
+troy_equal_scale_delay_seed_42,fresh,catalog_random,87996411#1,Jacob Street,1213.18,1429.5699999999997,216.38999999999965,253.7425239238038
+troy_equal_scale_delay_seed_42,fresh,catalog_random,74754966#4,Jacob Street,580.85,776.6199999999999,195.76999999999987,242.00507701286026
+troy_equal_scale_delay_seed_42,fresh,catalog_random,-68235505#0,23rd Street,3331.9300000000003,3522.0099999999984,190.0799999999981,52.082770007294656
+troy_equal_scale_delay_seed_42,fresh,catalog_random,-669453512#0,8th Street,865.3399999999998,1039.4099999999999,174.07000000000005,243.83472768455283
+troy_equal_scale_delay_seed_42,fresh,catalog_random,669246267#3,4th Street,1945.7499999999993,2113.6299999999997,167.88000000000034,178.2623791634117
+troy_equal_scale_delay_seed_42,fresh,catalog_random,79635182#4,6th Avenue,2072.5400000000004,2219.61,147.0699999999997,84.74466520410448
+troy_equal_scale_delay_seed_42,fresh,llm,103495371#9,2nd Street,2861.0,3239.960000000001,378.96000000000095,74.57105291599345
+troy_equal_scale_delay_seed_42,fresh,llm,-68235505#0,23rd Street,3331.9300000000003,3696.1400000000003,364.21000000000004,52.082770007294656
+troy_equal_scale_delay_seed_42,fresh,llm,-38286734#0,Broadway,1717.4699999999998,2031.990000000001,314.5200000000011,679.4128696529078
+troy_equal_scale_delay_seed_42,fresh,llm,5633781#5,Hill Street,2370.95,2647.77,276.82000000000016,732.5124461325634
+troy_equal_scale_delay_seed_42,fresh,llm,1295371579#7,4th Street,1169.63,1422.2300000000002,252.60000000000014,261.6523504576253
+troy_equal_scale_delay_seed_42,fresh,llm,-669453512#0,8th Street,865.3399999999998,1087.1300000000003,221.79000000000053,243.83472768455283
+troy_equal_scale_delay_seed_42,fresh,llm,669453513#1,8th Street,999.0799999999998,1182.8900000000003,183.8100000000005,196.02769453574575
+troy_equal_scale_delay_seed_42,fresh,llm,669453499,23rd Street,1319.37,1502.54,183.17000000000007,109.12225139489216
+troy_equal_scale_delay_seed_42,fresh,llm,1375130314,23rd Street,4943.329999999999,5109.629999999998,166.29999999999927,173.17588768985328
+troy_equal_scale_delay_seed_42,fresh,llm,87996411#1,Jacob Street,1213.18,1374.61,161.42999999999984,253.7425239238038
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-1017862838,Adams Street,5.510000000000001,5.510000000000001,0.0,710.4189539498855
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-103495368#0,5th Avenue,4.98,4.98,0.0,919.6337758827939
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-103495368#1,5th Avenue,9.34,9.34,0.0,846.3809427071103
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-103495368#2,5th Avenue,24.32,24.32,0.0,745.130092899518
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-103495368#3,5th Avenue,12.979999999999999,12.979999999999999,0.0,654.0460412204261
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-107999639#0,6th Avenue,4.75,4.75,0.0,387.91905251324965
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-107999639#1,6th Avenue,40.79999999999999,40.79999999999999,0.0,371.53494697672835
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-107999639#2,6th Avenue,18.41,18.41,0.0,314.35789516091444
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-107999639#5,6th Avenue,855.0,855.0,0.0,244.7273322623572
+troy_equal_scale_delay_seed_43,fresh,catalog_first,-107999639#7,6th Avenue,6.510000000000001,6.510000000000001,0.0,196.34932091810327
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-1017862838,Adams Street,5.510000000000001,5.510000000000001,0.0,710.4189539498855
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-103495368#0,5th Avenue,4.98,4.98,0.0,919.6337758827939
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-103495368#1,5th Avenue,9.34,9.34,0.0,846.3809427071103
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-103495368#2,5th Avenue,24.32,24.32,0.0,745.130092899518
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-103495368#3,5th Avenue,12.979999999999999,12.979999999999999,0.0,654.0460412204261
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-107999639#0,6th Avenue,4.75,4.75,0.0,387.91905251324965
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-107999639#1,6th Avenue,40.79999999999999,40.79999999999999,0.0,371.53494697672835
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-107999639#2,6th Avenue,18.41,18.41,0.0,314.35789516091444
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-107999639#5,6th Avenue,855.0,855.0,0.0,244.7273322623572
+troy_equal_scale_delay_seed_43,fresh,catalog_random,-107999639#7,6th Avenue,6.510000000000001,6.510000000000001,0.0,196.34932091810327
+troy_equal_scale_delay_seed_43,fresh,llm,-1017862838,Adams Street,5.510000000000001,5.510000000000001,0.0,710.4189539498855
+troy_equal_scale_delay_seed_43,fresh,llm,-103495368#0,5th Avenue,4.98,4.98,0.0,919.6337758827939
+troy_equal_scale_delay_seed_43,fresh,llm,-103495368#1,5th Avenue,9.34,9.34,0.0,846.3809427071103
+troy_equal_scale_delay_seed_43,fresh,llm,-103495368#2,5th Avenue,24.32,24.32,0.0,745.130092899518
+troy_equal_scale_delay_seed_43,fresh,llm,-103495368#3,5th Avenue,12.979999999999999,12.979999999999999,0.0,654.0460412204261
+troy_equal_scale_delay_seed_43,fresh,llm,-107999639#0,6th Avenue,4.75,4.75,0.0,387.91905251324965
+troy_equal_scale_delay_seed_43,fresh,llm,-107999639#1,6th Avenue,40.79999999999999,40.79999999999999,0.0,371.53494697672835
+troy_equal_scale_delay_seed_43,fresh,llm,-107999639#2,6th Avenue,18.41,18.41,0.0,314.35789516091444
+troy_equal_scale_delay_seed_43,fresh,llm,-107999639#5,6th Avenue,855.0,855.0,0.0,244.7273322623572
+troy_equal_scale_delay_seed_43,fresh,llm,-107999639#7,6th Avenue,6.510000000000001,6.510000000000001,0.0,196.34932091810327
+troy_equal_scale_delay_seed_44,fresh,catalog_first,669608266#2,Ferry Street,1870.5100000000004,7349.25,5478.74,277.0190781336187
+troy_equal_scale_delay_seed_44,fresh,catalog_first,39804593#0,Green Island Bridge,2437.5900000000006,3254.1999999999994,816.6099999999988,84.25447976880008
+troy_equal_scale_delay_seed_44,fresh,catalog_first,107999639#2,6th Avenue,1559.2299999999998,2094.7299999999996,535.4999999999998,184.7188276814247
+troy_equal_scale_delay_seed_44,fresh,catalog_first,-5638505#1,Bridge Avenue,2865.9100000000003,3213.8,347.8899999999999,78.15177173295544
+troy_equal_scale_delay_seed_44,fresh,catalog_first,-139324188#2,2nd Avenue,1978.1799999999998,2308.2999999999993,330.11999999999944,72.0967488864789
+troy_equal_scale_delay_seed_44,fresh,catalog_first,121772758#2,4th Street,749.1800000000001,1075.8300000000004,326.6500000000003,291.68995393225373
+troy_equal_scale_delay_seed_44,fresh,catalog_first,669246281#3,2nd Avenue,1662.5499999999993,1985.790000000001,323.2400000000018,42.97765145979992
+troy_equal_scale_delay_seed_44,fresh,catalog_first,-5588364#1,Hudson Avenue,2565.789999999999,2830.830000000001,265.0400000000018,286.9077159907448
+troy_equal_scale_delay_seed_44,fresh,catalog_first,74754966#4,Jacob Street,1375.75,1638.82,263.06999999999994,242.00507701286026
+troy_equal_scale_delay_seed_44,fresh,catalog_first,-669453499,23rd Street,4299.940000000002,4487.3,187.35999999999785,108.7751260605567
+troy_equal_scale_delay_seed_44,fresh,catalog_random,669608266#2,Ferry Street,1870.5100000000004,7349.25,5478.74,277.0190781336187
+troy_equal_scale_delay_seed_44,fresh,catalog_random,39804593#0,Green Island Bridge,2437.5900000000006,3254.1999999999994,816.6099999999988,84.25447976880008
+troy_equal_scale_delay_seed_44,fresh,catalog_random,107999639#2,6th Avenue,1559.2299999999998,2094.7299999999996,535.4999999999998,184.7188276814247
+troy_equal_scale_delay_seed_44,fresh,catalog_random,-5638505#1,Bridge Avenue,2865.9100000000003,3213.8,347.8899999999999,78.15177173295544
+troy_equal_scale_delay_seed_44,fresh,catalog_random,-139324188#2,2nd Avenue,1978.1799999999998,2308.2999999999993,330.11999999999944,72.0967488864789
+troy_equal_scale_delay_seed_44,fresh,catalog_random,121772758#2,4th Street,749.1800000000001,1075.8300000000004,326.6500000000003,291.68995393225373
+troy_equal_scale_delay_seed_44,fresh,catalog_random,669246281#3,2nd Avenue,1662.5499999999993,1985.790000000001,323.2400000000018,42.97765145979992
+troy_equal_scale_delay_seed_44,fresh,catalog_random,-5588364#1,Hudson Avenue,2565.789999999999,2830.830000000001,265.0400000000018,286.9077159907448
+troy_equal_scale_delay_seed_44,fresh,catalog_random,74754966#4,Jacob Street,1375.75,1638.82,263.06999999999994,242.00507701286026
+troy_equal_scale_delay_seed_44,fresh,catalog_random,-669453499,23rd Street,4299.940000000002,4487.3,187.35999999999785,108.7751260605567
+troy_equal_scale_delay_seed_44,fresh,llm,669608266#2,Ferry Street,1870.5100000000004,7349.25,5478.74,277.0190781336187
+troy_equal_scale_delay_seed_44,fresh,llm,39804593#0,Green Island Bridge,2437.5900000000006,3254.1999999999994,816.6099999999988,84.25447976880008
+troy_equal_scale_delay_seed_44,fresh,llm,107999639#2,6th Avenue,1559.2299999999998,2094.7299999999996,535.4999999999998,184.7188276814247
+troy_equal_scale_delay_seed_44,fresh,llm,-5638505#1,Bridge Avenue,2865.9100000000003,3213.8,347.8899999999999,78.15177173295544
+troy_equal_scale_delay_seed_44,fresh,llm,-139324188#2,2nd Avenue,1978.1799999999998,2308.2999999999993,330.11999999999944,72.0967488864789
+troy_equal_scale_delay_seed_44,fresh,llm,121772758#2,4th Street,749.1800000000001,1075.8300000000004,326.6500000000003,291.68995393225373
+troy_equal_scale_delay_seed_44,fresh,llm,669246281#3,2nd Avenue,1662.5499999999993,1985.790000000001,323.2400000000018,42.97765145979992
+troy_equal_scale_delay_seed_44,fresh,llm,-5588364#1,Hudson Avenue,2565.789999999999,2830.830000000001,265.0400000000018,286.9077159907448
+troy_equal_scale_delay_seed_44,fresh,llm,74754966#4,Jacob Street,1375.75,1638.82,263.06999999999994,242.00507701286026
+troy_equal_scale_delay_seed_44,fresh,llm,-669453499,23rd Street,4299.940000000002,4487.3,187.35999999999785,108.7751260605567

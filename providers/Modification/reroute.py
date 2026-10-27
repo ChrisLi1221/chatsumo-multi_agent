@@ -8,6 +8,35 @@ import xml.etree.ElementTree as ET
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence
 
 
+def write_rerouted_sumocfg(source_cfg: str, out_dir: str, net_path: str, route_path: str) -> str:
+    """Preserve simulation settings and additional inputs when changing routes."""
+    from .tls_program import clone_cfg_for_run, attach_additional_file, split_sumo_file_list
+    from .remove_edge import rewrite_sumocfg_inputs
+    cfg = clone_cfg_for_run(source_cfg, out_dir)
+    rewrite_sumocfg_inputs(cfg, net_path, route_path)
+    tree = ET.parse(cfg); root = tree.getroot()
+    add = root.find('./input/additional-files')
+    paths = split_sumo_file_list(add.get('value')) if add is not None else []
+    has_edges = False
+    for path in paths:
+        path = path if os.path.isabs(path) else os.path.join(os.path.dirname(cfg), path)
+        if os.path.isfile(path) and ET.parse(path).find('.//edgeData') is not None:
+            has_edges = True
+    if root.find('.//device.emissions.probability') is None:
+        report = root.find('report')
+        if report is None: report = ET.SubElement(root, 'report')
+        ET.SubElement(report, 'device.emissions.probability', {'value': '1.0'})
+    tree.write(cfg, encoding='utf-8', xml_declaration=True)
+    if not has_edges:
+        additional = ET.Element('additional')
+        ET.SubElement(additional, 'edgeData', {'id':'edge_performance','period':'60',
+            'file':os.path.abspath(os.path.join(out_dir,'edgedata.xml')),'excludeEmpty':'true'})
+        path = os.path.abspath(os.path.join(out_dir,'edge_data.add.xml'))
+        ET.ElementTree(additional).write(path, encoding='utf-8', xml_declaration=True)
+        attach_additional_file(cfg,path)
+    return cfg
+
+
 def write_soft_avoid_weights(
     path: str,
     avoid_edges: Iterable[str],

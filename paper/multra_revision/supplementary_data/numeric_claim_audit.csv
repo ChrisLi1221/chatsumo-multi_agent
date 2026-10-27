@@ -1,0 +1,98 @@
+claim,reported,recomputed,status,source
+llm Top10 mean,9.18,9.179019182517452,verified,original_pipeline candidate logs
+llm Top10 SD,10.18,10.178031812019068,verified,original_pipeline candidate logs
+llm Global mean,2.78,2.7759930951873386,verified,original_pipeline candidate logs
+llm Success count,13,13,verified,original_pipeline candidate logs
+llm Simulation efficiency,35.1,35.05154639175258,verified,original_pipeline candidate logs
+grounded_random Top10 mean,9.0,8.995608198678237,verified,original_pipeline candidate logs
+grounded_random Top10 SD,10.88,10.88048637760197,verified,original_pipeline candidate logs
+grounded_random Global mean,3.03,3.0280420654342004,verified,original_pipeline candidate logs
+grounded_random Success count,11,11,verified,original_pipeline candidate logs
+grounded_random Simulation efficiency,34.0,33.980582524271846,verified,original_pipeline candidate logs
+deterministic_heuristic Top10 mean,9.6,9.603672347294088,verified,original_pipeline candidate logs
+deterministic_heuristic Top10 SD,10.32,10.324475750507842,verified,original_pipeline candidate logs
+deterministic_heuristic Global mean,2.69,2.693918225152726,verified,original_pipeline candidate logs
+deterministic_heuristic Success count,12,12,verified,original_pipeline candidate logs
+deterministic_heuristic Simulation efficiency,39.0,39.0,verified,original_pipeline candidate logs
+Original Wilcoxon random,0.407,0.40686780301799563,verified,"zero_method=zsplit, method=auto"
+Original Wilcoxon heuristic,0.639,0.638671875,verified,"zero_method=zsplit, method=auto"
+LLM global reduction SD,5.08,5.082425205086204,verified,15 original case results
+llm proposal validity,100.0,100.0,verified,emitted proposals only; excludes generation failures
+grounded_random proposal validity,100.0,100.0,verified,emitted proposals only; excludes generation failures
+deterministic_heuristic proposal validity,97.3,97.33333333333333,verified,emitted proposals only; excludes generation failures
+llm seed 42 mean,12.38,12.380005205079867,verified,five networks at one seed
+llm seed 44 mean,10.05,10.047195307142996,verified,five networks at one seed
+deterministic_heuristic seed 43 mean,9.03,9.034761142119054,verified,five networks at one seed
+albany edges,6193,6193,verified,network XML and three seed logs
+albany junctions,4309,4309,verified,network XML and three seed logs
+albany TLS,107,107,verified,network XML and three seed logs
+albany baseline mean,112.8,112.79657777777781,verified,network XML and three seed logs
+albany baseline SD,0.26,0.2603104320089923,verified,network XML and three seed logs
+albany Top10 mean,2.25,2.246500971397706,verified,network XML and three seed logs
+albany Top10 SD,2.11,2.114818780240187,verified,network XML and three seed logs
+albany global mean,0.17,0.17060645233970181,verified,network XML and three seed logs
+albany global SD,0.52,0.524430970040251,verified,network XML and three seed logs
+albany simulation efficiency,21.1,21.05263157894737,verified,network XML and three seed logs
+albany_equal_scale_delay_seed_42 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_42/albany/demand.rou.xml
+albany_equal_scale_delay_seed_43 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_43/albany/demand.rou.xml
+albany_equal_scale_delay_seed_44 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_44/albany/demand.rou.xml
+troy edges,6107,6107,verified,network XML and three seed logs
+troy junctions,4355,4355,verified,network XML and three seed logs
+troy TLS,57,57,verified,network XML and three seed logs
+troy baseline mean,99.79,99.79433194444455,verified,network XML and three seed logs
+troy baseline SD,0.84,0.8374837127076911,verified,network XML and three seed logs
+troy Top10 mean,8.55,8.554698630069005,verified,network XML and three seed logs
+troy Top10 SD,11.17,11.170172603440154,verified,network XML and three seed logs
+troy global mean,0.75,0.7490345073952187,verified,network XML and three seed logs
+troy global SD,1.27,1.273097493685761,verified,network XML and three seed logs
+troy simulation efficiency,28.6,28.571428571428573,verified,network XML and three seed logs
+troy_equal_scale_delay_seed_42 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_42/troy/demand.rou.xml
+troy_equal_scale_delay_seed_43 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_43/troy/demand.rou.xml
+troy_equal_scale_delay_seed_44 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_44/troy/demand.rou.xml
+ann_arbor edges,10151,10151,verified,network XML and three seed logs
+ann_arbor junctions,7522,7522,verified,network XML and three seed logs
+ann_arbor TLS,81,81,verified,network XML and three seed logs
+ann_arbor baseline mean,138.58,138.5764652777776,verified,network XML and three seed logs
+ann_arbor baseline SD,3.13,3.1268497497768974,verified,network XML and three seed logs
+ann_arbor Top10 mean,8.25,8.24644182861907,verified,network XML and three seed logs
+ann_arbor Top10 SD,5.83,5.825635303010395,verified,network XML and three seed logs
+ann_arbor global mean,1.75,1.7465475324468624,verified,network XML and three seed logs
+ann_arbor global SD,0.46,0.4594475627651416,verified,network XML and three seed logs
+ann_arbor simulation efficiency,30.0,30.0,verified,network XML and three seed logs
+ann_arbor_equal_scale_delay_seed_42 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_42/ann_arbor/demand.rou.xml
+ann_arbor_equal_scale_delay_seed_43 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_43/ann_arbor/demand.rou.xml
+ann_arbor_equal_scale_delay_seed_44 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_44/ann_arbor/demand.rou.xml
+los_angeles edges,6969,6969,verified,network XML and three seed logs
+los_angeles junctions,4954,4954,verified,network XML and three seed logs
+los_angeles TLS,172,172,verified,network XML and three seed logs
+los_angeles baseline mean,175.76,175.7640680555556,verified,network XML and three seed logs
+los_angeles baseline SD,1.26,1.260754083048066,verified,network XML and three seed logs
+los_angeles Top10 mean,5.58,5.577236486584617,verified,network XML and three seed logs
+los_angeles Top10 SD,6.84,6.837776560607653,verified,network XML and three seed logs
+los_angeles global mean,0.51,0.505348621912712,verified,network XML and three seed logs
+los_angeles global SD,1.28,1.281936569263438,verified,network XML and three seed logs
+los_angeles simulation efficiency,31.6,31.57894736842105,verified,network XML and three seed logs
+los_angeles_equal_scale_delay_seed_42 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_42/los_angeles/demand.rou.xml
+los_angeles_equal_scale_delay_seed_43 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_43/los_angeles/demand.rou.xml
+los_angeles_equal_scale_delay_seed_44 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_44/los_angeles/demand.rou.xml
+manhattan edges,5993,5993,verified,network XML and three seed logs
+manhattan junctions,4065,4065,verified,network XML and three seed logs
+manhattan TLS,256,256,verified,network XML and three seed logs
+manhattan baseline mean,245.31,245.30888194444455,verified,network XML and three seed logs
+manhattan baseline SD,13.03,13.033127425093362,verified,network XML and three seed logs
+manhattan Top10 mean,21.27,21.270217995916855,verified,network XML and three seed logs
+manhattan Top10 SD,14.23,14.229338438347638,verified,network XML and three seed logs
+manhattan global mean,10.71,10.708428361842197,verified,network XML and three seed logs
+manhattan global SD,7.55,7.550727886583817,verified,network XML and three seed logs
+manhattan simulation efficiency,66.7,66.66666666666667,verified,network XML and three seed logs
+manhattan_equal_scale_delay_seed_42 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_42/manhattan/demand.rou.xml
+manhattan_equal_scale_delay_seed_43 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_43/manhattan/demand.rou.xml
+manhattan_equal_scale_delay_seed_44 demand count,2400,2400,verified,PROJECT_ROOT/experiment/equal-scale-congested-2x-seeded/seed_44/manhattan/demand.rou.xml
+selected LLM noop,2,2,verified,selected_proposal in 15 original logs
+selected LLM bundle,4,4,verified,selected_proposal in 15 original logs
+selected LLM refined,6,6,verified,selected_proposal in 15 original logs
+selected LLM initial,3,3,verified,selected_proposal in 15 original logs
+Old Pareto mean front size,1.53,1.5333333333333334,verified,old generated audit; different feasible set
+Old Pareto membership count,11,11,verified,old generated audit; NOT four proofs of dominance
+Four primary plans dominated,4,2 excluded under global<=0; 2 baseline comparisons omit minimum gain,incorrect interpretation corrected,analyze_pareto_reselection.safety_feasible and corrected_pareto.json
+Signal tool is Webster optimization,Webster,proportional_green_split_preserving_phase_states,incorrect method corrected,providers/Modification/tls_program.py:build_optimized_tllogic

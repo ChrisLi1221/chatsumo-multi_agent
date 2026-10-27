@@ -1,0 +1,402 @@
+[
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 2,
+    "frequencies": {
+      "mutation_005": 3,
+      "mutation_006": 2
+    },
+    "entropy_bits": 0.9709505944546686,
+    "pairwise_agreement": 0.4
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_005": 2,
+      "mutation_008": 1,
+      "mutation_002": 1,
+      "mutation_003": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 3,
+    "frequencies": {
+      "mutation_001": 2,
+      "mutation_004": 2,
+      "mutation_006": 1
+    },
+    "entropy_bits": 1.5219280948873621,
+    "pairwise_agreement": 0.2
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_002": 2,
+      "mutation_004": 1,
+      "mutation_001": 1,
+      "mutation_006": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 3,
+    "frequencies": {
+      "mutation_003": 1,
+      "mutation_005": 1,
+      "mutation_006": 3
+    },
+    "entropy_bits": 1.3709505944546687,
+    "pairwise_agreement": 0.3
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_003": 2,
+      "mutation_004": 1,
+      "mutation_001": 1,
+      "mutation_002": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 2,
+    "frequencies": {
+      "mutation_001": 1,
+      "mutation_006": 4
+    },
+    "entropy_bits": 0.7219280948873623,
+    "pairwise_agreement": 0.6
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 3,
+    "frequencies": {
+      "mutation_006": 2,
+      "mutation_001": 2,
+      "mutation_003": 1
+    },
+    "entropy_bits": 1.5219280948873621,
+    "pairwise_agreement": 0.2
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 2,
+    "frequencies": {
+      "mutation_001": 4,
+      "mutation_004": 1
+    },
+    "entropy_bits": 0.7219280948873623,
+    "pairwise_agreement": 0.6
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_005": 2,
+      "mutation_008": 1,
+      "mutation_002": 1,
+      "mutation_003": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 3,
+    "frequencies": {
+      "mutation_007": 1,
+      "mutation_006": 3,
+      "mutation_008": 1
+    },
+    "entropy_bits": 1.3709505944546687,
+    "pairwise_agreement": 0.3
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_002": 2,
+      "mutation_004": 1,
+      "mutation_001": 1,
+      "mutation_006": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 3,
+    "frequencies": {
+      "mutation_006": 2,
+      "mutation_001": 2,
+      "mutation_004": 1
+    },
+    "entropy_bits": 1.5219280948873621,
+    "pairwise_agreement": 0.2
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_003": 2,
+      "mutation_004": 1,
+      "mutation_001": 1,
+      "mutation_002": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_002": 5
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": 1.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 5,
+    "frequencies": {
+      "mutation_011": 1,
+      "mutation_004": 1,
+      "mutation_001": 1,
+      "mutation_002": 1,
+      "mutation_006": 1
+    },
+    "entropy_bits": 2.321928094887362,
+    "pairwise_agreement": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_002": 5
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": 1.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 4,
+    "frequencies": {
+      "mutation_005": 2,
+      "mutation_008": 1,
+      "mutation_002": 1,
+      "mutation_003": 1
+    },
+    "entropy_bits": 1.9219280948873623,
+    "pairwise_agreement": 0.1
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "llm",
+    "n": 5,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_006": 5
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": 1.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "catalog_first",
+    "n": 1,
+    "unique_choices": 1,
+    "frequencies": {
+      "mutation_001": 1
+    },
+    "entropy_bits": -0.0,
+    "pairwise_agreement": null
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "arm": "catalog_random",
+    "n": 5,
+    "unique_choices": 3,
+    "frequencies": {
+      "mutation_006": 2,
+      "mutation_001": 2,
+      "mutation_003": 1
+    },
+    "entropy_bits": 1.5219280948873621,
+    "pairwise_agreement": 0.2
+  }
+]

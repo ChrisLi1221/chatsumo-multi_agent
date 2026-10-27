@@ -30,12 +30,22 @@ if str(PROVIDERS_DIR) not in sys.path:
 
 from agents.bundle_optimizer import generate_pair_bundles
 from agents.capabilities import normalize_capability_args, validate_modifier_capability
+from agents.catalog_selectors import (
+    CATALOG_FIRST,
+    CATALOG_RANDOM,
+    make_catalog_selector,
+)
 from agents.debate_optimizer import (
     OPTIMIZER_ALIASES,
     run_debate_optimizer,
     run_feedback_refinement,
 )
 from agents.grounded_baselines import generate_grounded_baseline
+from agents.joint_optimizer import (
+    JointCatalogExhausted,
+    plan_signature,
+    run_joint_feedback_refinement,
+)
 from agents.llm_agents import call_llm, resolved_llm_config
 from agents.objectives import get_weight_profile, infer_weight_profile, objective_delta
 from agents.state_refactored import AgentState
@@ -54,6 +64,23 @@ PRIMARY_METRIC_BY_PROFILE = {
     "emissions": ("co2", "lower"),
 }
 LLM_FEEDBACK_PROPOSAL_SOURCES = {"llm", "random_initial_llm"}
+
+# Matched selector ablations.  These share the grounded initialization seed,
+# retained parent, enumerated mutation catalog, beam width and per-case SUMO
+# budget with "random_initial_llm"; only the choice of catalog entry differs.
+# Each value names a selector kind in agents.catalog_selectors.
+CATALOG_SELECTOR_PROPOSAL_SOURCES = {
+    "random_initial_catalog_first": CATALOG_FIRST,
+    "random_initial_catalog_random": CATALOG_RANDOM,
+}
+
+# Every source that runs a second-stage feedback refinement round.  Budget
+# policy and beam configuration key off this set, so the ablation conditions
+# stay budget-matched with the LLM condition.  Whether the *model* is used is a
+# separate question and keys off LLM_FEEDBACK_PROPOSAL_SOURCES.
+FEEDBACK_PROPOSAL_SOURCES = LLM_FEEDBACK_PROPOSAL_SOURCES | set(
+    CATALOG_SELECTOR_PROPOSAL_SOURCES
+)
 
 
 @dataclass(frozen=True)
@@ -618,17 +645,28 @@ def _evaluate_bundle(
         ]
         gains = dict(single_gain_by_id or {})
         bundle_gain = -float(objective["delta"])
-        additive_single_gain = sum(float(gains.get(proposal_id) or 0.0) for proposal_id in source_ids)
+        isolated_available = all(proposal_id in gains for proposal_id in source_ids)
+        additive_single_gain = (
+            sum(float(gains[proposal_id]) for proposal_id in source_ids)
+            if isolated_available else None
+        )
+        interaction_gain = (
+            bundle_gain - additive_single_gain if additive_single_gain is not None else None
+        )
         interaction = {
             "source_proposal_ids": source_ids,
             "bundle_gain": bundle_gain,
             "additive_single_gain": additive_single_gain,
-            "interaction_gain": bundle_gain - additive_single_gain,
+            "isolated_effects_available": isolated_available,
+            "interaction_gain": interaction_gain,
             "interpretation": (
+                "unavailable_without_isolated_component_evaluations"
+                if interaction_gain is None
+                else
                 "synergy"
-                if bundle_gain - additive_single_gain > 0
+                if interaction_gain > 0
                 else "interference"
-                if bundle_gain - additive_single_gain < 0
+                if interaction_gain < 0
                 else "additive"
             ),
         }
@@ -912,6 +950,8 @@ def _candidate_summary(
         "global_delay_relative_change": scope_objective.get("global_delay_relative_change"),
         "neighbor_delay_relative_change": scope_objective.get("neighbor_delay_relative_change"),
         "interaction_gain": (candidate.get("interaction") or {}).get("interaction_gain"),
+        "parent_proposal_id": proposal.get("parent_proposal_id"),
+        "conditional_change": candidate.get("conditional_change"),
         "improved": assessment["practical_improvement"],
         "objective_improved": objective.get("improved"),
         "selection_eligible": assessment["selection_eligible"],
@@ -961,8 +1001,9 @@ def _feedback_parent_candidates(
     profile: Optional[str],
     objective_scope: str,
     beam_width: int,
+    include_bundles: bool = False,
 ) -> List[Mapping[str, Any]]:
-    """Select a feasible-first, role-diverse beam of measured single actions."""
+    """Select a feasible-first beam; optionally admit measured joint plans."""
     if beam_width <= 0:
         return []
     successful = [
@@ -970,7 +1011,7 @@ def _feedback_parent_candidates(
         for candidate in candidates
         if candidate.get("status") == "ok"
         and not candidate.get("is_baseline")
-        and (candidate.get("proposal") or {}).get("action") != "bundle"
+        and (include_bundles or (candidate.get("proposal") or {}).get("action") != "bundle")
     ]
 
     def measured_score(candidate: Mapping[str, Any]) -> float:
@@ -1093,6 +1134,10 @@ def _feedback_history(
                 "agent": proposal.get("agent"),
                 "action": proposal.get("action"),
                 "args": _compact_proposal_args(proposal),
+                **({"actions": [
+                    {"action": row.get("action"), "args": _compact_proposal_args(row)}
+                    for row in proposal.get("actions") or []
+                ]} if proposal.get("action") == "bundle" else {}),
                 "objective_delta": (candidate.get("objective") or {}).get("delta"),
                 "top10_relative_improvement": (
                     candidate.get("scope_objective") or {}
@@ -1302,15 +1347,7 @@ def _expand_routing_variants(
 
 
 def _proposal_semantic_signature(proposal: Mapping[str, Any]) -> str:
-    args = dict(proposal.get("args") or {})
-    for key in ("net_path", "route_path", "cfg_path", "out_dir"):
-        args.pop(key, None)
-    return json.dumps(
-        {"action": proposal.get("action"), "args": args},
-        ensure_ascii=False,
-        sort_keys=True,
-        default=str,
-    )
+    return plan_signature(proposal)
 
 
 def _deduplicate_evaluation_proposals(
@@ -1356,8 +1393,9 @@ def _resolved_proposal_attempt_budget(
     requested_attempts = getattr(args, "proposal_attempt_budget", None)
     if requested_attempts is None:
         if (
-            int(getattr(args, "search_rounds", 1)) > 1
-            and proposal_source in LLM_FEEDBACK_PROPOSAL_SOURCES
+            (int(getattr(args, "search_rounds", 1)) > 1
+             or int(getattr(args, "joint_feedback_rounds", 0)) > 0)
+            and proposal_source in FEEDBACK_PROPOSAL_SOURCES
         ):
             requested_attempts = role_count
         else:
@@ -1388,8 +1426,15 @@ def _generate_proposal_source(
     proposal_seed = int(proposal_seed) + int(getattr(args, "_repetition", 1)) - 1
 
     if source != "llm":
+        # A matched selector ablation must share byte-identical grounded
+        # initialization with random_initial_llm, so it requests the same
+        # initializer under the same seed.  Parent proposal ids therefore stay
+        # aligned across conditions, which makes the per-case comparison
+        # exactly paired; only the refinement selector differs.
+        selector_kind = CATALOG_SELECTOR_PROPOSAL_SOURCES.get(source)
+        init_source = "random_initial_llm" if selector_kind else source
         generated = generate_grounded_baseline(
-            source,
+            init_source,
             diagnosis,
             baseline_artifacts,
             attempt_budget=attempt_budget,
@@ -1397,14 +1442,24 @@ def _generate_proposal_source(
             optimizer=args.optimizer,
             grid_edge_pool_size=int(getattr(args, "grid_edge_pool_size", 3)),
         )
+        generated["proposal_source"] = source
         generated["generation"] = {
             "proposal_source": source,
+            "initialization_source": init_source,
             "attempt_budget": attempt_budget,
             "proposal_seed": proposal_seed,
             "llm_calls_used": False,
+            "feedback_rounds_enabled": (
+                source in FEEDBACK_PROPOSAL_SOURCES
+                and (int(getattr(args, "search_rounds", 1)) > 1
+                     or int(getattr(args, "joint_feedback_rounds", 0)) > 0)
+            ),
+            "feedback_selector": selector_kind
+            or ("llm" if source == "random_initial_llm" else None),
             "feedback_llm_calls_enabled": (
                 source == "random_initial_llm"
-                and int(getattr(args, "search_rounds", 1)) > 1
+                and (int(getattr(args, "search_rounds", 1)) > 1
+                     or int(getattr(args, "joint_feedback_rounds", 0)) > 0)
             ),
         }
         return generated
@@ -1675,10 +1730,31 @@ def run_case(
     weights = get_weight_profile(profile)
     objective_scope = str(args.objective_scope)
     search_rounds = max(1, int(getattr(args, "search_rounds", 1)))
+    joint_feedback_rounds = int(getattr(args, "joint_feedback_rounds", 0))
+    joint_feedback_mode = str(getattr(args, "joint_feedback_mode", "aggregate"))
+    if joint_feedback_mode not in ("aggregate", "interaction"):
+        raise ValueError("Unknown joint feedback mode")
+    if joint_feedback_mode == "interaction" and objective_scope != "top10":
+        raise ValueError("Component interaction feedback requires --objective-scope top10")
+    if joint_feedback_rounds < 0:
+        raise ValueError("--joint-feedback-rounds must be nonnegative")
     feedback_beam_width = max(1, int(getattr(args, "feedback_beam_width", 2)))
     feedback_enabled = (
-        str(args.proposal_source) in LLM_FEEDBACK_PROPOSAL_SOURCES
-        and search_rounds > 1
+        str(args.proposal_source) in FEEDBACK_PROPOSAL_SOURCES
+        and (search_rounds > 1 or joint_feedback_rounds > 0)
+    )
+    catalog_selector_kind = CATALOG_SELECTOR_PROPOSAL_SOURCES.get(
+        str(args.proposal_source)
+    )
+    # Seed the random selector from the same case demand seed used by grounded
+    # initialization, so the ablation is reproducible and paired per case.
+    refinement_select_fn = (
+        make_catalog_selector(
+            catalog_selector_kind,
+            seed=case.seed if case.seed is not None else args.proposal_seed,
+        )
+        if catalog_selector_kind
+        else call_llm
     )
     resolved_attempt_budget = _resolved_proposal_attempt_budget(args)
     if feedback_enabled:
@@ -1687,6 +1763,8 @@ def run_case(
             if objective_scope == "top10"
             else "feedback_guided_constrained_beam_search_with_baseline_guard"
         )
+        if joint_feedback_rounds:
+            selection_method = "joint_" + selection_method
     else:
         selection_method = (
             "baseline_frozen_top10_constrained_search"
@@ -1718,7 +1796,11 @@ def run_case(
             "routing_edge_counts": args.routing_edge_counts,
             "routing_reroute_fraction": args.routing_reroute_fraction,
             "search_rounds": search_rounds,
+            "joint_feedback_rounds": joint_feedback_rounds,
+            "joint_feedback_mode": joint_feedback_mode,
+            "joint_feedback_enabled": feedback_enabled and joint_feedback_rounds > 0,
             "feedback_beam_width": feedback_beam_width,
+            "feedback_max_completion_tokens": int(getattr(args, "feedback_max_completion_tokens", 4096)),
             "feedback_enabled": feedback_enabled,
             "top_n": args.top_n,
             "subgraph_seed_n": args.subgraph_seed_n,
@@ -1801,6 +1883,9 @@ def run_case(
         "operator": "hybrid_feedback_search",
         "scheduled_operator": "single_argument_llm_mutation",
         "rounds": [],
+        "requested_joint_feedback_rounds": joint_feedback_rounds,
+        "joint_feedback_mode": joint_feedback_mode,
+        "joint_feedback_enabled": feedback_enabled and joint_feedback_rounds > 0,
     }
     if search_rounds > 1 and not feedback_enabled:
         feedback_search["skip_reason"] = (
@@ -1865,6 +1950,8 @@ def run_case(
         for candidate in candidates
         if not candidate.get("is_baseline") and candidate.get("proposal")
     }
+    joint_component_turns: Dict[str, int] = {}
+    exhausted_joint_parent_ids: set[str] = set()
 
     def evaluate_feedback_refinement(
         parent_candidate: Mapping[str, Any],
@@ -1891,19 +1978,68 @@ def run_case(
             "mutation_index": int(mutation_index),
             "simulation_feedback": feedback,
         }
-        try:
-            refined = run_feedback_refinement(
-                state,
-                parent_proposal=parent,
-                simulation_feedback=feedback,
-                diagnosis=diagnosis,
-                evaluated_history=history,
-                user_request=case.goal,
-                objective_profile=profile,
-                search_round=round_index,
-                mutation_index=mutation_index,
-                call_llm_fn=call_llm,
+        interaction = None
+        if parent.get("action") == "bundle" and joint_feedback_mode == "interaction":
+            from agents.interaction_feedback import build_interaction_feedback
+            interaction = build_interaction_feedback(
+                parent_candidate,
+                baseline=next(item for item in candidates if item.get("is_baseline")),
+                evaluated_candidates=candidates,
             )
+            refinement_record["component_interactions"] = interaction
+        try:
+            if parent.get("action") == "bundle":
+                root_id = str(parent.get("joint_root_id") or parent_id)
+                component_start = joint_component_turns.get(root_id, 0)
+                joint_component_turns[root_id] = component_start + 1
+                isolated_feedback = {
+                    str((item.get("proposal") or {}).get("proposal_id")): _candidate_feedback(
+                        item, baseline_kpi, profile=profile, objective_scope=objective_scope,
+                    )
+                    for item in candidates
+                    if item.get("status") == "ok" and not item.get("is_baseline")
+                    and (item.get("proposal") or {}).get("action") != "bundle"
+                }
+                refined = run_joint_feedback_refinement(
+                    state,
+                    parent_plan=parent,
+                    simulation_feedback=feedback,
+                    diagnosis=diagnosis,
+                    evaluated_history=history,
+                    excluded_plan_signatures=evaluated_signatures,
+                    component_feedback=isolated_feedback,
+                    interaction_feedback=interaction,
+                    user_request=case.goal,
+                    objective_profile=profile,
+                    search_round=round_index,
+                    mutation_index=mutation_index,
+                    component_start=component_start,
+                    selector_kind=catalog_selector_kind or "llm",
+                    max_completion_tokens=int(getattr(args, "feedback_max_completion_tokens", 4096)),
+                    call_llm_fn=refinement_select_fn,
+                )
+                joint_component_turns[root_id] = int(
+                    refined["refinement"]["selected_component_index"]
+                ) + 1
+            else:
+                refined = run_feedback_refinement(
+                    state,
+                    parent_proposal=parent,
+                    simulation_feedback=feedback,
+                    diagnosis=diagnosis,
+                    evaluated_history=history,
+                    user_request=case.goal,
+                    objective_profile=profile,
+                    search_round=round_index,
+                    mutation_index=mutation_index,
+                    max_completion_tokens=int(getattr(args, "feedback_max_completion_tokens", 4096)),
+                    call_llm_fn=refinement_select_fn,
+                )
+        except JointCatalogExhausted as exc:
+            exhausted_joint_parent_ids.add(parent_id)
+            refinement_record.update({"status": "catalog_exhausted", "reason": str(exc)})
+            round_record["refinements"].append(refinement_record)
+            return False
         except Exception as exc:
             refinement_record.update(
                 {
@@ -1915,11 +2051,25 @@ def run_case(
             print(f"      feedback refinement for {parent_id} failed: {exc}")
             return False
 
+        if catalog_selector_kind and refined.get("action") != "bundle":
+            # run_feedback_refinement labels its output as LLM-selected because
+            # that is its only production path.  Correct the provenance so the
+            # ablation runs are not mistaken for model-selected refinements.
+            refined["proposal_source"] = f"feedback_{catalog_selector_kind}"
+            refinement = dict(refined.get("refinement") or {})
+            refinement["operator"] = f"finite_catalog_{catalog_selector_kind}_selection"
+            refinement["selector_kind"] = catalog_selector_kind
+            refined["refinement"] = refinement
         debate.setdefault("proposals", []).append(refined)
         refinement_record["proposal_id"] = refined.get("proposal_id")
+        refinement_record["selector_kind"] = catalog_selector_kind or "llm"
         refinement_record["changed_fields"] = (
             refined.get("refinement") or {}
         ).get("changed_fields")
+        if refined.get("action") == "bundle":
+            refinement_record["selected_specialist"] = refined["refinement"]["selected_specialist"]
+            refinement_record["selected_component_index"] = refined["refinement"]["selected_component_index"]
+            refinement_record["feedback_scope"] = "joint_plan"
         validation = dict(refined.get("validation") or {})
         if not validation.get("ok"):
             refinement_record.update(
@@ -1960,7 +2110,8 @@ def run_case(
             return False
 
         evaluated_signatures.add(signature)
-        valid_proposals.append(refined)
+        if refined.get("action") != "bundle":
+            valid_proposals.append(refined)
         debate.setdefault("evaluation_proposals", []).append(refined)
         deduplication_audit.append(
             {
@@ -1975,18 +2126,40 @@ def run_case(
             f"      running refinement {proposal_id}: "
             f"changed {', '.join((refined.get('refinement') or {}).get('changed_fields') or [])}"
         )
-        candidate = _evaluate_proposal(
-            bridge,
-            refined,
-            run_dir / "candidates" / proposal_id,
-            baseline_artifacts,
-            baseline_kpi,
-            weights,
-            diagnosis_top_n,
-            focus_scope,
-        )
+        if refined.get("action") == "bundle":
+            candidate_dir = run_dir / "bundles" / proposal_id
+            candidate = _evaluate_bundle(
+                bridge, refined, candidate_dir, baseline_artifacts, baseline_kpi,
+                weights, diagnosis_top_n, single_gain, focus_scope,
+            )
+            if candidate.get("status") == "ok":
+                parent_top10 = (parent_candidate.get("scope_objective") or {}).get("top10_relative_improvement")
+                child_top10 = (candidate.get("scope_objective") or {}).get("top10_relative_improvement")
+                candidate["conditional_change"] = {
+                    "parent_proposal_id": parent_id,
+                    "kpi_score_reduction": float(parent_candidate["kpi_score"]) - float(candidate["kpi_score"]),
+                    "top10_improvement_delta": (
+                        float(child_top10) - float(parent_top10)
+                        if child_top10 is not None and parent_top10 is not None else None
+                    ),
+                }
+                comparison_path = candidate_dir / "06_comparison.json"
+                comparison_record = json.loads(comparison_path.read_text(encoding="utf-8"))
+                comparison_record["conditional_change"] = candidate["conditional_change"]
+                _write_json(comparison_path, comparison_record)
+        else:
+            candidate = _evaluate_proposal(
+                bridge,
+                refined,
+                run_dir / "candidates" / proposal_id,
+                baseline_artifacts,
+                baseline_kpi,
+                weights,
+                diagnosis_top_n,
+                focus_scope,
+            )
+            evaluated_single_count += 1
         candidates.append(candidate)
-        evaluated_single_count += 1
         was_evaluated = bool(candidate.get("sumo_evaluated"))
         if was_evaluated:
             sumo_evaluation_count += 1
@@ -2147,6 +2320,7 @@ def run_case(
             focus_scope,
         )
         candidates.append(candidate)
+        evaluated_signatures.add(_proposal_semantic_signature(bundle))
         if candidate.get("sumo_evaluated"):
             sumo_evaluation_count += 1
         summary = _candidate_summary(candidate, profile, objective_scope)
@@ -2157,6 +2331,69 @@ def run_case(
             )
         else:
             print(f"        failed: {summary['error']}")
+
+    for joint_round in range(1, joint_feedback_rounds + 1):
+        if not feedback_enabled:
+            break
+        remaining = (
+            max(0, int(args.sumo_budget) - sumo_evaluation_count)
+            if args.sumo_budget is not None else feedback_beam_width
+        )
+        round_index = search_rounds + joint_round
+        round_record = {
+            "round": round_index,
+            "phase": "joint_feedback",
+            "status": "running",
+            "parents": [],
+            "refinements": [],
+            "sumo_evaluations": 0,
+        }
+        feedback_search["rounds"].append(round_record)
+        if not remaining:
+            round_record.update(status="skipped", reason="sumo_budget_exhausted")
+            break
+        parents = _feedback_parent_candidates(
+            [item for item in candidates
+             if (item.get("proposal") or {}).get("action") == "bundle"
+             and item["proposal"]["proposal_id"] not in exhausted_joint_parent_ids],
+            profile=profile, objective_scope=objective_scope,
+            beam_width=min(feedback_beam_width, remaining), include_bundles=True,
+        )
+        if not parents:
+            round_record.update(
+                status="skipped",
+                reason="joint_catalogs_exhausted" if exhausted_joint_parent_ids
+                else "no_successfully_simulated_bundle",
+            )
+            break
+        round_record["parents"] = [item["proposal"]["proposal_id"] for item in parents]
+        print(f"[3c/6] Joint feedback round {joint_round}/{joint_feedback_rounds}: {len(parents)} parent(s)")
+        for parent_candidate in parents:
+            if args.sumo_budget is not None and sumo_evaluation_count >= args.sumo_budget:
+                break
+            parent_id = parent_candidate["proposal"]["proposal_id"]
+            mutation_index = refinement_branch_counts.get(parent_id, 0) + 1
+            refinement_branch_counts[parent_id] = mutation_index
+            # Refresh history after every sibling so full-plan duplicates are excluded.
+            history = _feedback_history(candidates, profile=profile, objective_scope=objective_scope)
+            if evaluate_feedback_refinement(
+                parent_candidate, round_index=round_index, round_record=round_record,
+                history=history, phase="joint_feedback", mutation_index=mutation_index,
+            ):
+                round_record["sumo_evaluations"] += 1
+        round_record["status"] = "completed"
+
+    feedback_search["generated_refinement_count"] = sum(
+        len(record.get("refinements") or []) for record in feedback_search["rounds"]
+    )
+    feedback_search["evaluated_refinement_count"] = sum(
+        int(record.get("sumo_evaluations") or 0) for record in feedback_search["rounds"]
+    )
+    feedback_search["evaluated_joint_refinement_count"] = sum(
+        int(record.get("sumo_evaluations") or 0) for record in feedback_search["rounds"]
+        if record.get("phase") == "joint_feedback"
+    )
+    _write_json(run_dir / "03_debate.json", debate)
 
     best_so_far_trace = _best_so_far_trace(
         candidates,
@@ -2188,7 +2425,9 @@ def run_case(
             "lower_is_better": True,
             "single_candidate_count": evaluated_single_count,
             "ready_single_candidate_count": len(valid_proposals),
-            "bundle_candidate_count": len(pair_bundles),
+            "bundle_candidate_count": sum(
+                (item.get("proposal") or {}).get("action") == "bundle" for item in candidates
+            ),
             "baseline_candidate_count": 1,
             "sumo_budget": args.sumo_budget,
             "sumo_evaluation_count": sumo_evaluation_count,
@@ -2257,6 +2496,7 @@ def run_case(
         "elapsed_s": time.time() - started,
     }
     metadata["llm"]["token_usage"] = state.context.get("token_usage", {})
+    metadata["llm"]["response_metadata"] = state.context.get("llm_response_metadata", [])
     metadata["llm"]["compatibility_fallbacks"] = state.context.get(
         "llm_compatibility_fallbacks",
         [],
@@ -2321,6 +2561,8 @@ def build_parser() -> argparse.ArgumentParser:
         choices=[
             "llm",
             "random_initial_llm",
+            "random_initial_catalog_first",
+            "random_initial_catalog_random",
             "grounded_random",
             "deterministic_heuristic",
             "grounded_grid",
@@ -2328,7 +2570,13 @@ def build_parser() -> argparse.ArgumentParser:
         default="llm",
         help=(
             "Generate initial candidates with specialist LLMs, grounded random "
-            "initialization followed by LLM feedback, or a non-LLM baseline."
+            "initialization followed by LLM feedback, or a non-LLM baseline. "
+            "The two random_initial_catalog_* values are matched selector "
+            "ablations: identical grounded initialization, parent, mutation "
+            "catalog, beam width and SUMO budget as random_initial_llm, with "
+            "the model's catalog choice replaced by the catalog's own "
+            "highest-priority entry (catalog_first) or a uniform random draw "
+            "(catalog_random)."
         ),
     )
     parser.add_argument(
@@ -2355,10 +2603,28 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
+        "--joint-feedback-rounds",
+        type=int,
+        default=0,
+        help=(
+            "Additional rounds after pair composition. Each selected bundle is refined "
+            "by one component's specialist using joint feedback, then fully re-simulated "
+            "within --sumo-budget. Enabled for LLM and catalog feedback sources."
+        ),
+    )
+    parser.add_argument(
         "--feedback-beam-width",
         type=int,
         default=2,
         help="Number of measured parent candidates refined in each feedback round.",
+    )
+    parser.add_argument(
+        "--joint-feedback-mode", choices=["aggregate", "interaction"], default="aggregate",
+        help="Add measured component/edge contrasts to joint feedback (requires top10 scope).",
+    )
+    parser.add_argument(
+        "--feedback-max-completion-tokens", type=int, default=4096,
+        help="Feedback response budget, including reasoning tokens; use 500 only to reproduce the archived protocol.",
     )
     parser.add_argument(
         "--proposal-seed",
@@ -2406,7 +2672,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--max-bundle-evals",
         type=int,
         default=3,
-        help="Maximum number of compatible two-action bundles to simulate; use 0 to disable",
+        help=(
+            "Maximum initial pair-composition simulations; use 0 to disable composition. "
+            "Additional joint refinements are controlled by --joint-feedback-rounds "
+            "and share the total --sumo-budget."
+        ),
     )
     return parser
 
@@ -2419,17 +2689,22 @@ def main() -> int:
         raise ValueError("--sumo-budget must be positive")
     if args.search_rounds <= 0:
         raise ValueError("--search-rounds must be positive")
+    if args.joint_feedback_rounds < 0:
+        raise ValueError("--joint-feedback-rounds must be nonnegative")
     if args.feedback_beam_width <= 0:
         raise ValueError("--feedback-beam-width must be positive")
+    if args.feedback_max_completion_tokens <= 0:
+        raise ValueError("--feedback-max-completion-tokens must be positive")
     if args.grid_edge_pool_size <= 0:
         raise ValueError("--grid-edge-pool-size must be positive")
     if (
         args.proposal_source in LLM_FEEDBACK_PROPOSAL_SOURCES
-        and args.search_rounds > 1
+        and (args.search_rounds > 1 or args.joint_feedback_rounds > 0)
         and not os.getenv("OPENAI_API_KEY")
     ) or (args.proposal_source == "llm" and not os.getenv("OPENAI_API_KEY")):
         raise RuntimeError(
-            "OPENAI_API_KEY is not set. Export it before running, for example: "
+            "OPENAI_API_KEY is not set. Add it to the project-root .env file "
+            "or export it before running, for example: "
             "export OPENAI_API_KEY='your-key'"
         )
     cases = load_cases(args)

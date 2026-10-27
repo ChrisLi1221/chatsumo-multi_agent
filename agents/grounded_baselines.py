@@ -347,6 +347,7 @@ def build_legal_candidate_pool(
         str(artifacts.get("cfg") or ""),
         tuple(str(row["edge_id"]) for row in objective_edge_rows(diagnosis)),
         tuple(diagnosed_tls_ids(diagnosis)),
+        tuple(sorted(active_roles)),
     )
     cached = _LEGAL_POOL_CACHE.get(cache_key)
     if cached is not None:
@@ -355,7 +356,7 @@ def build_legal_candidate_pool(
             for role in active_roles
         }
 
-    all_roles = set(SPECIALIST_ROLES)
+    all_roles = active_roles
     pool: Dict[str, List[Dict[str, Any]]] = {role: [] for role in all_roles}
     signatures = set()
     for role, specs in _raw_role_candidate_specs(diagnosis).items():

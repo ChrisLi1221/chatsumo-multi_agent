@@ -33,9 +33,23 @@ DEFAULT_METHODS = [
     "grounded_random",
     "deterministic_heuristic",
 ]
+
+# Matched selector ablation.  Unlike DEFAULT_METHODS, which varies the proposal
+# source and the whole budget allocation, these three conditions share the
+# grounded initialization seed, the retained parent, the enumerated mutation
+# catalog, the beam width and the per-case SUMO budget.  They differ only in
+# who picks the catalog entry, which isolates the contribution of LLM mutation
+# selection from the surrounding beam-search structure.
+SELECTOR_ABLATION_METHODS = [
+    "random_initial_llm",
+    "random_initial_catalog_first",
+    "random_initial_catalog_random",
+]
 METHOD_LABELS = {
     "llm": "Specialist LLM",
     "random_initial_llm": "Random-initialized LLM feedback",
+    "random_initial_catalog_first": "Catalog-first selector",
+    "random_initial_catalog_random": "Catalog-random selector",
     "grounded_random": "Grounded random",
     "deterministic_heuristic": "Deterministic heuristic",
     "grounded_grid": "Restricted grid",
@@ -240,7 +254,28 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--case-id", default="scenario")
     parser.add_argument("--goal", default="reduce traffic delay")
     parser.add_argument("--profile", choices=["balanced", "delay", "throughput", "emissions"])
-    parser.add_argument("--methods", type=_parse_methods, default=DEFAULT_METHODS)
+    parser.add_argument(
+        "--methods",
+        type=_parse_methods,
+        default=DEFAULT_METHODS,
+        help=(
+            "Comma-separated proposal sources to compare. Defaults to the "
+            "budget-matched proposal-source comparison. Use "
+            "--selector-ablation for the matched mutation-selector ablation "
+            "instead of naming those conditions here."
+        ),
+    )
+    parser.add_argument(
+        "--selector-ablation",
+        action="store_true",
+        help=(
+            "Run the matched mutation-selector ablation "
+            f"({', '.join(SELECTOR_ABLATION_METHODS)}) instead of --methods. "
+            "All conditions share the grounded initialization seed, parent, "
+            "mutation catalog, beam width and SUMO budget; only the catalog "
+            "pick differs."
+        ),
+    )
     parser.add_argument("--include-grid", action="store_true")
     parser.add_argument("--sumo-budget", type=int, default=3)
     parser.add_argument(
@@ -253,7 +288,12 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument("--search-rounds", type=int, default=1)
+    parser.add_argument(
+        "--joint-feedback-rounds", type=int, default=0,
+        help="Extra conditional bundle-refinement rounds for feedback methods, sharing the SUMO cap.",
+    )
     parser.add_argument("--feedback-beam-width", type=int, default=2)
+    parser.add_argument("--feedback-max-completion-tokens", type=int, default=4096)
     parser.add_argument("--proposal-seed", type=int)
     parser.add_argument("--grid-edge-pool-size", type=int, default=3)
     parser.add_argument("--optimizer", choices=["all", "signal", "network", "routing"], default="all")
@@ -290,12 +330,20 @@ def main() -> int:
         raise ValueError("Proposal attempt budget must be positive")
     if args.search_rounds <= 0 or args.feedback_beam_width <= 0:
         raise ValueError("Search rounds and feedback beam width must be positive")
-    methods = list(args.methods)
+    if args.feedback_max_completion_tokens <= 0:
+        raise ValueError("Feedback completion token budget must be positive")
+    if args.joint_feedback_rounds < 0:
+        raise ValueError("Joint feedback rounds must be nonnegative")
+    methods = (
+        list(SELECTOR_ABLATION_METHODS)
+        if args.selector_ablation
+        else list(args.methods)
+    )
     if args.include_grid and "grounded_grid" not in methods:
         methods.append("grounded_grid")
     llm_feedback_requested = bool(
         set(methods) & LLM_FEEDBACK_PROPOSAL_SOURCES
-    ) and args.search_rounds > 1
+    ) and (args.search_rounds > 1 or args.joint_feedback_rounds > 0)
     if ("llm" in methods or llm_feedback_requested) and not os.getenv("OPENAI_API_KEY"):
         raise RuntimeError(
             "OPENAI_API_KEY is required when a selected method uses LLM generation or feedback"
@@ -362,6 +410,7 @@ def main() -> int:
         },
         "search_rounds": args.search_rounds,
         "feedback_beam_width": args.feedback_beam_width,
+        "feedback_max_completion_tokens": args.feedback_max_completion_tokens,
         "objective_scope": args.objective_scope,
         "definitions": {
             "simulation_efficiency": (

@@ -3,6 +3,35 @@
 **ChatSUMO** is an intelligent conversational agent that can **generate, modify, run, and analyze SUMO traffic simulations** through natural language.  
 It bridges the gap between **transportation researchers** and **complex microscopic simulators** by combining **LLM reasoning**, **automated SUMO pipelines**, and **interactive visualization**.
 
+## 仓库导航
+
+本仓库包含 ChatSUMO 多智能体编排、SimTIO 优化实验，以及论文和演示材料。
+
+| 目录 / 入口 | 内容 |
+|---|---|
+| `orchestrator.py` / `orchestrator_batch.py` | 单任务与批量多智能体编排 |
+| `agents/` | 规划、候选选择、联合优化和交互反馈 |
+| `providers/` | SUMO 网络、需求、修改、执行和指标工具 |
+| [优化实验入口](experiment/OPTIMIZATION_ONLY.md) | 基于已有 SUMO 场景的实验命令 |
+| [宽搜索协议](experiment/WIDE_FEEDBACK_V1.md) | 5 个共同初始方案、每父方案 2 个不同子代、15 次候选预算 |
+| [交互反馈协议](experiment/INTERACTION_FEEDBACK_V1.md) | 组件单独与联合仿真、约束及路段副作用 |
+| [完整反馈协议](experiment/FULL_FEEDBACK_V1.md) | 从共同初始动作生成反馈、mutation 和联合优化 |
+| [联合反馈续跑](experiment/JOINT_FEEDBACK_CONTINUATION.md) | 联合反馈、单组件修改与完整重仿真 |
+| [补充实验](experiment/SUPPLEMENT_EXPERIMENTS.md) | 稳定性、需求敏感性和复核命令 |
+| [当前论文](paper/multra_revision/README.md) | 当前修订稿、图表、汇总证据与构建说明 |
+| [原稿](paper/chatsumo_optimizer/README.md) | 原始 LaTeX 论文工程 |
+| [演示材料](presentation/itsc_draft/README.md) | 幻灯片、中文讲稿和生成脚本 |
+| `tests/` | 回归测试：在仓库根目录运行 `python -m pytest -q` |
+
+### Git 收录范围
+
+提交源码、测试、配置示例、实验协议、论文源文件、当前文档和汇总证据。
+`.env`、仿真原始输出、缓存、运行时数据库、LaTeX 中间文件、重复 ZIP 包、
+`paper/multra_revision_history/` 手工备份和 `paper/multra_revision_private/` 本地资料由
+[`.gitignore`](.gitignore) 排除；本地文件仍保留。
+实验输出和原始场景不随 Git 分发，部分重建脚本需要先生成或准备相应输入；
+具体路径和命令见各实验协议。投稿 ZIP 包需要在本地重新生成。
+
 ---
 
 ## 🚗 Overview
@@ -64,6 +93,11 @@ chat_sumo/
 ---
 
 ## 🧱 Dependencies
+
+The experiment scripts and LLM agents automatically read `OPENAI_API_KEY` from
+`.env` in the project root. Copy `.env.example` to `.env` and set your key once;
+subsequent runs need no manual export. An existing nonempty `OPENAI_API_KEY`
+environment variable takes priority. The local `.env` file is ignored by Git.
 
 | Library | Purpose |
 |----------|----------|

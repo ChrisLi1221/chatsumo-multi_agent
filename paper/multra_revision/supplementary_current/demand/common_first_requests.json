@@ -1,0 +1,182 @@
+[
+  {
+    "case": "albany_equal_scale_demand1200_delay_seed_42",
+    "parent": "demand_initial_005_set_corridor_speed",
+    "sha256": "93be8cc0f46a78aae9100ff73905c6125daed410c1181b97a0e841c704017eda"
+  },
+  {
+    "case": "albany_equal_scale_demand1200_delay_seed_42",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "4b7ef16dba48e66d73e05ca17ff33e7a17c400eb877c953901dd9736f8c5fcba"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "sha256": "da36eef00f9c3c20aef0101d5a4830b05793611a25b2eaef867c3bcfedd5734c"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "parent": "wide_initial_005_set_corridor_speed",
+    "sha256": "372a310211a64642b21750f224f3cec77f215c4e7eac633afc8838515db70411"
+  },
+  {
+    "case": "albany_equal_scale_demand3600_delay_seed_42",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "74301ced22969ea948cae36e8829fae0d05f4a0c0e82d87f0e510a6f5a2cd6af"
+  },
+  {
+    "case": "albany_equal_scale_demand3600_delay_seed_42",
+    "parent": "demand_initial_005_set_corridor_speed",
+    "sha256": "d58e9384115910c70aa440cf92d587436e919f003bd2d1542ecaab15004d600b"
+  },
+  {
+    "case": "albany_equal_scale_demand1200_delay_seed_43",
+    "parent": "demand_initial_003_reroute_flows",
+    "sha256": "32c0683bba5bc6c0985c71cc84f4d59d5efc7d02b07fb456ef123a8af52a973d"
+  },
+  {
+    "case": "albany_equal_scale_demand1200_delay_seed_43",
+    "parent": "demand_initial_005_remove_edge",
+    "sha256": "b31e16cd9b27a54ee02a4a469d218ae91cf2e752bd14a8baaa4f22953e55addc"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "sha256": "33885e60e8364b862a7eb94bedb104978c7bc7263818468a10694f84dd5d0f7e"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "sha256": "75a29078fe70e79522855392d3b63ec5360507b0eb96ab67da1c906d46c36ffc"
+  },
+  {
+    "case": "albany_equal_scale_demand3600_delay_seed_43",
+    "parent": "demand_initial_004_tls_optimize_and_apply",
+    "sha256": "393a0fc67d9d854c8863be224c060f73d61cc4e7b840817a27dd4868dc0b18e0"
+  },
+  {
+    "case": "albany_equal_scale_demand3600_delay_seed_43",
+    "parent": "demand_initial_002_set_corridor_speed",
+    "sha256": "84acff76042c49583fb26a67aafe77f39adc1d52575879b13df765de447f4965"
+  },
+  {
+    "case": "albany_equal_scale_demand1200_delay_seed_44",
+    "parent": "demand_initial_005_remove_edge",
+    "sha256": "00d7414c4a694d93a8882e6ce7dc880432909ba01cc10fc20610325f4d9bc7b1"
+  },
+  {
+    "case": "albany_equal_scale_demand1200_delay_seed_44",
+    "parent": "demand_initial_004_tls_optimize_and_apply",
+    "sha256": "c94d21135bd7f97d3bb8ed1ab2ef2a2018532e74aa526a36983b08d926ef951e"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "sha256": "c7fa5c61117cd9f2dbd923436ea7e762ff446f2898a434ac17d3b1ad05b2588d"
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "sha256": "3159067799525cf5506f8684f7c3c0a36db1752943bc3e7837a045c662b34638"
+  },
+  {
+    "case": "albany_equal_scale_demand3600_delay_seed_44",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "3bcc09bfbb2965257a30b4df016a997fbc0634b7101ac0fa3ca45c2ffd004d80"
+  },
+  {
+    "case": "albany_equal_scale_demand3600_delay_seed_44",
+    "parent": "demand_initial_002_set_corridor_speed",
+    "sha256": "ee16459734da41cab7b5393a2b1f9058139bcc3a2aa7dd3ae4d2a752240040b7"
+  },
+  {
+    "case": "manhattan_equal_scale_demand1200_delay_seed_42",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "a15a3a521f2ca692dc843b8825181cab73a56751f0b117ec4d655239658cb638"
+  },
+  {
+    "case": "manhattan_equal_scale_demand1200_delay_seed_42",
+    "parent": "demand_initial_005_set_corridor_speed",
+    "sha256": "c4a97b24f3a8da55319076685aae72ac96cb26c831567809ea5874b791bac94c"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "sha256": "6e037b6d30ccadbfb5b2b0e83c14f70fec4c9ee0b2d2f79026d169180578cf59"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "sha256": "d9d9c86e3925bd108df0336a2392cb4bb530ad6c82216863bd73777eb66eff29"
+  },
+  {
+    "case": "manhattan_equal_scale_demand3600_delay_seed_42",
+    "parent": "demand_initial_004_tls_optimize_and_apply",
+    "sha256": "faa38c9f96ec9ef765c7d9d64b0a1e4cadcfa72fec1b7b01ed85237f7e2094f6"
+  },
+  {
+    "case": "manhattan_equal_scale_demand3600_delay_seed_42",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "4fc048a2a60a58e8aa02c919aaadb8e6dd9639856940f70f8d336a1c55e2d823"
+  },
+  {
+    "case": "manhattan_equal_scale_demand1200_delay_seed_43",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "676b391f2f5d3cc736d7738b823ffefbbf19eaee2b3a71285756b7029bbf83db"
+  },
+  {
+    "case": "manhattan_equal_scale_demand1200_delay_seed_43",
+    "parent": "demand_initial_004_tls_optimize_and_apply",
+    "sha256": "19dfbed7857db7eeeae1140e8ec6b22690c0119ea027836260787f5cc820dc10"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "parent": "wide_initial_004_tls_optimize_and_apply",
+    "sha256": "576168e8d6ccb83b9fafcfb96844ab0b8668718da609717a086478bdf5d24d0d"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "parent": "random_initial_llm_002_set_corridor_speed",
+    "sha256": "1374c0e5ba680ecc58b70a6575538f4f699da971ce7213ee866e893f5c5032cf"
+  },
+  {
+    "case": "manhattan_equal_scale_demand3600_delay_seed_43",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "6a0bbbb532c5e1082406ed742e2951dd53e7bfe014034b3880e4e11b4546e317"
+  },
+  {
+    "case": "manhattan_equal_scale_demand3600_delay_seed_43",
+    "parent": "demand_initial_005_remove_edge",
+    "sha256": "28cf3ad7786ec9576c877576b6c562d41eb841361d41df553ae7b02ea84dcb63"
+  },
+  {
+    "case": "manhattan_equal_scale_demand1200_delay_seed_44",
+    "parent": "demand_initial_001_tls_optimize_and_apply",
+    "sha256": "be2e72183578e0ba49ad2008faf48a32879fb41f33b67ee8fcfb234a196ad294"
+  },
+  {
+    "case": "manhattan_equal_scale_demand1200_delay_seed_44",
+    "parent": "demand_initial_002_set_corridor_speed",
+    "sha256": "023fdaa4bf5744699c720e23b27df32d9c9a9698866d269597b61ad9739b455e"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_001_tls_optimize_and_apply",
+    "sha256": "7a269c4d6e4093aacd6767aa1262c1341c8a19dd3cc31090c9077ce2d6278024"
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "parent": "random_initial_llm_003_reroute_flows__edges_1",
+    "sha256": "30fa0ae34c4ecb548d9d4b3456925c26eecfd4cf9e6dfa22b7b5fbcfbc892951"
+  },
+  {
+    "case": "manhattan_equal_scale_demand3600_delay_seed_44",
+    "parent": "demand_initial_004_tls_optimize_and_apply",
+    "sha256": "63fa746303578e6c55fdd6d57295fe2bdc496e74c4804f340ddf5c31cde666f6"
+  },
+  {
+    "case": "manhattan_equal_scale_demand3600_delay_seed_44",
+    "parent": "demand_initial_005_remove_edge",
+    "sha256": "8fe65608b071942fcfb8a54af863648f90892daf111ea033a962b6d469e65454"
+  }
+]

@@ -1,0 +1,5 @@
+- Validated catalogs support conditional refinement of simulated intervention pairs.
+- Frozen-input tests do not establish an LLM advantage over simple selectors.
+- Repeated searches reveal substantial conditional variation in some networks.
+- Synthetic demand intensity changes method rankings and congestion severity.
+- Aggregate feasibility can coexist with concentrated remote deterioration.

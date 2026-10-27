@@ -1,0 +1,3585 @@
+{
+  "summary": [
+    {
+      "arm": "random_initial_llm",
+      "n": 15,
+      "top10": "9.18 \u00b1 10.18",
+      "top10_mean": 0.0917901918251745,
+      "global": "2.78 \u00b1 5.08",
+      "success": 13,
+      "success_rate": 0.8666666666666667,
+      "sim_eff": 0.3619047619047619,
+      "valid": 1.0,
+      "evals": 6.466666666666667
+    },
+    {
+      "arm": "random_initial_catalog_first",
+      "n": 15,
+      "top10": "9.36 \u00b1 10.18",
+      "top10_mean": 0.09356062228065763,
+      "global": "2.82 \u00b1 4.94",
+      "success": 14,
+      "success_rate": 0.9333333333333333,
+      "sim_eff": 0.39365079365079364,
+      "valid": 1.0,
+      "evals": 6.866666666666666
+    },
+    {
+      "arm": "random_initial_catalog_random",
+      "n": 15,
+      "top10": "8.05 \u00b1 10.28",
+      "top10_mean": 0.08050876261651714,
+      "global": "2.60 \u00b1 5.14",
+      "success": 11,
+      "success_rate": 0.7333333333333333,
+      "sim_eff": 0.32698412698412693,
+      "valid": 1.0,
+      "evals": 6.866666666666666
+    }
+  ],
+  "paired_tests_exploratory": [
+    {
+      "comparison": "LLM selection vs Catalog-first",
+      "n": 15,
+      "llm_mean": 0.0917901918251745,
+      "other_mean": 0.09356062228065763,
+      "mean_diff": -0.001770430455483137,
+      "wins": 5,
+      "losses": 5,
+      "ties": 5,
+      "wilcoxon_stat": 27.0,
+      "wilcoxon_p": 0.9593536340401635
+    },
+    {
+      "comparison": "LLM selection vs Catalog-random",
+      "n": 15,
+      "llm_mean": 0.0917901918251745,
+      "other_mean": 0.08050876261651714,
+      "mean_diff": 0.011281429208657363,
+      "wins": 6,
+      "losses": 3,
+      "ties": 6,
+      "wilcoxon_stat": 17.0,
+      "wilcoxon_p": 0.5146697234497355
+    }
+  ],
+  "decision_summary": {
+    "random_initial_llm": {
+      "decisions": 24,
+      "mean_catalog_size": 10.041666666666666,
+      "mean_position": 3.1666666666666665,
+      "mean_relative_position": 0.29650372775372774,
+      "picked_first_entry": 6,
+      "attempt_status": {
+        "generation_error": 6,
+        "evaluated": 24
+      },
+      "generation_errors": 6,
+      "attempts_total": 30
+    },
+    "random_initial_catalog_first": {
+      "decisions": 30,
+      "mean_catalog_size": 9.666666666666666,
+      "mean_position": 1.0,
+      "mean_relative_position": 0.0,
+      "picked_first_entry": 30,
+      "attempt_status": {
+        "evaluated": 30
+      },
+      "generation_errors": 0,
+      "attempts_total": 30
+    },
+    "random_initial_catalog_random": {
+      "decisions": 30,
+      "mean_catalog_size": 9.666666666666666,
+      "mean_position": 4.733333333333333,
+      "mean_relative_position": 0.4367171717171717,
+      "picked_first_entry": 6,
+      "attempt_status": {
+        "evaluated": 30
+      },
+      "generation_errors": 0,
+      "attempts_total": 30
+    }
+  },
+  "stage_means_pct": {
+    "random_initial_llm": [
+      5.828147019524218,
+      7.7499583334267665,
+      9.17901918251745
+    ],
+    "random_initial_catalog_first": [
+      5.828147019524218,
+      7.963874160766888,
+      9.356062228065765
+    ],
+    "random_initial_catalog_random": [
+      5.828147019524218,
+      7.087404473905723,
+      8.050876261651714
+    ]
+  },
+  "arms": [
+    {
+      "arm": "random_initial_llm",
+      "counts": {
+        "raw_proposals": 69,
+        "validated_proposals": 69,
+        "candidate_attempts_after_validation": 99,
+        "sumo_evaluations": 97,
+        "successful_simulations": 96,
+        "safety_feasible_candidates": 40,
+        "improving_1pct_candidates": 63,
+        "all_constraints_passed_candidates": 34,
+        "feasible_improving_candidates": 34
+      },
+      "micro_simulation_efficiency": 0.35051546391752575,
+      "cases": [
+        {
+          "city": "albany",
+          "seed": 42,
+          "initial": 0.02976687296503333,
+          "singles": 0.04198837407036893,
+          "final": 0.04198837407036893,
+          "counts": {
+            "raw_proposals": 4,
+            "validated_proposals": 4,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 6,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.04198837407036893,
+            "global_delay_reduction": 0.007590974378523296,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 10,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010"
+                ],
+                "selected_position": 2,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "generation_error": 1,
+              "evaluated": 1
+            }
+          }
+        },
+        {
+          "city": "albany",
+          "seed": 43,
+          "initial": 0.025406655071562256,
+          "singles": 0.025406655071562256,
+          "final": 0.025406655071562256,
+          "counts": {
+            "raw_proposals": 4,
+            "validated_proposals": 4,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 6,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.025406655071562256,
+            "global_delay_reduction": -0.0024727808083322422,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.16666666666666666,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_003",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 3,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 1,
+              "generation_error": 1
+            }
+          }
+        },
+        {
+          "city": "albany",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 3,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 2,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_003",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 3,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 42,
+          "initial": 0.0311788832634442,
+          "singles": 0.0311788832634442,
+          "final": 0.05895385253132435,
+          "counts": {
+            "raw_proposals": 4,
+            "validated_proposals": 4,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 6,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.05895385253132435,
+            "global_delay_reduction": 0.01628018038700707,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_006",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 6,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 1,
+              "generation_error": 1
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.1488021401141021,
+          "final": 0.1488021401141021,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 4,
+            "all_constraints_passed_candidates": 2,
+            "feasible_improving_candidates": 2
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.1488021401141021,
+            "global_delay_reduction": 0.022536461014739162,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.2857142857142857,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_005",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 5,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.039637262213145674,
+          "final": 0.039637262213145674,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 1,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.039637262213145674,
+            "global_delay_reduction": 0.013579784571659648,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_006",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 6,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 2,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 42,
+          "initial": 0.03399048604203836,
+          "singles": 0.06822090016452731,
+          "final": 0.13439082002781344,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.13439082002781344,
+            "global_delay_reduction": 0.019350783314456166,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_004",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 4,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_007",
+                "catalog_size": 9,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009"
+                ],
+                "selected_position": 7,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.022777621447393037,
+          "final": 0.022777621447393037,
+          "counts": {
+            "raw_proposals": 4,
+            "validated_proposals": 4,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 6,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 1,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.022777621447393037,
+            "global_delay_reduction": -0.005415796091452707,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.16666666666666666,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 1,
+              "generation_error": 1
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": 0.01014865312233204,
+          "counts": {
+            "raw_proposals": 4,
+            "validated_proposals": 4,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 6,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 2,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.01014865312233204,
+            "global_delay_reduction": 0.0012254714343779005,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.16666666666666666,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "generation_error": 1,
+              "evaluated": 1
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 42,
+          "initial": 0.338944344487483,
+          "singles": 0.338944344487483,
+          "final": 0.338944344487483,
+          "counts": {
+            "raw_proposals": 4,
+            "validated_proposals": 4,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 6,
+            "sumo_evaluations": 5,
+            "successful_simulations": 5,
+            "safety_feasible_candidates": 5,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 5,
+            "feasible_improving_candidates": 5
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.338944344487483,
+            "global_delay_reduction": 0.17217312116880434,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 1.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 5,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 2,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "generation_error": 1,
+              "evaluated": 1
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 43,
+          "initial": 0.042799359775483325,
+          "singles": 0.058506435133417134,
+          "final": 0.058506435133417134,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.058506435133417134,
+            "global_delay_reduction": 0.024301119024108253,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_004",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 4,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "min_split"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 44,
+          "initial": 0.2406557602566055,
+          "singles": 0.2406557602566055,
+          "final": 0.2406557602566055,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.2406557602566055,
+            "global_delay_reduction": 0.1247786106623533,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_006",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 6,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 42,
+          "initial": 0.029827186412020423,
+          "singles": 0.04472286913700363,
+          "final": 0.04472286913700363,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 2,
+            "feasible_improving_candidates": 2
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.04472286913700363,
+            "global_delay_reduction": 0.00028112256383705514,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.2857142857142857,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 2,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 2,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 2,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_005",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 5,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 44,
+          "initial": 0.10165250465496223,
+          "singles": 0.10165250465496223,
+          "final": 0.21191808976506654,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_llm",
+            "top10_reduction": 0.21191808976506654,
+            "global_delay_reduction": 0.022189912658019506,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_005",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 5,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_004",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 4,
+                "selector_kind": "llm",
+                "changed_fields": [
+                  "avoid_edges"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "arm": "random_initial_catalog_first",
+      "counts": {
+        "raw_proposals": 75,
+        "validated_proposals": 75,
+        "candidate_attempts_after_validation": 105,
+        "sumo_evaluations": 103,
+        "successful_simulations": 102,
+        "safety_feasible_candidates": 46,
+        "improving_1pct_candidates": 72,
+        "all_constraints_passed_candidates": 40,
+        "feasible_improving_candidates": 40
+      },
+      "micro_simulation_efficiency": 0.3883495145631068,
+      "cases": [
+        {
+          "city": "albany",
+          "seed": 42,
+          "initial": 0.02976687296503333,
+          "singles": 0.02976687296503333,
+          "final": 0.02976687296503333,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 7,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.02976687296503333,
+            "global_delay_reduction": 0.00710244541231253,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 9,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 10,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "albany",
+          "seed": 43,
+          "initial": 0.025406655071562256,
+          "singles": 0.025406655071562256,
+          "final": 0.025406655071562256,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.025406655071562256,
+            "global_delay_reduction": -0.0024727808083322422,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "albany",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.024871402029838174,
+          "final": 0.024871402029838174,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 4,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.024871402029838174,
+            "global_delay_reduction": 0.004276466450896299,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 42,
+          "initial": 0.0311788832634442,
+          "singles": 0.1381028571813745,
+          "final": 0.18310340062803898,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 5,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 5,
+            "feasible_improving_candidates": 5
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.18310340062803898,
+            "global_delay_reduction": 0.039503029266412915,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.7142857142857143,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": 0.053562081538062634,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 4,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.053562081538062634,
+            "global_delay_reduction": 0.027548681697505795,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.015803935728155194,
+          "final": 0.015803935728155194,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 1,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.015803935728155194,
+            "global_delay_reduction": 0.010469164559558486,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 42,
+          "initial": 0.03399048604203836,
+          "singles": 0.10226566441494911,
+          "final": 0.10226566441494911,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.10226566441494911,
+            "global_delay_reduction": 0.018927102518610406,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 9,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.022777621447393037,
+          "final": 0.022777621447393037,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 1,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.022777621447393037,
+            "global_delay_reduction": -0.005415796091452707,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.0417286607090378,
+          "final": 0.0417286607090378,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 4,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.0417286607090378,
+            "global_delay_reduction": -0.0037971450596565592,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.42857142857142855,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 42,
+          "initial": 0.338944344487483,
+          "singles": 0.338944344487483,
+          "final": 0.338944344487483,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 6,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 6,
+            "feasible_improving_candidates": 6
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.338944344487483,
+            "global_delay_reduction": 0.17217312116880434,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 1.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 43,
+          "initial": 0.042799359775483325,
+          "singles": 0.042799359775483325,
+          "final": 0.042799359775483325,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 2,
+            "feasible_improving_candidates": 2
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.042799359775483325,
+            "global_delay_reduction": 0.015706838062048534,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.3333333333333333,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 44,
+          "initial": 0.2406557602566055,
+          "singles": 0.24195829917662615,
+          "final": 0.24195829917662615,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.24195829917662615,
+            "global_delay_reduction": 0.11298223837442423,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 42,
+          "initial": 0.029827186412020423,
+          "singles": 0.06850294647313515,
+          "final": 0.06850294647313515,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 2,
+            "feasible_improving_candidates": 2
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.06850294647313515,
+            "global_delay_reduction": 0.0038288171410363336,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.2857142857142857,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 3,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 44,
+          "initial": 0.10165250465496223,
+          "singles": 0.10165250465496223,
+          "final": 0.21191808976506654,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 5,
+            "improving_1pct_candidates": 7,
+            "all_constraints_passed_candidates": 5,
+            "feasible_improving_candidates": 5
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_first",
+            "top10_reduction": 0.21191808976506654,
+            "global_delay_reduction": 0.022189912658019506,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.7142857142857143,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_first",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "arm": "random_initial_catalog_random",
+      "counts": {
+        "raw_proposals": 75,
+        "validated_proposals": 75,
+        "candidate_attempts_after_validation": 105,
+        "sumo_evaluations": 103,
+        "successful_simulations": 102,
+        "safety_feasible_candidates": 42,
+        "improving_1pct_candidates": 63,
+        "all_constraints_passed_candidates": 33,
+        "feasible_improving_candidates": 33
+      },
+      "micro_simulation_efficiency": 0.32038834951456313,
+      "cases": [
+        {
+          "city": "albany",
+          "seed": 42,
+          "initial": 0.02976687296503333,
+          "singles": 0.02976687296503333,
+          "final": 0.02976687296503333,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.02976687296503333,
+            "global_delay_reduction": 0.00710244541231253,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.42857142857142855,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 9,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009"
+                ],
+                "selected_position": 2,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 10,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "albany",
+          "seed": 43,
+          "initial": 0.025406655071562256,
+          "singles": 0.06816906624266172,
+          "final": 0.06816906624266172,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 2,
+            "feasible_improving_candidates": 2
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.06816906624266172,
+            "global_delay_reduction": 0.004741615969941382,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.2857142857142857,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_005",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 5,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "albany",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 3,
+            "improving_1pct_candidates": 4,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_007",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 7,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "avoid_edges"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_009",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 9,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 42,
+          "initial": 0.0311788832634442,
+          "singles": 0.07679406910113928,
+          "final": 0.10701812921223919,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.10701812921223919,
+            "global_delay_reduction": 0.02911841228419343,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_006",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 6,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 2,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 0,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "cycle"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_005",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 5,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "ann_arbor",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 0,
+            "improving_1pct_candidates": 1,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_004",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 4,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "min_split"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_009",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 9,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "avoid_edges"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 42,
+          "initial": 0.03399048604203836,
+          "singles": 0.07063398051357206,
+          "final": 0.07466510345426658,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.07466510345426658,
+            "global_delay_reduction": 0.014343878624137107,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_011",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 11,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 9,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009"
+                ],
+                "selected_position": 2,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "cycle"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.022777621447393037,
+          "final": 0.022777621447393037,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 1,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.022777621447393037,
+            "global_delay_reduction": -0.005415796091452707,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_003",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 3,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "min_split"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "los_angeles",
+          "seed": 44,
+          "initial": 0.0,
+          "singles": 0.04108990522950451,
+          "final": 0.04108990522950451,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 5,
+            "improving_1pct_candidates": 3,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.04108990522950451,
+            "global_delay_reduction": 0.0014699052169206972,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.42857142857142855,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_004",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 4,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "min_split"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_009",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 9,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 42,
+          "initial": 0.338944344487483,
+          "singles": 0.338944344487483,
+          "final": 0.338944344487483,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 6,
+            "improving_1pct_candidates": 6,
+            "all_constraints_passed_candidates": 6,
+            "feasible_improving_candidates": 6
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.338944344487483,
+            "global_delay_reduction": 0.17217312116880434,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 1.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_006",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 6,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 2,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 43,
+          "initial": 0.042799359775483325,
+          "singles": 0.042799359775483325,
+          "final": 0.042799359775483325,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 6,
+            "successful_simulations": 6,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 2,
+            "feasible_improving_candidates": 2
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.042799359775483325,
+            "global_delay_reduction": 0.015706838062048534,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.3333333333333333,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 6,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "speed_factor"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_003",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 3,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "min_split"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "manhattan",
+          "seed": 44,
+          "initial": 0.2406557602566055,
+          "singles": 0.2406557602566055,
+          "final": 0.2406557602566055,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 4,
+            "feasible_improving_candidates": 4
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.2406557602566055,
+            "global_delay_reduction": 0.1247786106623533,
+            "selected_action": "tls_optimize_and_apply",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.5714285714285714,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_004",
+                "catalog_size": 7,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007"
+                ],
+                "selected_position": 4,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "min_split"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_009",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 9,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "avoid_edges"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 42,
+          "initial": 0.029827186412020423,
+          "singles": 0.029827186412020423,
+          "final": 0.029827186412020423,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 2,
+            "improving_1pct_candidates": 4,
+            "all_constraints_passed_candidates": 1,
+            "feasible_improving_candidates": 1
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.029827186412020423,
+            "global_delay_reduction": 0.004175564007067645,
+            "selected_action": "set_corridor_speed",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.14285714285714285,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_002_set_corridor_speed",
+                "selected_mutation_id": "mutation_011",
+                "catalog_size": 11,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011"
+                ],
+                "selected_position": 11,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "edge_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_002",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 2,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 43,
+          "initial": 0.0,
+          "singles": 0.0,
+          "final": -0.0,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 1,
+            "improving_1pct_candidates": 2,
+            "all_constraints_passed_candidates": 0,
+            "feasible_improving_candidates": 0
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": -0.0,
+            "global_delay_reduction": 0.0,
+            "selected_action": "no_op",
+            "no_op": true,
+            "success": false,
+            "simulation_efficiency": 0.0,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_001",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 1,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "reroute_fraction"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_005",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 5,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        },
+        {
+          "city": "troy",
+          "seed": 44,
+          "initial": 0.10165250465496223,
+          "singles": 0.10165250465496223,
+          "final": 0.21191808976506654,
+          "counts": {
+            "raw_proposals": 5,
+            "validated_proposals": 5,
+            "proposal_noops": 0,
+            "candidate_attempts_after_validation": 7,
+            "sumo_evaluations": 7,
+            "successful_simulations": 7,
+            "safety_feasible_candidates": 4,
+            "improving_1pct_candidates": 5,
+            "all_constraints_passed_candidates": 3,
+            "feasible_improving_candidates": 3
+          },
+          "record": {
+            "proposal_source": "random_initial_catalog_random",
+            "top10_reduction": 0.21191808976506654,
+            "global_delay_reduction": 0.022189912658019506,
+            "selected_action": "bundle",
+            "no_op": false,
+            "success": true,
+            "simulation_efficiency": 0.42857142857142855,
+            "proposal_validation_rate": 1.0,
+            "sumo_evaluations": 7,
+            "decisions": [
+              {
+                "parent_proposal_id": "random_initial_llm_001_tls_optimize_and_apply",
+                "selected_mutation_id": "mutation_007",
+                "catalog_size": 8,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008"
+                ],
+                "selected_position": 7,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "tl_id"
+                ]
+              },
+              {
+                "parent_proposal_id": "random_initial_llm_003_reroute_flows__edges_1",
+                "selected_mutation_id": "mutation_009",
+                "catalog_size": 12,
+                "catalog_ids": [
+                  "mutation_001",
+                  "mutation_002",
+                  "mutation_003",
+                  "mutation_004",
+                  "mutation_005",
+                  "mutation_006",
+                  "mutation_007",
+                  "mutation_008",
+                  "mutation_009",
+                  "mutation_010",
+                  "mutation_011",
+                  "mutation_012"
+                ],
+                "selected_position": 9,
+                "selector_kind": "catalog_random",
+                "changed_fields": [
+                  "avoid_edges"
+                ]
+              }
+            ],
+            "attempt_status": {
+              "evaluated": 2
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

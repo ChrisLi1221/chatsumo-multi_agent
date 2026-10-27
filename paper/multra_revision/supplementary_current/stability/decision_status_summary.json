@@ -1,0 +1,28 @@
+{
+  "llm": {
+    "single": {
+      "ok": 94,
+      "duplicate_across_parents": 6
+    },
+    "joint": {
+      "ok": 100
+    }
+  },
+  "catalog_first": {
+    "single": {
+      "ok": 20
+    },
+    "joint": {
+      "ok": 16
+    }
+  },
+  "catalog_random": {
+    "single": {
+      "ok": 99,
+      "duplicate_across_parents": 1
+    },
+    "joint": {
+      "ok": 84
+    }
+  }
+}

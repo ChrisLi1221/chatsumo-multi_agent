@@ -1,0 +1,38 @@
+The example is albany\_equal\_scale\_delay\_seed\_43, selected as the alphabetically first fresh case with two valid LLM refinements. It is illustrative, not an additional experiment. Demand and SUMO seed are 43; the random-selector seed for repeat zero is 20260970. The complete case, including every proposed and rejected catalog entry, measured feedback, request, response, execution outcome, and final decision, is supplied as an anonymized JSON file.
+
+\subsection*{Parent 1: set\_corridor\_speed}
+Semantic parent arguments: \texttt{edge\_id} = \path{1387174776#0}; \texttt{edge\_count} = \path{5}; \texttt{speed\_factor} = \path{0.7}. Measured feedback is 2.541\% Top-10 reduction, +0.247\% global-delay change, and -2.756\% neighboring-loss change. Failed conditions: none. The catalog contains 11 legal entries. Only the listed field changes; other semantic arguments retain the parent value.
+
+\begin{longtable}{lp{.23\linewidth}p{.48\linewidth}}
+\toprule ID & Changed field & New value \\\midrule\endhead
+mutation\_001 & speed\_factor & \path{0.8} \\
+mutation\_002 & speed\_factor & \path{0.9} \\
+mutation\_003 & edge\_id & \path{-35970302#2} \\
+mutation\_004 & edge\_id & \path{-886367693} \\
+mutation\_005 & edge\_id & \path{1370990030#2} \\
+mutation\_006 & edge\_id & \path{-5587868#11} \\
+mutation\_007 & edge\_id & \path{1388192375#0} \\
+mutation\_008 & edge\_id & \path{35970302#2} \\
+mutation\_009 & edge\_id & \path{35926591#0} \\
+mutation\_010 & edge\_id & \path{43763490#5} \\
+mutation\_011 & edge\_id & \path{-1508698052#0} \\
+\bottomrule\end{longtable}
+Filter audit: accepted=11, not\_exactly\_one\_changed\_field=1. The LLM selected \texttt{mutation\_001}. The executed child yields -0.231\% Top-10 reduction, +1.300\% global-delay change, and +3.259\% neighboring-loss change. It fails the final acceptance rule.
+
+\subsection*{Parent 2: tls\_optimize\_and\_apply}
+Semantic parent arguments: \texttt{tl\_id} = \path{cluster_1041571140_13082033320_2129420716_2129420718_#2more}. Measured feedback is 10.012\% Top-10 reduction, -0.313\% global-delay change, and +14.322\% neighboring-loss change. Failed conditions: neighbor\_spillover. The catalog contains 8 legal entries. Only the listed field changes; other semantic arguments retain the parent value.
+
+\begin{longtable}{lp{.23\linewidth}p{.48\linewidth}}
+\toprule ID & Changed field & New value \\\midrule\endhead
+mutation\_001 & cycle & \path{75.0} \\
+mutation\_002 & cycle & \path{105.0} \\
+mutation\_003 & min\_split & \path{0.05} \\
+mutation\_004 & min\_split & \path{0.12} \\
+mutation\_005 & tl\_id & \path{cluster_1499135723_1499135727_1499135738_1499135741_#4more} \\
+mutation\_006 & tl\_id & \path{cluster_1081363964_1499135861_2052755405_41535857} \\
+mutation\_007 & tl\_id & \path{cluster_1541567370_41401727} \\
+mutation\_008 & tl\_id & \path{cluster_3380463919_41337816_41337818} \\
+\bottomrule\end{longtable}
+Filter audit: accepted=8, not\_exactly\_one\_changed\_field=1. The LLM selected \texttt{mutation\_004}. The executed child yields 9.874\% Top-10 reduction, -1.344\% global-delay change, and +5.425\% neighboring-loss change. It fails the final acceptance rule.
+
+The final selection is \texttt{random\_initial\_llm\_002\_set\_corridor\_speed}, with 2.541\% Top-10 reduction. The complete case uses 7 logical candidate simulations. The supplementary case trace includes all three initial interventions, both refinements, both generated bundles, full post-execution KPIs, and the retained plan.

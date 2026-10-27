@@ -1,0 +1,98 @@
+{
+  "original_pipeline": {
+    "deterministic_heuristic": {
+      "n": 15,
+      "top10_mean": 9.603672347294088,
+      "top10_sd": 10.324475750507842,
+      "global_mean": 2.693918225152726,
+      "successes": 12,
+      "evaluations": 100,
+      "feasible_improving": 39,
+      "successful_simulations": 100
+    },
+    "grounded_random": {
+      "n": 15,
+      "top10_mean": 8.995608198678237,
+      "top10_sd": 10.88048637760197,
+      "global_mean": 3.0280420654342004,
+      "successes": 11,
+      "evaluations": 103,
+      "feasible_improving": 35,
+      "successful_simulations": 98
+    },
+    "llm": {
+      "n": 15,
+      "top10_mean": 9.179019182517452,
+      "top10_sd": 10.178031812019068,
+      "global_mean": 2.7759930951873386,
+      "successes": 13,
+      "evaluations": 97,
+      "feasible_improving": 34,
+      "successful_simulations": 96
+    }
+  },
+  "historical_matched": {
+    "catalog_first": {
+      "n": 15,
+      "top10_mean": 9.356062228065763,
+      "top10_sd": 10.179495752071533,
+      "global_mean": 2.8201473023345858,
+      "successes": 14,
+      "evaluations": 103,
+      "feasible_improving": 40,
+      "successful_simulations": 102
+    },
+    "catalog_random": {
+      "n": 15,
+      "top10_mean": 8.050876261651714,
+      "top10_sd": 10.280783741428342,
+      "global_mean": 2.6025633864956386,
+      "successes": 11,
+      "evaluations": 103,
+      "feasible_improving": 33,
+      "successful_simulations": 102
+    },
+    "llm": {
+      "n": 15,
+      "top10_mean": 9.179019182517452,
+      "top10_sd": 10.178031812019068,
+      "global_mean": 2.7759930951873386,
+      "successes": 13,
+      "evaluations": 97,
+      "feasible_improving": 34,
+      "successful_simulations": 96
+    }
+  },
+  "fresh": {
+    "catalog_first": {
+      "n": 15,
+      "top10_mean": 9.356062228065763,
+      "top10_sd": 10.179495752071533,
+      "global_mean": 2.8201473023345858,
+      "successes": 14,
+      "evaluations": 103,
+      "feasible_improving": 40,
+      "successful_simulations": 102
+    },
+    "catalog_random": {
+      "n": 15,
+      "top10_mean": 9.690081332968692,
+      "top10_sd": 11.912143106695762,
+      "global_mean": 2.985456362494243,
+      "successes": 12,
+      "evaluations": 103,
+      "feasible_improving": 38,
+      "successful_simulations": 102
+    },
+    "llm": {
+      "n": 15,
+      "top10_mean": 8.231977942303853,
+      "top10_sd": 10.371033444119956,
+      "global_mean": 2.591657432634425,
+      "successes": 12,
+      "evaluations": 92,
+      "feasible_improving": 29,
+      "successful_simulations": 91
+    }
+  }
+}

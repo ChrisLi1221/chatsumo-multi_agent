@@ -1,0 +1,20 @@
+{
+  "llm": {
+    "remote_cases": 13,
+    "median_max": 1350.3099999999995,
+    "maximum": 5478.74,
+    "maximum_cell": 9081.130000000005
+  },
+  "catalog_first": {
+    "remote_cases": 13,
+    "median_max": 1001.6700000000037,
+    "maximum": 5478.74,
+    "maximum_cell": 16617.34
+  },
+  "catalog_random": {
+    "remote_cases": 13,
+    "median_max": 1681.1200000000006,
+    "maximum": 10848.210000000001,
+    "maximum_cell": 9029.480000000003
+  }
+}

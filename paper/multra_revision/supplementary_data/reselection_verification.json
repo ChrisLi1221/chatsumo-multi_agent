@@ -1,0 +1,932 @@
+[
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "historical_matched",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "grounded_random",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "deterministic_heuristic",
+    "cohort": "original_pipeline",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "albany_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "ann_arbor_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "los_angeles_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "repeat",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "manhattan_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_42",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_43",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "catalog_first",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "catalog_random",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  },
+  {
+    "case": "troy_equal_scale_delay_seed_44",
+    "arm": "llm",
+    "cohort": "fresh",
+    "difference_pp": 0.0
+  }
+]

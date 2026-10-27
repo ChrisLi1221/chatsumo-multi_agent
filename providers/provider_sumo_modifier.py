@@ -25,6 +25,7 @@ from Modification.reroute import (
     validate_od_preservation,
     write_selected_trip_demand,
     write_soft_avoid_weights,
+    write_rerouted_sumocfg,
 )
 from Modification.tls_program import (
     attach_additional_file,
@@ -68,35 +69,8 @@ def _write_sumocfg_like(
     net_path: str,
     route_path: str,
 ) -> str:
-    """Write a SUMO config in out_dir for a rerouted scenario."""
-    os.makedirs(out_dir, exist_ok=True)
-    net_abs = os.path.abspath(net_path)
-    route_abs = os.path.abspath(route_path)
-    edge_data_abs = os.path.abspath(os.path.join(out_dir, "edgedata.xml"))
-    tripinfo_abs = os.path.abspath(os.path.join(out_dir, "tripinfo.xml"))
-
-    additional_abs = os.path.abspath(os.path.join(out_dir, "edge_data.add.xml"))
-    with open(additional_abs, "w", encoding="utf-8") as f:
-        f.write(
-            f"""<additional>
-    <edgeData id="edge_performance" period="60" file="{edge_data_abs}" excludeEmpty="true"/>
-</additional>"""
-        )
-
-    cfg_out = os.path.abspath(os.path.join(out_dir, "sim.sumocfg"))
-    with open(cfg_out, "w", encoding="utf-8") as f:
-        f.write(f"""<configuration>
-    <input>
-        <net-file value="{net_abs}"/>
-        <route-files value="{route_abs}"/>
-        <additional-files value="{additional_abs}"/>
-    </input>
-    <report>
-        <tripinfo-output value="{tripinfo_abs}"/>
-        <device.emissions.probability value="1.0"/>
-    </report>
-</configuration>""")
-    return cfg_out
+    """Clone the source configuration; routing must not reset SUMO settings."""
+    return write_rerouted_sumocfg(source_cfg, out_dir, net_path, route_path)
 
 
 def _sumocfg_add_additional(cfg_path: str, add_path: str) -> str:

@@ -6,7 +6,8 @@
 baseline simulation -> diagnosis/subgraph -> proposal generation/validation
 -> one isolated SUMO run per valid proposal -> optional feedback-guided beam refinement
 -> compatible pair expansion
--> incremental bundle validation/SUMO evaluation -> weighted-KPI ranking
+-> incremental bundle validation/SUMO evaluation
+-> optional conditional joint-plan feedback rounds -> constrained measured ranking
 ```
 
 It does not run scenario generation, the conversational planner, repair loops,
@@ -80,9 +81,11 @@ With this budget, three initial singles and up to two feedback refinements leave
 one SUMO evaluation for a compatible bundle. If a legal role pool is exhausted,
 a bundle is unavailable, or a candidate fails before consuming SUMO, the
 corresponding candidate budget remains unused. Every feedback update is selected
-by the responsible LLM specialist from the finite catalog. Feedback search applies to `--proposal-source llm` and
-`--proposal-source random_initial_llm`; other proposal sources retain their
-one-shot behavior.
+by the responsible specialist from the finite catalog. Feedback search applies
+to `llm`, `random_initial_llm`, `random_initial_catalog_first`, and
+`random_initial_catalog_random`; the latter two replace the model's catalog
+selection with a deterministic or seeded-random choice. Other proposal sources
+retain their one-shot behavior.
 `03_debate.json` records parents, feedback, mutations, and validation outcomes.
 `04_candidates.json` additionally stores a `best_so_far_trace` indexed by
 candidate SUMO evaluations.
@@ -109,6 +112,68 @@ python experiment/run_proposal_source_comparison.py \
 The network specialist can propose a conservative `set_corridor_speed` action
 for one evidenced road corridor, or fall back to the more disruptive
 `remove_edge` action when a safe closure is supported by the diagnosis.
+
+## Conditional refinement of joint plans
+
+`--joint-feedback-rounds N` adds N feedback rounds **after** the existing
+single-action search and initial pair composition. It defaults to zero, which
+preserves the old schedule. Successfully simulated bundles, including bundles
+that fail outcome constraints, can be selected as parents. A refined bundle
+remains eligible as a parent in the next joint round.
+
+For each selected parent, one component's specialist receives the whole plan,
+its measured KPIs and failed constraints, the other component's fixed controls,
+and isolated component feedback when it has actually been measured. Ownership
+rotates across components within a bundle lineage; exhausted components are
+skipped. The specialist selects one legal one-argument mutation. Every other
+component's semantic controls are held fixed. The complete child plan is rebuilt
+from the original baseline, incrementally validated in execution order, and
+simulated once; it is never applied on top of the already-modified parent net.
+
+Catalog entries are filtered by the existing bundle compatibility rules and
+deduplicated by the **complete ordered plan**, excluding artifact paths and
+proposal IDs. A component evaluated alone can therefore be evaluated again in
+a new joint context. Isolated measurements of newly refined components are not
+invented: additive synergy is marked unavailable unless both standalone effects
+are known. Parent-to-child measured changes are reported separately.
+
+```bash
+python experiment/run_optimization_only.py \
+  --cfg experiment/equal-scale-congested-2x-seeded/seed_42/albany/sim.sumocfg \
+  --case-id albany_joint_feedback_seed42 \
+  --profile delay \
+  --proposal-source random_initial_llm \
+  --proposal-seed 42 \
+  --objective-scope top10 \
+  --search-rounds 2 \
+  --joint-feedback-rounds 2 \
+  --feedback-beam-width 2 \
+  --bundle-top-k 4 \
+  --max-bundle-evals 2 \
+  --sumo-budget 11 \
+  --output-dir experiment/joint-feedback
+```
+
+This schedules up to three initial singles, two single refinements, two initial
+bundles, and four joint refinements. `--max-bundle-evals` caps initial pair
+composition; `--joint-feedback-rounds` controls the subsequent refinements.
+**All stages share `--sumo-budget`** (the common baseline is excluded). Joint
+rounds do not reserve extra budget: if earlier stages exhaust the cap, or no
+bundle was successfully simulated, their skip reason is recorded. Increase the
+cap or reduce the initial stages to leave room for joint feedback.
+
+The comparison runner accepts the same flag. Use `--selector-ablation` to run
+the three feedback selectors with this schedule, or replace the proposal source
+above with `random_initial_catalog_first` for a run without model calls. Selectors
+share the scheduling policy; once their decisions diverge, later parent plans
+and catalogs can naturally differ.
+
+`03_debate.json` records `phase=joint_feedback`, parent IDs, selected specialist,
+changed component, fixed components, and the joint context. `04_candidates.json`
+counts joint refinements as bundles and includes them in the incumbent trace.
+Each child's `06_comparison.json` includes `conditional_change`: KPI-score
+reduction and the change in Top-10 relative improvement versus its measured
+parent. These are conditional changes, not estimates of an isolated effect.
 
 The routing specialist can jointly soft-avoid one to three distinct evidenced
 bottleneck edges. Its selected fraction is sampled once from the union of

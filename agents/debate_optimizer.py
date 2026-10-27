@@ -357,6 +357,7 @@ def build_finite_mutation_catalog(
     artifacts: Optional[Mapping[str, Any]] = None,
     simulation_feedback: Optional[Mapping[str, Any]] = None,
     evaluated_history: Optional[List[Mapping[str, Any]]] = None,
+    audit_log: Optional[List[Dict[str, Any]]] = None,
 ) -> List[Dict[str, Any]]:
     """Enumerate validator-confirmed, unseen, single-field local mutations."""
     parent = dict(parent_proposal or {})
@@ -370,18 +371,28 @@ def build_finite_mutation_catalog(
     seen = set(excluded)
 
     def add(field: str, value: Any, hint: str) -> None:
+        audit = {"field": field, "value": value, "hint": hint}
+        if audit_log is not None:
+            audit_log.append(audit)
         if len(candidates) >= MAX_FINITE_MUTATIONS:
+            audit["disposition"] = "catalog_cap"
             return
         args = dict(semantic_parent)
         args[field] = value
         changed = _refinement_change_fields(parent, {"args": args})
         if changed != [field]:
+            audit["disposition"] = "not_exactly_one_changed_field"
             return
         full_args = _with_artifact_args(action, args, artifact_map)
         validation = validate_modifier_capability(action, full_args, artifact_map)
         signature = _semantic_signature(action, full_args)
+        audit["validation"] = validation
+        audit["semantic_signature"] = signature
         if not validation.get("ok") or signature in seen:
+            audit["disposition"] = "invalid" if not validation.get("ok") else "duplicate_or_evaluated"
             return
+        audit["disposition"] = "accepted"
+        audit["mutation_id"] = f"mutation_{len(candidates) + 1:03d}"
         seen.add(signature)
         candidates.append(
             {
@@ -531,9 +542,14 @@ def run_feedback_refinement(
     objective_profile: Optional[str] = None,
     search_round: int = 2,
     mutation_index: int = 1,
+    joint_context: Optional[Mapping[str, Any]] = None,
+    catalog_override: Optional[List[Mapping[str, Any]]] = None,
+    max_completion_tokens: int = 4096,
     call_llm_fn,
 ) -> Dict[str, Any]:
     """Let the LLM select one validator-confirmed finite local mutation."""
+    if max_completion_tokens <= 0:
+        raise ValueError("max_completion_tokens must be positive")
     parent = dict(parent_proposal or {})
     parent_agent = str(parent.get("agent") or "")
     role = next(
@@ -546,7 +562,7 @@ def run_feedback_refinement(
     profile = objective_profile or infer_weight_profile(user_request)
     artifacts = _artifact_dict(state)
     role_view = {key: value for key, value in role.items() if key != "system_prompt"}
-    catalog = build_finite_mutation_catalog(
+    catalog = list(catalog_override) if catalog_override is not None else build_finite_mutation_catalog(
         parent,
         diagnosis=diagnosis,
         artifacts=artifacts,
@@ -568,6 +584,33 @@ def run_feedback_refinement(
         "capabilities": _capability_view(),
         "mutation_catalog": _mutation_payload(catalog),
     }
+    joint_rules = ""
+    if joint_context is not None:
+        payload["joint_context"] = dict(joint_context)
+        joint_rules = (
+            "\nYou are changing one component of a jointly simulated plan. "
+            "simulation_feedback measures the ENTIRE joint plan, not your component "
+            "alone. Condition your choice on the fixed components, their targets, "
+            "and the joint constraint failures in joint_context. Select a mutation "
+            "for the designated component only; all other actions remain fixed. "
+            "Do not infer an isolated component effect from a joint measurement. "
+            "The complete modified plan will be rebuilt and simulated together."
+        )
+        if joint_context.get("component_interactions") is not None:
+            joint_rules += (
+                "\nUse joint_context.component_interactions to compare baseline, exact "
+                "isolated components, and their ordered joint outcome. Read metric units "
+                "and lower_is_better flags: positive loss/delay interaction residuals "
+                "indicate worse performance than the additive reference, not causal blame. "
+                "Inspect newly failed constraints, newly worsened roads, remote side "
+                "effects, and the measured previous_conditional_change. Missing isolated "
+                "measurements are unknown; never substitute a component's older settings "
+                "or infer its isolated performance from a bundle. Prefer a legal mutation "
+                "whose target/parameter plausibly addresses an observed conflict while "
+                "preserving useful joint gains. Explain which measured contrast informs "
+                "your choice and any missing evidence in claim and evidence_refs. "
+                "Do not select a different component or change the catalog."
+            )
     base_usage_scope = (
         f"feedback:{parent_agent}:round_{int(search_round):02d}"
         + (f":mutation_{int(mutation_index):02d}" if int(mutation_index) > 1 else "")
@@ -584,12 +627,12 @@ def run_feedback_refinement(
                     "Choose exactly one ID from mutation_catalog."
                 )
             response = call_llm_fn(
-                system=str(role["system_prompt"]) + "\n\n" + FEEDBACK_REFINEMENT_RULES,
+                system=str(role["system_prompt"]) + "\n\n" + FEEDBACK_REFINEMENT_RULES + joint_rules,
                 user=json.dumps(request_payload, ensure_ascii=False, default=str),
                 force_json=True,
                 state=state,
                 usage_scope=base_usage_scope + (":repair" if attempt else ""),
-                max_tokens=500,
+                max_tokens=max_completion_tokens,
             )
             selection_attempts += 1
             raw = dict(response) if isinstance(response, Mapping) else {}
@@ -691,7 +734,9 @@ def run_feedback_refinement(
         "selected_mutation_id": selected.get("mutation_id") if selected else None,
         "mutation_catalog_size": len(catalog),
         "mutation_catalog_ids": [row.get("mutation_id") for row in catalog],
+        "mutation_catalog": _mutation_payload(catalog),
         "selection_attempts": selection_attempts,
+        "max_completion_tokens": max_completion_tokens,
         "changed_fields": changed_fields,
         "feedback_used": True,
         "validation_errors": refinement_errors,

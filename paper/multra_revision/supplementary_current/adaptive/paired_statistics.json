@@ -1,0 +1,160 @@
+{
+  "catalog_first": {
+    "n": 15,
+    "mean_difference_pp": -0.5694157366208633,
+    "median_difference_pp": -0.22208825680085553,
+    "wins": 4,
+    "ties": 3,
+    "losses": 8,
+    "wilcoxon_p": 0.5302845968336095,
+    "original_zsplit_auto_p": 0.42615492361107,
+    "exact_case_signflip_p": 0.7265625,
+    "exact_city_signflip_p": 0.75,
+    "city_cluster_bootstrap_ci95_pp": [
+      -3.1404004737489175,
+      1.5555806169254693
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_delay_seed_42",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_43",
+        "difference_pp": 1.8332301546955758
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_44",
+        "difference_pp": 6.077345959736003
+      },
+      {
+        "case": "ann_arbor_equal_scale_delay_seed_42",
+        "difference_pp": -14.237312626751688
+      },
+      {
+        "case": "ann_arbor_equal_scale_delay_seed_43",
+        "difference_pp": 12.777772080443416
+      },
+      {
+        "case": "ann_arbor_equal_scale_delay_seed_44",
+        "difference_pp": 3.9637262213145674
+      },
+      {
+        "case": "los_angeles_equal_scale_delay_seed_42",
+        "difference_pp": -6.150420186930372
+      },
+      {
+        "case": "los_angeles_equal_scale_delay_seed_43",
+        "difference_pp": -2.111217415773381
+      },
+      {
+        "case": "los_angeles_equal_scale_delay_seed_44",
+        "difference_pp": -7.483649700004613
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_42",
+        "difference_pp": -1.6959993309976866
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_43",
+        "difference_pp": -0.45624328531641467
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_44",
+        "difference_pp": -0.22208825680085553
+      },
+      {
+        "case": "troy_equal_scale_delay_seed_42",
+        "difference_pp": -0.8363796629274995
+      },
+      {
+        "case": "troy_equal_scale_delay_seed_43",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "troy_equal_scale_delay_seed_44",
+        "difference_pp": 0.0
+      }
+    ],
+    "holm_wilcoxon_p": 0.5302845968336095
+  },
+  "catalog_random": {
+    "n": 15,
+    "mean_difference_pp": -3.2782003031421403,
+    "median_difference_pp": -0.618237628538175,
+    "wins": 3,
+    "ties": 3,
+    "losses": 9,
+    "wilcoxon_p": 0.08437944259396049,
+    "original_zsplit_auto_p": 0.07805184404599262,
+    "exact_case_signflip_p": 0.07763671875,
+    "exact_city_signflip_p": 0.125,
+    "city_cluster_bootstrap_ci95_pp": [
+      -6.580924477779876,
+      -0.5116276034680134
+    ],
+    "paired_differences": [
+      {
+        "case": "albany_equal_scale_delay_seed_42",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_43",
+        "difference_pp": 1.8332301546955758
+      },
+      {
+        "case": "albany_equal_scale_delay_seed_44",
+        "difference_pp": -3.829446508790479
+      },
+      {
+        "case": "ann_arbor_equal_scale_delay_seed_42",
+        "difference_pp": -9.589305980693752
+      },
+      {
+        "case": "ann_arbor_equal_scale_delay_seed_43",
+        "difference_pp": 6.206427165150375
+      },
+      {
+        "case": "ann_arbor_equal_scale_delay_seed_44",
+        "difference_pp": 3.9637262213145674
+      },
+      {
+        "case": "los_angeles_equal_scale_delay_seed_42",
+        "difference_pp": -7.352544507210736
+      },
+      {
+        "case": "los_angeles_equal_scale_delay_seed_43",
+        "difference_pp": 0.0
+      },
+      {
+        "case": "los_angeles_equal_scale_delay_seed_44",
+        "difference_pp": -8.659569251641063
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_42",
+        "difference_pp": -4.128397817988727
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_43",
+        "difference_pp": -0.618237628538175
+      },
+      {
+        "case": "manhattan_equal_scale_delay_seed_44",
+        "difference_pp": -0.09704070884587424
+      },
+      {
+        "case": "troy_equal_scale_delay_seed_42",
+        "difference_pp": -3.764252431115767
+      },
+      {
+        "case": "troy_equal_scale_delay_seed_43",
+        "difference_pp": -23.137593253468047
+      },
+      {
+        "case": "troy_equal_scale_delay_seed_44",
+        "difference_pp": 0.0
+      }
+    ],
+    "holm_wilcoxon_p": 0.16875888518792098
+  }
+}

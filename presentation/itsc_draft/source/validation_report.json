@@ -1,0 +1,86 @@
+{
+  "pptx_slides": 18,
+  "pdf_pages": 18,
+  "nonempty_notes": 18,
+  "editable_charts": 4,
+  "chart_values": [
+    {
+      "slide": 9,
+      "series": [
+        {
+          "name": "Monolithic",
+          "values": [
+            100.0,
+            100.0,
+            70.0
+          ]
+        },
+        {
+          "name": "Multi-agent",
+          "values": [
+            90.0,
+            100.0,
+            90.0
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 10,
+      "series": [
+        {
+          "name": "Monolithic",
+          "values": [
+            8529.2,
+            9690.3,
+            11404.7
+          ]
+        },
+        {
+          "name": "Multi-agent",
+          "values": [
+            4845.5,
+            5310.1,
+            6028.7
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 10,
+      "series": [
+        {
+          "name": "Monolithic",
+          "values": [
+            19.8,
+            22.7,
+            41.4
+          ]
+        },
+        {
+          "name": "Multi-agent",
+          "values": [
+            6.2,
+            7.3,
+            8.3
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 11,
+      "series": [
+        {
+          "name": "L2 and L3",
+          "values": [
+            30.0,
+            50.0,
+            50.0
+          ]
+        }
+      ]
+    }
+  ],
+  "geometry_issues": [],
+  "text_requiring_visual_review": []
+}

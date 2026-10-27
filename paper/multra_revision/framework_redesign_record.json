@@ -1,0 +1,37 @@
+{
+  "tool": "Built-in OpenAI image-generation tool accessed through Codex",
+  "reference": "figures_current/Framework.png",
+  "prompt": "framework_redesign_prompt.txt",
+  "model_version": "Not exposed by tool; not inferred",
+  "generated_image_dimensions": [
+    1672,
+    941
+  ],
+  "generated_image_sha256": "b7c586abcb6973298ac1a2a5b14173ef410367c20009911a8363a1f7f6d6c8a1",
+  "rendering": "Hybrid PDF: restyled flat, text-free diagram artwork with white panels and separately typeset Arial Bold vector labels. Candidate-budget footer removed. Artwork remains raster.",
+  "checks": [
+    "Five shared program-generated initial actions",
+    "Two measured parents, up to two distinct children each",
+    "Top-four measured singles, up to two compatible bundles",
+    "Joint feedback: one component changes, partner fixed, re-simulation, two rounds, beam two",
+    "Top-10 gain >=1%, global delay increase <=1%, neighbor loss increase <=5%, throughput not lower, teleports not higher",
+    "Judge and Pareto modules removed"
+  ],
+  "typography": {
+    "font": "Arial Bold, normal width, no horizontal scaling",
+    "source": "figures_current/Framework_typography.tex",
+    "background": "figures_current/Framework_background.png",
+    "text_removal_prompt": "framework_typography_prompt.txt",
+    "pdf_sha256": "810d766ce7c56a8a2bee2185016e269ddd49c8b947ccde97456d6d68671899a4",
+    "png_sha256": "b15192baec536ff3a0885f7439664d186cfdc093dfe907b4963541c07867daeb"
+  },
+  "style_revision": {
+    "prompt": "framework_flat_style_prompt.txt",
+    "background_sha256": "9e8e2924026f3e5246a5d2e7fa2a99841ed3756cc0f437fb94076235ec79f0fc",
+    "page_dimensions_bp": [
+      1672,
+      841
+    ],
+    "removed": "Entire candidate-budget footer, including the cache/baseline footnote. Method text retains budget accounting."
+  }
+}

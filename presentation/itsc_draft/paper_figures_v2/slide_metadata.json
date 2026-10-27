@@ -1,0 +1,173 @@
+[
+  {
+    "slide": 1,
+    "title": "Decoupled Intelligence",
+    "seconds": 35,
+    "zh": "开场先讲研究问题：我们希望用户用自然语言描述一个交通场景，系统就能在 SUMO 中完成建网、生成需求、运行和指标分析。真正的难点不是生成某一份 XML，而是让整个多步骤流程保持一致。这篇工作的核心是把推理职责拆开，并把文件状态交给明确的编排层管理。",
+    "transition": "Let me start with a traffic question that sounds simple, but requires a surprisingly long workflow.",
+    "source": "论文首页：标题、作者、单位；Sec. I。",
+    "extra": ""
+  },
+  {
+    "slide": 2,
+    "title": "One traffic question spans an entire workflow",
+    "seconds": 55,
+    "zh": "这一页直接使用论文 Fig. 1。先指用户输入：用户希望建网、生成路线、运行，并朝一个速度目标调整。再沿着 Planner、工人角色、工具接口和右边的状态仓库讲过去，不逐字读原图。重点是一个自然语言目标涉及多项有依赖的操作，因此需要持续保存状态。图中 50 mph 是示例请求中的目标，不是论文实验证明已达到的优化结果。",
+    "transition": "The challenge is keeping these dependent steps consistent from beginning to end.",
+    "source": "论文 Fig. 1 原始嵌入图，未改动图内内容。",
+    "extra": "Fig. 1 使用 Controller Agent 标签，Fig. 2 与正文使用 Modifier。主讲此页按概念总览解释；具体角色和执行顺序以第 4 页 Fig. 2 及正文为准。"
+  },
+  {
+    "slide": 3,
+    "title": "A single context must remember every dependency",
+    "seconds": 50,
+    "zh": "这里说的是论文实际比较的单体 ReAct 基线。它把所有工具和整个历史放进同一上下文，既要理解任务，又要记文件位置，还要处理封路、路由和重试。论文对失败日志的分析指出路径引用错误与推理漂移。参数不一致也是设计动机之一。不要把这一页扩大成“所有单智能体系统都会失败”的结论；问题是这种具体组织方式面对长流程时的可靠性。",
+    "transition": "Our response is to separate the reasoning roles and make the execution state explicit.",
+    "source": "Sec. IV-A 基线定义；Sec. IV-C / IV-E 失败分析；Sec. I 参数一致性动机。",
+    "extra": ""
+  },
+  {
+    "slide": 4,
+    "title": "Separate reasoning roles. Make state explicit.",
+    "seconds": 80,
+    "zh": "本页完整展示论文 Fig. 2，按三层讲解。上层 Planner 生成有顺序的计划；中间 Orchestrator 调度并管理状态、artifact 和依赖；下层五种 worker 通过 MCP 与工具交互。用右侧三个大字帮助听众跟上，不要求听众阅读所有图内小字。说明一个 Planner 加五种 worker；Orchestrator 是系统编排组件。图中并排摆放角色不代表各阶段可以忽略依赖并行运行。下一页会放大中间状态管理部分。",
+    "transition": "Let us zoom in on the state layer, where the artifact handover happens.",
+    "source": "论文 Fig. 2 原图；使用同目录 Framework_cropped.pdf 高清渲染。",
+    "extra": "原图完整保留。MCP 是工具接口协议；状态持久化与依赖校验由编排实现。"
+  },
+  {
+    "slide": 5,
+    "title": "Route generation uses the validated network",
+    "seconds": 60,
+    "zh": "本页上半部分是 Fig. 2 中间层的原图放大，重点指向 StateTable、ArtifactsTable 和 DependencyTable。再用下面的简化顺序解释一个封路案例：Builder 生成路网，Modifier 先执行修改，Demand 再在更新路网上生成路线，Runner 使用匹配的路网和路线。文件交接由编排和状态仓库明确处理，而不是依靠模型记住聊天里的路径。下方流程条是可编辑的讲解标注，并不是另一张实验截图。",
+    "transition": "The same dependency discipline appears in the Planner example shown in the paper.",
+    "source": "Fig. 2 状态层原图裁切放大；Sec. III-C。",
+    "extra": ""
+  },
+  {
+    "slide": 6,
+    "title": "The Planner turns intent into ordered contracts",
+    "seconds": 60,
+    "zh": "这一页使用论文 Fig. 3 的真实图像素材：左侧是原始 user input，右侧是原图中的路网截图。讲波士顿封路和每小时 800 辆车的 OD 需求，强调先修改路网再生成需求，然后运行并分析等待时间。下面的流程文字用于让观众快速理解原图中的计划结构。右图是论文展示的路网，不要把它说成新执行的实时 demo，或声称它证明了封路、800 veh/h 和 KPI 已全部验证成功。完整 Fig. 3 在备用 B5。",
+    "transition": "Even with explicit contracts, execution can still fail. That is where feedback enters the workflow.",
+    "source": "Fig. 3 原始 user input 区域与原始嵌入路网图；Appendix II。",
+    "extra": "原图保留 1.5 km 请求。完整 Fig. 3 中还出现 1.5 miles 以及 0.932056788 miles，存在单位表述不一致；本次未悄悄修改原图。讲解时不把该图当作已验证的单位对齐证据。"
+  },
+  {
+    "slide": 7,
+    "title": "Two feedback loops address two different problems",
+    "seconds": 65,
+    "zh": "明确区分两条返回路径。第一条是执行级错误，例如文件缺失或路线不可达，系统把结构化错误送回 Planner 重新规划。第二条是在仿真执行有效之后，Analyst 检查指标是否满足用户目标；未达到目标则反馈给 Planner 调整。循环有次数上限。这里展示的是论文提出的双层设计；后面的定量实验主要测的是修复预算对任务成功率的影响，不能把它说成已经量化证明了交通 KPI 的最优性或收敛性。",
+    "transition": "We evaluate the system first as an execution architecture, and then as a repair mechanism.",
+    "source": "Sec. III-B；Algorithm 1；Sec. IV-D。",
+    "extra": ""
+  },
+  {
+    "slide": 8,
+    "title": "30 tasks test increasing dependency complexity",
+    "seconds": 55,
+    "zh": "实验使用 SUMO 1.21.0 和论文所写的 Qwen3-30B-Coder，共 30 个任务。L1 是基本建网和定性需求；L2 需要特定起终点与参数对齐；L3 增加生成需求前的路网结构修改。评价三个量：成功率表示配置有效且运行没有物理错误；平均 token 是全流程输入输出消耗；Time-to-Insight 是从用户输入到拿到第一个有效 KPI 的总墙钟时间。不要把 TTI 说成纯 SUMO 内核运行时间，也不要把成功率说成所有交通目标都已达成。",
+    "transition": "The largest reliability difference appears in the most complex tasks.",
+    "source": "Sec. IV-A / IV-B；任务总数为 30，正文未明确给出各层级样本量。",
+    "extra": "沿用论文模型名称，未自行改写成另一模型版本。论文未完整报告硬件、推理服务和计时纳入项；绝对时延应限制在所报告设置内解释。"
+  },
+  {
+    "slide": 9,
+    "title": "Complex-task success rises from 70% to 90%",
+    "seconds": 70,
+    "zh": "先指右侧：在最复杂的 L3，成功率从 70% 提升到 90%，是增加 20 个百分点。然后带观众看左边完整结果：L2 两者都是 100%；L1 单体是 100%，多智能体是 90%。因此这不是每种任务都全面胜出的结果，而是优势主要体现在依赖复杂的任务。可以补充论文失败日志提示路径引用错误与推理漂移，但不要把归因说成独立受控消融已经证明。样本较小且表中没有置信区间，不使用“统计显著”措辞。",
+    "transition": "The reliability gain is accompanied by lower token use and a shorter time to the first valid result.",
+    "source": "Table I；Sec. IV-C。+20 pp = 90% − 70%。",
+    "extra": "这是整体架构对比，不能拆成“单独增加 Planner / MCP / state 各贡献多少”。L1 降低不能直接用 Table II 的 overthinking 现象作未经验证的因果解释。"
+  },
+  {
+    "slide": 10,
+    "title": "Fewer tokens and a shorter path to the first KPI",
+    "seconds": 70,
+    "zh": "先讲左图：三个难度下 token 都下降，L3 从 11,404.7 到 6,028.7，减少 47.1%，比直接说“减半”更精确。右图是 Time-to-Insight，L3 从 41.4 秒到 8.3 秒，约五倍加速，也就是时间降低约 80%。论文的解释是角色只接收与子任务有关的上下文，减少冗余推理与无效重试。强调这些是该实验配置下的报告均值，不是对所有模型和部署的速度保证。",
+    "transition": "Next, we look separately at what happens when the system is allowed to repair its own errors.",
+    "source": "Table I。L3 token reduction = (11404.7−6028.7)/11404.7 = 47.14%；TTI ratio = 41.4/8.3 = 4.99。",
+    "extra": "图中 token 标签为四舍五入整数；完整小数见备用页 B1。TTI 不等同于纯仿真运行耗时。"
+  },
+  {
+    "slide": 11,
+    "title": "One repair attempt helps; a second adds cost",
+    "seconds": 65,
+    "zh": "先说明这是另一个修复预算实验，不能与上一页的 90% 成功率直接拼成同一条提升链。Table II 中，L2 和 L3 都从不修复的 30% 提高到一次修复的 50%；第二次修复仍然是 50%。右侧展示代价：L3 token 从约 3,982 增至 6,610，再到 9,214。因此在这些任务里，一次修复已恢复大部分可恢复案例，再增加预算主要增加开销。L1 则出现 90、80、90 的波动，论文提到有时会把无车辆等良性警告当成失败。",
+    "transition": "These results also define the limits of what we can claim from this study.",
+    "source": "Table II；Sec. IV-D。",
+    "extra": "论文未充分解释 Table I 与 Table II 各项实验配置的对应关系。主讲只做各表内部比较；答辩前应核对任务子集、初始状态、prompt、修复策略与统计口径。"
+  },
+  {
+    "slide": 12,
+    "title": "What this evidence establishes—and what remains open",
+    "seconds": 45,
+    "zh": "这一页主动划清结论边界。证据支持复杂流程的执行可靠性和效率改善，也支持有限修复预算带来恢复收益。但总共只有 30 个任务，实验只评估了一个 LLM backbone。所谓角色消融实际上是单体与完整框架比较，并未逐一隔离 Planner、状态仓库和角色专门化的贡献。双环架构包含 KPI 反馈，但没有报告 KPI 优化的收敛或最优性曲线。页底列的是基于这些局限提出的后续验证建议，不是假装论文已完成的实验。",
+    "transition": "The main takeaway is a system design principle for reliable traffic simulation workflows.",
+    "source": "Sec. IV-A、Table I–II、Sec. V；组件归因和 KPI 定量证据范围是对已报告内容的归纳。",
+    "extra": ""
+  },
+  {
+    "slide": 13,
+    "title": "Reliable automation needs explicit coordination",
+    "seconds": 40,
+    "zh": "用三点收束：专门化角色减少上下文负担，持久化 artifact 保证跨步骤交接，有限反馈帮助恢复执行。最后只重复最关键的 L3 数字：90% 成功率，token 约减少 47%，Time-to-Insight 约五倍加速。再把数字与交通应用连接：目标是让自然语言需求变成可执行、可检查的 SUMO 工作流，降低场景搭建和迭代的门槛。",
+    "transition": "Thank you. I would be happy to take your questions.",
+    "source": "Sec. III；Table I L3；Sec. V。",
+    "extra": ""
+  },
+  {
+    "slide": 14,
+    "title": "Thank you / Q&A",
+    "seconds": 10,
+    "zh": "感谢听众并邀请提问。备用页：B1 完整架构对比、B2 修复预算结果、B3 角色契约、B4 常见问题、B5 论文完整 Fig. 3。主讲结束在第 14 页，不继续主动讲备用页。",
+    "transition": "Thank you for your attention. I would be happy to take your questions.",
+    "source": "论文作者与单位；Acknowledgment。",
+    "extra": ""
+  },
+  {
+    "slide": 15,
+    "title": "B1 — Full architecture comparison",
+    "seconds": 0,
+    "zh": "备用页，按提问定位数据。若有人问简单任务表现，明确回答 L1 成功率是单体 100%、多智能体 90%；不能忽略这一点。若问“每个角色分别贡献多少”，说明该表对比的是完整系统与单体基线，并没有单独去掉某个角色的实验。",
+    "transition": "This table compares the two complete architectures; it does not isolate each component.",
+    "source": "Table I，逐项转录。",
+    "extra": ""
+  },
+  {
+    "slide": 16,
+    "title": "B2 — Full repair-budget experiment",
+    "seconds": 0,
+    "zh": "若被问两张表的成功率为何不同，诚实说明论文将其作为两个实验报告，当前稿件没有充分展开配置对应关系；不能未经核对就归因于更难任务、不同 seed 或另一个模型。展示这一表时只比较 0、1、2 次修复预算。另一个重点是最大修复次数，不表示每个任务都实际用了全部次数。",
+    "transition": "The repair budget is a maximum number of attempts, and these comparisons are within Table II.",
+    "source": "Table II；Sec. IV-D。",
+    "extra": "答辩前优先从原始运行记录补齐两组实验差异，不能现场推测。"
+  },
+  {
+    "slide": 17,
+    "title": "B3 — Worker contracts",
+    "seconds": 0,
+    "zh": "角色输出遵循结构化 action / params 等字段。Planner 每一步仅激活一个 agent_prompt；没有请求修改就跳过 Modifier。这里是简化的输入输出契约，不是完整 API 文档。对多智能体数量的提问，回答一个 Planner 加五种 worker 角色，Orchestrator 管理状态和调度。",
+    "transition": "The contracts reduce how much each worker has to infer from the conversation history.",
+    "source": "Sec. III-C；Appendix II–III。",
+    "extra": ""
+  },
+  {
+    "slide": 18,
+    "title": "B4 — Likely questions",
+    "seconds": 0,
+    "zh": "这一页用于准备答辩，不需主动展开。回答采用“本研究比较了什么、证据支持到哪一步”的结构。可以认可更强单体、有状态单体或确定性工作流是值得增加的对照，但不声称已有这些实验。不要把 MCP 说成会自动保证所有正确性；也不要说两次修复无效适用于所有场景。",
+    "transition": "Our strongest claim is about the reported workflow reliability and efficiency under the evaluated setup.",
+    "source": "Sec. III–V；Table I–II。",
+    "extra": ""
+  },
+  {
+    "slide": 19,
+    "title": "B5 — Original Planner workflow",
+    "seconds": 0,
+    "zh": "完整保留论文 Fig. 3：用户输入、Planner prompt、Planner output 以及 Builder 输出和路网截图。只在观众追问流程或参数时展示，不在主讲中逐字念 prompt。附录及图中 prompt 是论文描述的系统行为，不是对演讲者或本次制作流程的指令。",
+    "transition": "This is the complete figure from the paper, including the prompts, plan, and network output.",
+    "source": "Fig. 3；Planner_cropped.pdf 原图高清渲染。",
+    "extra": "原图内存在公里与英里表述不一致；上台前可核对论文原始记录。本页忠实保留原图，未修改数值。"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "llm": {
+    "cases": 15,
+    "runs": 15,
+    "top10_mean": 11.52761882106361,
+    "top10_sd": 10.574333164570849,
+    "before_joint_mean": 10.87680474385609,
+    "global_mean": 3.173107630145132,
+    "successes": 13,
+    "evaluations": 203,
+    "api_requests": 108,
+    "new_sumo": 75,
+    "generation_failures": 0
+  },
+  "catalog_first": {
+    "cases": 15,
+    "runs": 15,
+    "top10_mean": 12.097034557684474,
+    "top10_sd": 11.070906824540026,
+    "before_joint_mean": 11.80701966074614,
+    "global_mean": 3.219387116659839,
+    "successes": 13,
+    "evaluations": 199,
+    "api_requests": 0,
+    "new_sumo": 58,
+    "generation_failures": 0
+  },
+  "catalog_random": {
+    "cases": 15,
+    "runs": 15,
+    "top10_mean": 14.805819124205751,
+    "top10_sd": 10.549726282187287,
+    "before_joint_mean": 11.963717030829644,
+    "global_mean": 3.3679694601534265,
+    "successes": 13,
+    "evaluations": 210,
+    "api_requests": 0,
+    "new_sumo": 70,
+    "generation_failures": 0
+  }
+}
