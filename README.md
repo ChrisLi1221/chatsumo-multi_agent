@@ -5,7 +5,7 @@ It bridges the gap between **transportation researchers** and **complex microsco
 
 ## 仓库导航
 
-本仓库包含 ChatSUMO 多智能体编排、SimTIO 优化实验，以及论文和演示材料。
+本仓库包含 ChatSUMO 多智能体编排、SimTIO 优化实验和演示材料。
 
 | 目录 / 入口 | 内容 |
 |---|---|
@@ -18,19 +18,17 @@ It bridges the gap between **transportation researchers** and **complex microsco
 | [完整反馈协议](experiment/FULL_FEEDBACK_V1.md) | 从共同初始动作生成反馈、mutation 和联合优化 |
 | [联合反馈续跑](experiment/JOINT_FEEDBACK_CONTINUATION.md) | 联合反馈、单组件修改与完整重仿真 |
 | [补充实验](experiment/SUPPLEMENT_EXPERIMENTS.md) | 稳定性、需求敏感性和复核命令 |
-| [当前论文](paper/multra_revision/README.md) | 当前修订稿、图表、汇总证据与构建说明 |
-| [原稿](paper/chatsumo_optimizer/README.md) | 原始 LaTeX 论文工程 |
 | [演示材料](presentation/itsc_draft/README.md) | 幻灯片、中文讲稿和生成脚本 |
 | `tests/` | 回归测试：在仓库根目录运行 `python -m pytest -q` |
 
 ### Git 收录范围
 
-提交源码、测试、配置示例、实验协议、论文源文件、当前文档和汇总证据。
+提交源码、测试、配置示例、实验协议、演示材料及实验目录中的汇总证据。
 `.env`、仿真原始输出、缓存、运行时数据库、LaTeX 中间文件、重复 ZIP 包、
-`paper/multra_revision_history/` 手工备份和 `paper/multra_revision_private/` 本地资料由
+整个 `paper/` 论文目录由
 [`.gitignore`](.gitignore) 排除；本地文件仍保留。
 实验输出和原始场景不随 Git 分发，部分重建脚本需要先生成或准备相应输入；
-具体路径和命令见各实验协议。投稿 ZIP 包需要在本地重新生成。
+具体路径和命令见各实验协议。论文构建脚本还需要本地 `paper/` 资料。
 
 ---
 

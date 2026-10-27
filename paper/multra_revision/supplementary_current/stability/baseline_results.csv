@@ -1,6 +1,0 @@
-case,city,seed,trips,mean_delay_s,teleports,completed,top10_loss_s
-albany_equal_scale_delay_seed_42,albany,42,2400,113.06903750000002,0,2400,25639.24000000001
-ann_arbor_equal_scale_delay_seed_42,ann_arbor,42,2400,141.43757083333315,0,2400,47474.76000000002
-los_angeles_equal_scale_delay_seed_42,los_angeles,42,2400,176.3414833333335,0,2400,54349.62000000004
-manhattan_equal_scale_delay_seed_42,manhattan,42,2400,260.30689166666673,2,2400,124842.61999999991
-troy_equal_scale_delay_seed_42,troy,42,2400,100.4455125,0,2400,37687.43
